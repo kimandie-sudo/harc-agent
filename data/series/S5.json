@@ -1,0 +1,37 @@
+{
+ "series_id": "S5",
+ "source_set": "you2025",
+ "_note": "모델 입력용. 논문 제목·저자·결론 없음. 정답은 answers/ 에만. 모든 치수는 원문 Fig. 5·Fig. 7 의 단면 SEM 사진에 저자가 직접 적은 값이다(그래프를 읽은 근사값이 아니다). 교차 검증: 하단/상단이 Fig. 6·Fig. 8 의 개구율과 맞는다(61/197=0.31, 88/197=0.45, 153/196=0.78, 109/196=0.56, 86/180=0.48, 116/201=0.58, 81/203=0.40). 보잉 정도((max_cd-top_cd)/2)도 본문 수치와 맞는다(19.5, 5, 0.5, 24.5 nm). D9·E40·E60 은 원문이 '보잉 대신 좁아짐' 이라고만 적고 최대 직경을 표기하지 않아 max_cd 를 비웠다 — 보잉은 판정 불가로 남는다. neck_cd 는 D3 에만 표기돼 있다(깊이 약 400~500 nm). 증착 7 s / 식각 30 s 조건은 두 스윕(Fig. 5 의 7 s, Fig. 7 의 30 s)에 모두 나오고 치수도 같아(196/197/153) 조건 하나(D7)로 둔다. 원문의 연속 식각 기준(Fig. 4)은 S1 의 C1 과 같은 데이터(8/2/20 sccm, 197/221/130)라 넣지 않았다 — 같은 연구실의 선행 논문(coatings2023)이다.",
+ "design": "ofat",
+ "structure": "SiO2 contact hole, ACL mask. 2400 nm 열산화 SiO2, 홀 직경 200 nm, ACL 1350 nm",
+ "goal": "저GWP 가스 순환 식각으로 SiO2 고종횡비 콘택홀의 변형을 줄인다. 목표는 상단에서 하단까지 직경이 고른 수직 홀.",
+ "swept_variable": "순환 식각(증착 단계와 식각 단계를 번갈아 반복)의 단계 시간 — 증착 단계 시간(식각 단계 30 s 고정)과 식각 단계 시간(증착 단계 7 s 고정)을 한 번에 하나씩 바꿨다",
+ "other_fixed": "ICP, 소스 250 W. 증착 단계: HFE-347mcc3/Ar 8/22 sccm, 30 mTorr, 바이어스 0 V. 식각 단계: HFE-347mcc3/O2/Ar 8/2/20 sccm, 10 mTorr, 바이어스 -1200 V. 총 식각 시간 12 min (사이클 수는 단계 시간에 따라 달라진다).",
+ "nominal_cd_nm": 200,
+ "target_depth_nm": 2400,
+ "px_nm": null,
+ "value_source": "paper",
+ "extra": {
+  "value_note": "top_cd·neck_cd·max_cd·bottom_cd 는 단면 SEM 에서 저자가 잰 홀 직경(nm). 모든 조건이 2400 nm 를 끝까지 식각했다.",
+  "unavailable": {
+   "max_cd": "D9·E40·E60 — 원문 SEM 사진에 최대 직경 표기가 없다",
+   "neck_cd": "D3 외 조건 — 표기 없음"
+  }
+ },
+ "conditions": [
+  {"id": "D3", "level": "증착 3 s / 식각 30 s", "label": "증착 3 s, 식각 30 s, 24 사이클", "dep_s": 3, "etch_s": 30, "cycles": 24,
+   "top_cd": 197, "neck_cd": 182, "max_cd": 236, "bottom_cd": 61, "etch_stop": false, "image": "images/S5_D3.png"},
+  {"id": "D5", "level": "증착 5 s / 식각 30 s", "label": "증착 5 s, 식각 30 s, 24 사이클", "dep_s": 5, "etch_s": 30, "cycles": 24,
+   "top_cd": 197, "max_cd": 207, "bottom_cd": 88, "etch_stop": false, "image": "images/S5_D5.png"},
+  {"id": "D7", "level": "증착 7 s / 식각 30 s", "label": "증착 7 s, 식각 30 s, 24 사이클", "dep_s": 7, "etch_s": 30, "cycles": 24,
+   "top_cd": 196, "max_cd": 197, "bottom_cd": 153, "etch_stop": false, "image": "images/S5_D7.png"},
+  {"id": "D9", "level": "증착 9 s / 식각 30 s", "label": "증착 9 s, 식각 30 s, 24 사이클", "dep_s": 9, "etch_s": 30, "cycles": 24,
+   "top_cd": 196, "bottom_cd": 109, "etch_stop": false, "image": "images/S5_D9.png"},
+  {"id": "E20", "level": "증착 7 s / 식각 20 s", "label": "증착 7 s, 식각 20 s, 36 사이클", "dep_s": 7, "etch_s": 20, "cycles": 36,
+   "top_cd": 180, "max_cd": 229, "bottom_cd": 86, "etch_stop": false, "image": "images/S5_E20.png"},
+  {"id": "E40", "level": "증착 7 s / 식각 40 s", "label": "증착 7 s, 식각 40 s, 18 사이클", "dep_s": 7, "etch_s": 40, "cycles": 18,
+   "top_cd": 201, "bottom_cd": 116, "etch_stop": false, "image": "images/S5_E40.png"},
+  {"id": "E60", "level": "증착 7 s / 식각 60 s", "label": "증착 7 s, 식각 60 s, 12 사이클", "dep_s": 7, "etch_s": 60, "cycles": 12,
+   "top_cd": 203, "bottom_cd": 81, "etch_stop": false, "image": "images/S5_E60.png"}
+ ]
+}

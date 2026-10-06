@@ -1,0 +1,940 @@
+{
+ "run_id": "1001-083108-7543",
+ "pipeline_version": "v2",
+ "series": "S8",
+ "provider": "google",
+ "model": "gemma-4-26b-a4b-it",
+ "mode": "single",
+ "rag": true,
+ "images": false,
+ "cause_hedge": true,
+ "chunk_chars": null,
+ "temperature": 0.7,
+ "rule_hints": true,
+ "retriever": "bm25",
+ "chunk_source": "rag",
+ "anonymize_chunks": false,
+ "check": {
+  "judgeable": {
+   "bowing": {
+    "T1": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "max_cd"
+     ]
+    },
+    "T2": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "max_cd"
+     ]
+    },
+    "T3": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "max_cd"
+     ]
+    },
+    "T4": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "max_cd"
+     ]
+    }
+   },
+   "taper": {
+    "T1": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio / 보충 가능: 이미지에서 harc_measure로 bottom_cd, top_bottom_ratio 측정 시 판정 가능",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio"
+     ]
+    },
+    "T2": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio / 보충 가능: 이미지에서 harc_measure로 bottom_cd, top_bottom_ratio 측정 시 판정 가능",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio"
+     ]
+    },
+    "T3": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio / 보충 가능: 이미지에서 harc_measure로 bottom_cd, top_bottom_ratio 측정 시 판정 가능",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio"
+     ]
+    },
+    "T4": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio / 보충 가능: 이미지에서 harc_measure로 bottom_cd, top_bottom_ratio 측정 시 판정 가능",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio"
+     ]
+    }
+   },
+   "necking": {
+    "T1": {
+     "ok": true,
+     "uses": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "T2": {
+     "ok": true,
+     "uses": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "T3": {
+     "ok": true,
+     "uses": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "T4": {
+     "ok": true,
+     "uses": [
+      "neck_cd",
+      "top_cd"
+     ]
+    }
+   },
+   "undercut": {
+    "T1": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "T2": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "T3": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "T4": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    }
+   },
+   "sidewall_angle": {
+    "T1": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "T2": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "T3": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "T4": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    }
+   },
+   "etch_stop": {
+    "T1": {
+     "ok": false,
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "T2": {
+     "ok": false,
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "T3": {
+     "ok": false,
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "T4": {
+     "ok": false,
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능",
+     "missing": [
+      "etch_stop"
+     ]
+    }
+   },
+   "mask_erosion": {
+    "T1": {
+     "ok": true,
+     "uses": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "T2": {
+     "ok": true,
+     "uses": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "T3": {
+     "ok": true,
+     "uses": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "T4": {
+     "ok": true,
+     "uses": [
+      "mask_etch_rate_nm_min"
+     ]
+    }
+   },
+   "cd_deviation": {
+    "T1": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    },
+    "T2": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    },
+    "T3": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    },
+    "T4": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    }
+   },
+   "depth_loss": {
+    "T1": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "T2": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "T3": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "T4": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    }
+   }
+  },
+  "resolution": {
+   "px_nm": null,
+   "edge_uncertainty_px": 2,
+   "per_condition": {},
+   "note": "px 크기 정보 없음 → 이미지 기반 판별 한계 계산 불가"
+  },
+  "value_source_note": "이미지 측정값 — 해상도 한계 미만의 차이는 '변화 없음'으로 취급",
+  "gaps": [
+   {
+    "defect": "taper",
+    "condition": "T1",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "T2",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "T3",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "T4",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "T1",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "T2",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "T3",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "T4",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "T1",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "T2",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "T3",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "T4",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "T1",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "T2",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "T3",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "T4",
+    "missing": [
+     "etch_stop"
+    ]
+   }
+  ]
+ },
+ "rules": {
+  "bowing": {
+   "defect": "bowing",
+   "metric": "bow_index_pct",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 측벽이 곧음",
+   "metric_definition": "(최대CD/상단CD - 1) × 100 % (클수록 심함)",
+   "threshold_pct": 5.0,
+   "change_vs_first_basis": "첫 조건 대비 퍼센트포인트 차이. 3pp 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "T1",
+     "level": "척 온도 26 °C",
+     "top_cd": 165,
+     "max_cd": 190,
+     "max_cd_depth": null,
+     "bow_index_pct": 15.2,
+     "bowing": true,
+     "change_vs_first_pp": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "T2",
+     "level": "척 온도 -22 °C",
+     "top_cd": 161,
+     "max_cd": 180,
+     "max_cd_depth": null,
+     "bow_index_pct": 11.8,
+     "bowing": true,
+     "change_vs_first_pp": -3.4,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "T3",
+     "level": "척 온도 -48 °C",
+     "top_cd": 172,
+     "max_cd": 183,
+     "max_cd_depth": null,
+     "bow_index_pct": 6.4,
+     "bowing": true,
+     "change_vs_first_pp": -8.8,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "T4",
+     "level": "척 온도 -63 °C",
+     "top_cd": 182,
+     "max_cd": 192,
+     "max_cd_depth": null,
+     "bow_index_pct": 5.5,
+     "bowing": true,
+     "change_vs_first_pp": -9.7,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    }
+   ],
+   "trend_bow_index": "단조 감소",
+   "best_condition": "T4",
+   "best_value": 5.5,
+   "worst_condition": "T1",
+   "worst_value": 15.2,
+   "summary": "최악 T1(15.2), 최선 T4(5.5), 값이 작을수록 측벽이 곧음"
+  },
+  "taper": {
+   "defect": "taper",
+   "metric": "top_bottom_ratio",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "상단CD/하단CD (클수록 심함)",
+   "threshold_pct": 8.0,
+   "change_vs_first_basis": "첫 조건 대비 비율 변화. 8% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "T1",
+     "level": "척 온도 26 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio / 보충 가능: 이미지에서 harc_measure로 bottom_cd, top_bottom_ratio 측정 시 판정 가능"
+    },
+    {
+     "condition": "T2",
+     "level": "척 온도 -22 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio / 보충 가능: 이미지에서 harc_measure로 bottom_cd, top_bottom_ratio 측정 시 판정 가능"
+    },
+    {
+     "condition": "T3",
+     "level": "척 온도 -48 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio / 보충 가능: 이미지에서 harc_measure로 bottom_cd, top_bottom_ratio 측정 시 판정 가능"
+    },
+    {
+     "condition": "T4",
+     "level": "척 온도 -63 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio / 보충 가능: 이미지에서 harc_measure로 bottom_cd, top_bottom_ratio 측정 시 판정 가능"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 수직)",
+   "trend_ratio": "판단 불가(값 부족)"
+  },
+  "necking": {
+   "defect": "necking",
+   "metric": "neck_cd",
+   "direction": "lower_is_worse",
+   "direction_note": "값이 클수록 입구가 열려 있음",
+   "metric_definition": "넥 CD (작을수록 심함). top_cd 가 함께 있으면 넥CD/상단CD 비도 계산한다",
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 넥 CD 비율 변화. 3% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "T1",
+     "level": "척 온도 26 °C",
+     "neck_cd": 66.7,
+     "neck_ratio": 0.404,
+     "necking": true,
+     "neck_ratio_threshold": 0.95,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "T2",
+     "level": "척 온도 -22 °C",
+     "neck_cd": 64.9,
+     "neck_ratio": 0.403,
+     "necking": true,
+     "neck_ratio_threshold": 0.95,
+     "change_vs_first_pct": -2.7,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "T3",
+     "level": "척 온도 -48 °C",
+     "neck_cd": 87.4,
+     "neck_ratio": 0.508,
+     "necking": true,
+     "neck_ratio_threshold": 0.95,
+     "change_vs_first_pct": 31.0,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "T4",
+     "level": "척 온도 -63 °C",
+     "neck_cd": 95.9,
+     "neck_ratio": 0.527,
+     "necking": true,
+     "neck_ratio_threshold": 0.95,
+     "change_vs_first_pct": 43.8,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "T4",
+   "best_value": 95.9,
+   "worst_condition": "T2",
+   "worst_value": 64.9,
+   "summary": "최악 T2(64.9), 최선 T4(95.9), 값이 클수록 입구가 열려 있음",
+   "trend_neck_cd": "비단조(창 또는 역전 있음)"
+  },
+  "undercut": {
+   "defect": "undercut",
+   "metric": "undercut_nm",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 마스크 아래가 덜 파임",
+   "metric_definition": "(최대폭 − 개구폭)/2, 단위 nm (클수록 심함)",
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 언더컷 비율 변화. 3% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "T1",
+     "level": "척 온도 26 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "T2",
+     "level": "척 온도 -22 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "T3",
+     "level": "척 온도 -48 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "T4",
+     "level": "척 온도 -63 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 마스크 아래가 덜 파임)",
+   "trend_undercut": "판단 불가(값 부족)"
+  },
+  "sidewall_angle": {
+   "defect": "sidewall_angle",
+   "metric": "sidewall_angle_deg",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "수직으로부터의 이탈 각도, 단위 도 (클수록 심함)",
+   "threshold_deg": 0.5,
+   "change_vs_first_basis": "첫 조건 대비 각도 차(도). 0.5° 이내는 '변화 없음'. 각도는 0 에 가까울 수 있어 비율이 아니라 절대 차로 잰다",
+   "rows": [
+    {
+     "condition": "T1",
+     "level": "척 온도 26 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "T2",
+     "level": "척 온도 -22 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "T3",
+     "level": "척 온도 -48 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "T4",
+     "level": "척 온도 -63 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 수직)",
+   "trend_sidewall_angle": "판단 불가(값 부족)"
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "metric": "etch_stop",
+   "direction": "true_is_worse",
+   "direction_note": "중단(true)이면 나쁨",
+   "metric_definition": "불리언 — true 이면 중단",
+   "change_vs_first_basis": "첫 조건 대비 상태 변화 (정상→중단은 '악화')",
+   "rows": [
+    {
+     "condition": "T1",
+     "level": "척 온도 26 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능"
+    },
+    {
+     "condition": "T2",
+     "level": "척 온도 -22 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능"
+    },
+    {
+     "condition": "T3",
+     "level": "척 온도 -48 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능"
+    },
+    {
+     "condition": "T4",
+     "level": "척 온도 -63 °C",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능"
+    }
+   ],
+   "onset": null,
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (중단(true)이면 나쁨)"
+  },
+  "mask_erosion": {
+   "defect": "mask_erosion",
+   "metric": "mask_etch_rate_nm_min",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 마스크가 덜 깎임 (음수는 증착)",
+   "metric_definition": "마스크 식각률, 단위 nm/min (클수록 심함)",
+   "threshold_nm_min": 5,
+   "change_vs_first_basis": "첫 조건 대비 마스크 식각률의 절대 차. 5 nm/min 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "T1",
+     "level": "척 온도 26 °C",
+     "mask_etch_rate_nm_min": 56.2,
+     "selectivity": 1.6,
+     "change_vs_first_nm_min": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "T2",
+     "level": "척 온도 -22 °C",
+     "mask_etch_rate_nm_min": 60.4,
+     "selectivity": 1.8,
+     "change_vs_first_nm_min": 4.2,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "T3",
+     "level": "척 온도 -48 °C",
+     "mask_etch_rate_nm_min": 77.7,
+     "selectivity": 1.6,
+     "change_vs_first_nm_min": 21.5,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "T4",
+     "level": "척 온도 -63 °C",
+     "mask_etch_rate_nm_min": 92.0,
+     "selectivity": 2.2,
+     "change_vs_first_nm_min": 35.8,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "T1",
+   "best_value": 56.2,
+   "worst_condition": "T4",
+   "worst_value": 92.0,
+   "summary": "최악 T4(92.0), 최선 T1(56.2), 값이 작을수록 마스크가 덜 깎임 (음수는 증착)",
+   "trend_mask_etch_rate": "단조 증가"
+  },
+  "cd_deviation": {
+   "defect": "cd_deviation",
+   "metric": "cd_dev_abs_pct",
+   "direction": "higher_is_worse",
+   "direction_note": "0 에 가까울수록 설계 CD 에 맞음 (넓어짐·좁아짐 모두 나쁨)",
+   "metric_definition": "|측정CD/설계CD − 1| × 100 % (클수록 심함). 부호 있는 값은 cd_dev_pct",
+   "nominal_cd_nm": 200,
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 |편차| 의 차(%p). 3%p 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "T1",
+     "level": "척 온도 26 °C",
+     "cd_nm": 165,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": -17.5,
+     "cd_dev_abs_pct": 17.5,
+     "cd_dev_side": "좁아짐",
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "T2",
+     "level": "척 온도 -22 °C",
+     "cd_nm": 161,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": -19.5,
+     "cd_dev_abs_pct": 19.5,
+     "cd_dev_side": "좁아짐",
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "T3",
+     "level": "척 온도 -48 °C",
+     "cd_nm": 172,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": -14.0,
+     "cd_dev_abs_pct": 14.0,
+     "cd_dev_side": "좁아짐",
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "T4",
+     "level": "척 온도 -63 °C",
+     "cd_nm": 182,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": -9.0,
+     "cd_dev_abs_pct": 9.0,
+     "cd_dev_side": "좁아짐",
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "T4",
+   "best_value": 9.0,
+   "worst_condition": "T2",
+   "worst_value": 19.5,
+   "summary": "최악 T2(19.5), 최선 T4(9.0), 0 에 가까울수록 설계 CD 에 맞음 (넓어짐·좁아짐 모두 나쁨)",
+   "trend_cd_dev": "비단조(창 또는 역전 있음)"
+  },
+  "depth_loss": {
+   "defect": "depth_loss",
+   "metric": "etch_depth_um",
+   "direction": "lower_is_worse",
+   "direction_note": "값이 클수록 같은 시간에 깊이 파임",
+   "metric_definition": "식각 깊이, 단위 µm (작을수록 심함)",
+   "threshold_pct": 5.0,
+   "change_vs_first_basis": "첫 조건 대비 깊이 변화율. 5% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "T1",
+     "level": "척 온도 26 °C",
+     "etch_depth_um": 0.53,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "T2",
+     "level": "척 온도 -22 °C",
+     "etch_depth_um": 0.66,
+     "change_vs_first_pct": 24.5,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "T3",
+     "level": "척 온도 -48 °C",
+     "etch_depth_um": 0.75,
+     "change_vs_first_pct": 41.5,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "T4",
+     "level": "척 온도 -63 °C",
+     "etch_depth_um": 1.23,
+     "change_vs_first_pct": 132.1,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "T4",
+   "best_value": 1.23,
+   "worst_condition": "T1",
+   "worst_value": 0.53,
+   "summary": "최악 T1(0.53), 최선 T4(1.23), 값이 클수록 같은 시간에 깊이 파임",
+   "trend_depth": "단조 증가"
+  }
+ },
+ "single": {
+  "q1": {
+   "primary_issue": "저온 조건에서의 마스크 침식(Mask Erosion) 가속화",
+   "onset_condition": "척 온도가 -22 °C(T2)에서 -48 °C(T3)로 하강하는 구간",
+   "process_window": "보잉(Bowing) 억제 및 식각 깊이(Depth) 확보와 마스크 선택비(Selectivity) 유지 사이의 균형 구간",
+   "tradeoffs": [
+    "온도 하강 시 보잉(Bowing)이 감소하고 식각 깊이(Depth)가 증가하여 프로파일은 개선되나, 마스크 식각률(Mask Etch Rate)이 급격히 상승함"
+   ]
+  },
+  "q2": {
+   "hypotheses": [
+    {
+     "mechanism": "저온에 의한 측벽 폴리머 증착량 증가 (Enhanced Sidewall Passivation)",
+     "predicted_trend": "온도 하강 시 측벽 보호막이 두꺼워져 보잉(Bowing) 감소",
+     "observed_trend": "온도 하강 시 bow_index_pct가 15.2%에서 5.5%로 단조 감소",
+     "verdict": "Supported",
+     "citations": [
+      "you2025#20"
+     ]
+    },
+    {
+     "mechanism": "저온에서의 마스크 식각 반응성 및 스퍼터링 증가 (Increased Mask Erosion)",
+     "predicted_trend": "온도 하강 시 마스크 식각률(Mask Etch Rate) 증가",
+     "observed_trend": "온도 하강 시 mask_etch_rate_nm_min이 56.2에서 92.0으로 단조 증가",
+     "verdict": "Supported",
+     "citations": [
+      "osipov2022srep#16"
+     ]
+    },
+    {
+     "mechanism": "식각 효율 및 이온 직진성 개선 (Improved Etch Rate/Depth)",
+     "predicted_trend": "온도 하강 시 식각 깊이(Etch Depth) 증가",
+     "observed_trend": "온도 하강 시 etch_depth_um이 0.53에서 1.23으로 단조 증가",
+     "verdict": "Supported",
+     "citations": [
+      "you2025#19"
+     ]
+    }
+   ]
+  },
+  "q3": {
+   "variable": "척(Wafer) 온도",
+   "direction": "상승 (Increase)",
+   "suggested_levels": [
+    "-30 °C",
+    "-40 °C"
+   ],
+   "risk": "온도가 다시 상승할 경우 보잉(Bowing)이 증가하거나 식각 깊이(Depth)가 감소할 위험이 있음"
+  }
+ },
+ "rag_chunks": [
+  {
+   "chunk_id": "you2025#15",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "kwon2021mat#5",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "you2025#19",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "you2025#21",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "you2025#20",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "osipov2022srep#16",
+   "text": "(공개본에서 삭제)"
+  }
+ ],
+ "rag_warning": []
+}

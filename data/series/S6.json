@@ -1,0 +1,44 @@
+{
+ "series_id": "S6",
+ "source_set": "sung2022mat",
+ "_note": "모델 입력용. 논문 제목·저자·결론 없음. 정답은 answers/ 에만. 값의 출처가 셋이다 — (1) 본문 수치: I15 의 마스크 식각 없음(0), I25 선택비 3.6 에 대응하는 식각률, C150·C200 의 SiO2 식각률(~244, ~267), C200 의 마스크 식각률(~12), CD 변화율(I15 -66%, I20 -25%, I22 -8%, I25 +15%, C150 +31%, C200 +48%). (2) 그림 판독: extra.figure_read 에 적은 값 — Fig. 2 의 식각률 곡선과 Fig. 6k·6l 의 CD 변화 곡선에서 읽었다(식각률 ±5 nm/min, CD ±3 nm 정도의 판독 오차). (3) 계산: cd_nm = 마스크 홀 160 nm × (1 + 변화율). 식각 중단(etch_stop)은 본문의 '15–17.5 sccm 에서 1.4–2.0 µm 식각 후 ACL 마스크가 플루오로카본 층으로 막혔다' 에서 왔다. 두 장비의 스윕은 조건을 공유하지 않는다. SEM 은 원문 Fig. 6a–j (CC BY 4.0).",
+ "design": "ofat",
+ "structure": "SiO2 contact hole, ACL mask. Si 위 2.4 µm SiO2, ACL 1.4 µm, 마스크 홀 직경 160 nm",
+ "goal": "C6F6/Ar/O2 로 ACL 마스크 SiO2 HARC 식각. 목표는 홀 CD 를 마스크 개구(160 nm)에 가깝게 유지한 채 이방성으로 식각하고 마스크 선택비를 확보하는 것.",
+ "swept_variable": "O2 유량 — ICP 장비(15–25 sccm)와 CCP 장비(150–200 sccm)에서 각각",
+ "other_fixed": "가스 C6F6/Ar/O2. ICP: 소스 500 W, 바이어스 -1500 V, 6 mTorr, C6F6 20 · Ar 10 sccm. CCP: 60 MHz 상부 400 W, 2 MHz 하부 바이어스 -1700 V, 30 mTorr, C6F6 50 · Ar 150 sccm.",
+ "nominal_cd_nm": 160,
+ "target_depth_nm": 2400,
+ "px_nm": null,
+ "value_source": "paper+figure",
+ "extra": {
+  "value_note": "etch_rate_nm_min 은 SiO2 식각률, mask_etch_rate_nm_min 은 ACL 마스크 식각률(음수는 마스크 위 증착). cd_nm 은 원문의 'hole diameter CD'(측정 깊이는 원문에 없음) — 마스크 홀 160 nm 대비 변화율에서 계산.",
+  "figure_read": {
+   "etch_rate_nm_min": ["I15", "I17", "I20", "I22", "I25", "C160", "C170", "C180"],
+   "mask_etch_rate_nm_min": ["I17", "I20", "I22", "I25", "C150", "C160", "C170", "C180"],
+   "cd_nm": ["I17", "C160", "C170", "C180"]
+  }
+ },
+ "conditions": [
+  {"id": "I15", "level": "ICP · O2 15 sccm", "label": "ICP, C6F6/Ar/O2 20/10/15 sccm", "tool": "ICP", "o2_sccm": 15,
+   "etch_rate_nm_min": 225, "mask_etch_rate_nm_min": 0, "cd_nm": 54, "etch_stop": true, "image": "images/S6_I15.png"},
+  {"id": "I17", "level": "ICP · O2 17.5 sccm", "label": "ICP, C6F6/Ar/O2 20/10/17.5 sccm", "tool": "ICP", "o2_sccm": 17.5,
+   "etch_rate_nm_min": 335, "mask_etch_rate_nm_min": 60, "cd_nm": 93, "etch_stop": true, "image": "images/S6_I17.png"},
+  {"id": "I20", "level": "ICP · O2 20 sccm", "label": "ICP, C6F6/Ar/O2 20/10/20 sccm", "tool": "ICP", "o2_sccm": 20,
+   "etch_rate_nm_min": 390, "mask_etch_rate_nm_min": 62, "cd_nm": 120, "etch_stop": false, "image": "images/S6_I20.png"},
+  {"id": "I22", "level": "ICP · O2 22.5 sccm", "label": "ICP, C6F6/Ar/O2 20/10/22.5 sccm", "tool": "ICP", "o2_sccm": 22.5,
+   "etch_rate_nm_min": 400, "mask_etch_rate_nm_min": 63, "cd_nm": 147, "etch_stop": false, "image": "images/S6_I22.png"},
+  {"id": "I25", "level": "ICP · O2 25 sccm", "label": "ICP, C6F6/Ar/O2 20/10/25 sccm", "tool": "ICP", "o2_sccm": 25,
+   "etch_rate_nm_min": 400, "mask_etch_rate_nm_min": 110, "cd_nm": 184, "etch_stop": false, "image": "images/S6_I25.png"},
+  {"id": "C150", "level": "CCP · O2 150 sccm", "label": "CCP, C6F6/Ar/O2 50/150/150 sccm", "tool": "CCP", "o2_sccm": 150,
+   "etch_rate_nm_min": 244, "mask_etch_rate_nm_min": -270, "cd_nm": 210, "etch_stop": false, "image": "images/S6_C150.png"},
+  {"id": "C160", "level": "CCP · O2 160 sccm", "label": "CCP, C6F6/Ar/O2 50/150/160 sccm", "tool": "CCP", "o2_sccm": 160,
+   "etch_rate_nm_min": 248, "mask_etch_rate_nm_min": -140, "cd_nm": 212, "etch_stop": false, "image": "images/S6_C160.png"},
+  {"id": "C170", "level": "CCP · O2 170 sccm", "label": "CCP, C6F6/Ar/O2 50/150/170 sccm", "tool": "CCP", "o2_sccm": 170,
+   "etch_rate_nm_min": 252, "mask_etch_rate_nm_min": -55, "cd_nm": 212, "etch_stop": false, "image": "images/S6_C170.png"},
+  {"id": "C180", "level": "CCP · O2 180 sccm", "label": "CCP, C6F6/Ar/O2 50/150/180 sccm", "tool": "CCP", "o2_sccm": 180,
+   "etch_rate_nm_min": 253, "mask_etch_rate_nm_min": -20, "cd_nm": 238, "etch_stop": false, "image": "images/S6_C180.png"},
+  {"id": "C200", "level": "CCP · O2 200 sccm", "label": "CCP, C6F6/Ar/O2 50/150/200 sccm", "tool": "CCP", "o2_sccm": 200,
+   "etch_rate_nm_min": 267, "mask_etch_rate_nm_min": 12, "cd_nm": 237, "etch_stop": false, "image": "images/S6_C200.png"}
+ ]
+}

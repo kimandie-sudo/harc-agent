@@ -1,0 +1,1395 @@
+{
+ "run_id": "1001-061200-e77b",
+ "pipeline_version": "v2",
+ "series": "S5",
+ "provider": "google",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "single",
+ "rag": false,
+ "images": false,
+ "cause_hedge": true,
+ "chunk_chars": null,
+ "temperature": 0.7,
+ "rule_hints": true,
+ "retriever": "bm25",
+ "chunk_source": "rag",
+ "anonymize_chunks": false,
+ "check": {
+  "judgeable": {
+   "bowing": {
+    "D3": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "max_cd"
+     ]
+    },
+    "D5": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "max_cd"
+     ]
+    },
+    "D7": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "max_cd"
+     ]
+    },
+    "D9": {
+     "ok": false,
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd"
+     ]
+    },
+    "E20": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "max_cd"
+     ]
+    },
+    "E40": {
+     "ok": false,
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd"
+     ]
+    },
+    "E60": {
+     "ok": false,
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd"
+     ]
+    }
+   },
+   "taper": {
+    "D3": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "bottom_cd"
+     ]
+    },
+    "D5": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "bottom_cd"
+     ]
+    },
+    "D7": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "bottom_cd"
+     ]
+    },
+    "D9": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "bottom_cd"
+     ]
+    },
+    "E20": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "bottom_cd"
+     ]
+    },
+    "E40": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "bottom_cd"
+     ]
+    },
+    "E60": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "bottom_cd"
+     ]
+    }
+   },
+   "necking": {
+    "D3": {
+     "ok": true,
+     "uses": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "D5": {
+     "ok": false,
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd"
+     ]
+    },
+    "D7": {
+     "ok": false,
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd"
+     ]
+    },
+    "D9": {
+     "ok": false,
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd"
+     ]
+    },
+    "E20": {
+     "ok": false,
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd"
+     ]
+    },
+    "E40": {
+     "ok": false,
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd"
+     ]
+    },
+    "E60": {
+     "ok": false,
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd"
+     ]
+    }
+   },
+   "undercut": {
+    "D3": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "D5": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "D7": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "D9": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "E20": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "E40": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "E60": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    }
+   },
+   "sidewall_angle": {
+    "D3": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "D5": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "D7": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "D9": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E20": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E40": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E60": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    }
+   },
+   "etch_stop": {
+    "D3": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "D5": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "D7": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "D9": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E20": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E40": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E60": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    }
+   },
+   "mask_erosion": {
+    "D3": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "D5": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "D7": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "D9": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "E20": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "E40": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "E60": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    }
+   },
+   "cd_deviation": {
+    "D3": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    },
+    "D5": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    },
+    "D7": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    },
+    "D9": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    },
+    "E20": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    },
+    "E40": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    },
+    "E60": {
+     "ok": true,
+     "uses": [
+      "top_cd"
+     ]
+    }
+   },
+   "depth_loss": {
+    "D3": {
+     "ok": false,
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능",
+     "missing": [
+      "etch_depth_um"
+     ]
+    },
+    "D5": {
+     "ok": false,
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능",
+     "missing": [
+      "etch_depth_um"
+     ]
+    },
+    "D7": {
+     "ok": false,
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능",
+     "missing": [
+      "etch_depth_um"
+     ]
+    },
+    "D9": {
+     "ok": false,
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능",
+     "missing": [
+      "etch_depth_um"
+     ]
+    },
+    "E20": {
+     "ok": false,
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능",
+     "missing": [
+      "etch_depth_um"
+     ]
+    },
+    "E40": {
+     "ok": false,
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능",
+     "missing": [
+      "etch_depth_um"
+     ]
+    },
+    "E60": {
+     "ok": false,
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능",
+     "missing": [
+      "etch_depth_um"
+     ]
+    }
+   }
+  },
+  "resolution": {
+   "px_nm": null,
+   "edge_uncertainty_px": 2,
+   "per_condition": {},
+   "note": "px 크기 정보 없음 → 이미지 기반 판별 한계 계산 불가"
+  },
+  "value_source_note": "계측·논문 표기값 사용 — 해상도 한계는 값을 이미지에서 새로 잴 때만 적용",
+  "gaps": [
+   {
+    "defect": "bowing",
+    "condition": "D9",
+    "missing": [
+     "max_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E40",
+    "missing": [
+     "max_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E60",
+    "missing": [
+     "max_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "D5",
+    "missing": [
+     "neck_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "D7",
+    "missing": [
+     "neck_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "D9",
+    "missing": [
+     "neck_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E20",
+    "missing": [
+     "neck_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E40",
+    "missing": [
+     "neck_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E60",
+    "missing": [
+     "neck_cd"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "D3",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "D5",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "D7",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "D9",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "E20",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "E40",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "E60",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "D3",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "D5",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "D7",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "D9",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "E20",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "E40",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "E60",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "D3",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "D5",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "D7",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "D9",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "E20",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "E40",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "E60",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "depth_loss",
+    "condition": "D3",
+    "missing": [
+     "etch_depth_um"
+    ]
+   },
+   {
+    "defect": "depth_loss",
+    "condition": "D5",
+    "missing": [
+     "etch_depth_um"
+    ]
+   },
+   {
+    "defect": "depth_loss",
+    "condition": "D7",
+    "missing": [
+     "etch_depth_um"
+    ]
+   },
+   {
+    "defect": "depth_loss",
+    "condition": "D9",
+    "missing": [
+     "etch_depth_um"
+    ]
+   },
+   {
+    "defect": "depth_loss",
+    "condition": "E20",
+    "missing": [
+     "etch_depth_um"
+    ]
+   },
+   {
+    "defect": "depth_loss",
+    "condition": "E40",
+    "missing": [
+     "etch_depth_um"
+    ]
+   },
+   {
+    "defect": "depth_loss",
+    "condition": "E60",
+    "missing": [
+     "etch_depth_um"
+    ]
+   }
+  ]
+ },
+ "rules": {
+  "bowing": {
+   "defect": "bowing",
+   "metric": "bow_index_pct",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 측벽이 곧음",
+   "metric_definition": "(최대CD/상단CD - 1) × 100 % (클수록 심함)",
+   "threshold_pct": 5.0,
+   "change_vs_first_basis": "첫 조건 대비 퍼센트포인트 차이. 3pp 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "D3",
+     "level": "증착 3 s / 식각 30 s",
+     "top_cd": 197,
+     "max_cd": 236,
+     "max_cd_depth": null,
+     "bow_index_pct": 19.8,
+     "bowing": true,
+     "change_vs_first_pp": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "D5",
+     "level": "증착 5 s / 식각 30 s",
+     "top_cd": 197,
+     "max_cd": 207,
+     "max_cd_depth": null,
+     "bow_index_pct": 5.1,
+     "bowing": true,
+     "change_vs_first_pp": -14.7,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "D7",
+     "level": "증착 7 s / 식각 30 s",
+     "top_cd": 196,
+     "max_cd": 197,
+     "max_cd_depth": null,
+     "bow_index_pct": 0.5,
+     "bowing": false,
+     "change_vs_first_pp": -19.3,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "D9",
+     "level": "증착 9 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "E20",
+     "level": "증착 7 s / 식각 20 s",
+     "top_cd": 180,
+     "max_cd": 229,
+     "max_cd_depth": null,
+     "bow_index_pct": 27.2,
+     "bowing": true,
+     "change_vs_first_pp": 7.4,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E40",
+     "level": "증착 7 s / 식각 40 s",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "E60",
+     "level": "증착 7 s / 식각 60 s",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능"
+    }
+   ],
+   "best_condition": "D7",
+   "best_value": 0.5,
+   "worst_condition": "E20",
+   "worst_value": 27.2,
+   "summary": "최악 E20(27.2), 최선 D7(0.5), 값이 작을수록 측벽이 곧음"
+  },
+  "taper": {
+   "defect": "taper",
+   "metric": "top_bottom_ratio",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "상단CD/하단CD (클수록 심함)",
+   "threshold_pct": 8.0,
+   "change_vs_first_basis": "첫 조건 대비 비율 변화. 8% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "D3",
+     "level": "증착 3 s / 식각 30 s",
+     "top_bottom_ratio": 3.23,
+     "top_cd": 197,
+     "bottom_cd": 61,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "D5",
+     "level": "증착 5 s / 식각 30 s",
+     "top_bottom_ratio": 2.24,
+     "top_cd": 197,
+     "bottom_cd": 88,
+     "change_vs_first_pct": -30.7,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "D7",
+     "level": "증착 7 s / 식각 30 s",
+     "top_bottom_ratio": 1.28,
+     "top_cd": 196,
+     "bottom_cd": 153,
+     "change_vs_first_pct": -60.3,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "D9",
+     "level": "증착 9 s / 식각 30 s",
+     "top_bottom_ratio": 1.8,
+     "top_cd": 196,
+     "bottom_cd": 109,
+     "change_vs_first_pct": -44.3,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E20",
+     "level": "증착 7 s / 식각 20 s",
+     "top_bottom_ratio": 2.09,
+     "top_cd": 180,
+     "bottom_cd": 86,
+     "change_vs_first_pct": -35.2,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E40",
+     "level": "증착 7 s / 식각 40 s",
+     "top_bottom_ratio": 1.73,
+     "top_cd": 201,
+     "bottom_cd": 116,
+     "change_vs_first_pct": -46.3,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E60",
+     "level": "증착 7 s / 식각 60 s",
+     "top_bottom_ratio": 2.51,
+     "top_cd": 203,
+     "bottom_cd": 81,
+     "change_vs_first_pct": -22.4,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "D7",
+   "best_value": 1.28,
+   "worst_condition": "D3",
+   "worst_value": 3.23,
+   "summary": "최악 D3(3.23), 최선 D7(1.28), 값이 작을수록 수직"
+  },
+  "necking": {
+   "defect": "necking",
+   "metric": "neck_cd",
+   "direction": "lower_is_worse",
+   "direction_note": "값이 클수록 입구가 열려 있음",
+   "metric_definition": "넥 CD (작을수록 심함). top_cd 가 함께 있으면 넥CD/상단CD 비도 계산한다",
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 넥 CD 비율 변화. 3% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "D3",
+     "level": "증착 3 s / 식각 30 s",
+     "neck_cd": 182,
+     "neck_ratio": 0.924,
+     "necking": true,
+     "neck_ratio_threshold": 0.95,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "D5",
+     "level": "증착 5 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "D7",
+     "level": "증착 7 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "D9",
+     "level": "증착 9 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "E20",
+     "level": "증착 7 s / 식각 20 s",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "E40",
+     "level": "증착 7 s / 식각 40 s",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "E60",
+     "level": "증착 7 s / 식각 60 s",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd 측정 시 판정 가능"
+    }
+   ],
+   "best_condition": "D3",
+   "best_value": 182,
+   "worst_condition": "D3",
+   "worst_value": 182,
+   "summary": "최악 D3(182), 최선 D3(182), 값이 클수록 입구가 열려 있음"
+  },
+  "undercut": {
+   "defect": "undercut",
+   "metric": "undercut_nm",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 마스크 아래가 덜 파임",
+   "metric_definition": "(최대폭 − 개구폭)/2, 단위 nm (클수록 심함)",
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 언더컷 비율 변화. 3% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "D3",
+     "level": "증착 3 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "D5",
+     "level": "증착 5 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "D7",
+     "level": "증착 7 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "D9",
+     "level": "증착 9 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "E20",
+     "level": "증착 7 s / 식각 20 s",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "E40",
+     "level": "증착 7 s / 식각 40 s",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "E60",
+     "level": "증착 7 s / 식각 60 s",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 마스크 아래가 덜 파임)"
+  },
+  "sidewall_angle": {
+   "defect": "sidewall_angle",
+   "metric": "sidewall_angle_deg",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "수직으로부터의 이탈 각도, 단위 도 (클수록 심함)",
+   "threshold_deg": 0.5,
+   "change_vs_first_basis": "첫 조건 대비 각도 차(도). 0.5° 이내는 '변화 없음'. 각도는 0 에 가까울 수 있어 비율이 아니라 절대 차로 잰다",
+   "rows": [
+    {
+     "condition": "D3",
+     "level": "증착 3 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "D5",
+     "level": "증착 5 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "D7",
+     "level": "증착 7 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "D9",
+     "level": "증착 9 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "E20",
+     "level": "증착 7 s / 식각 20 s",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "E40",
+     "level": "증착 7 s / 식각 40 s",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "E60",
+     "level": "증착 7 s / 식각 60 s",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 수직)"
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "metric": "etch_stop",
+   "direction": "true_is_worse",
+   "direction_note": "중단(true)이면 나쁨",
+   "metric_definition": "불리언 — true 이면 중단",
+   "change_vs_first_basis": "첫 조건 대비 상태 변화 (정상→중단은 '악화')",
+   "rows": [
+    {
+     "condition": "D3",
+     "level": "증착 3 s / 식각 30 s",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "D5",
+     "level": "증착 5 s / 식각 30 s",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "D7",
+     "level": "증착 7 s / 식각 30 s",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "D9",
+     "level": "증착 9 s / 식각 30 s",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E20",
+     "level": "증착 7 s / 식각 20 s",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E40",
+     "level": "증착 7 s / 식각 40 s",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E60",
+     "level": "증착 7 s / 식각 60 s",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    }
+   ],
+   "onset": null,
+   "best_condition": "D3",
+   "best_value": false,
+   "worst_condition": "D3",
+   "worst_value": false,
+   "summary": "최악 D3(정상), 최선 D3(정상), 중단(true)이면 나쁨"
+  },
+  "mask_erosion": {
+   "defect": "mask_erosion",
+   "metric": "mask_etch_rate_nm_min",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 마스크가 덜 깎임 (음수는 증착)",
+   "metric_definition": "마스크 식각률, 단위 nm/min (클수록 심함)",
+   "threshold_nm_min": 5,
+   "change_vs_first_basis": "첫 조건 대비 마스크 식각률의 절대 차. 5 nm/min 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "D3",
+     "level": "증착 3 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "D5",
+     "level": "증착 5 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "D7",
+     "level": "증착 7 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "D9",
+     "level": "증착 9 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "E20",
+     "level": "증착 7 s / 식각 20 s",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "E40",
+     "level": "증착 7 s / 식각 40 s",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "E60",
+     "level": "증착 7 s / 식각 60 s",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 마스크가 덜 깎임 (음수는 증착))"
+  },
+  "cd_deviation": {
+   "defect": "cd_deviation",
+   "metric": "cd_dev_abs_pct",
+   "direction": "higher_is_worse",
+   "direction_note": "0 에 가까울수록 설계 CD 에 맞음 (넓어짐·좁아짐 모두 나쁨)",
+   "metric_definition": "|측정CD/설계CD − 1| × 100 % (클수록 심함). 부호 있는 값은 cd_dev_pct",
+   "nominal_cd_nm": 200,
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 |편차| 의 차(%p). 3%p 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "D3",
+     "level": "증착 3 s / 식각 30 s",
+     "cd_nm": 197,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": -1.5,
+     "cd_dev_abs_pct": 1.5,
+     "cd_dev_side": "좁아짐",
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "D5",
+     "level": "증착 5 s / 식각 30 s",
+     "cd_nm": 197,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": -1.5,
+     "cd_dev_abs_pct": 1.5,
+     "cd_dev_side": "좁아짐",
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "D7",
+     "level": "증착 7 s / 식각 30 s",
+     "cd_nm": 196,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": -2.0,
+     "cd_dev_abs_pct": 2.0,
+     "cd_dev_side": "좁아짐",
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "D9",
+     "level": "증착 9 s / 식각 30 s",
+     "cd_nm": 196,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": -2.0,
+     "cd_dev_abs_pct": 2.0,
+     "cd_dev_side": "좁아짐",
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E20",
+     "level": "증착 7 s / 식각 20 s",
+     "cd_nm": 180,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": -10.0,
+     "cd_dev_abs_pct": 10.0,
+     "cd_dev_side": "좁아짐",
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E40",
+     "level": "증착 7 s / 식각 40 s",
+     "cd_nm": 201,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": 0.5,
+     "cd_dev_abs_pct": 0.5,
+     "cd_dev_side": "넓어짐",
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E60",
+     "level": "증착 7 s / 식각 60 s",
+     "cd_nm": 203,
+     "nominal_cd_nm": 200,
+     "cd_dev_pct": 1.5,
+     "cd_dev_abs_pct": 1.5,
+     "cd_dev_side": "넓어짐",
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    }
+   ],
+   "best_condition": "E40",
+   "best_value": 0.5,
+   "worst_condition": "E20",
+   "worst_value": 10.0,
+   "summary": "최악 E20(10.0), 최선 E40(0.5), 0 에 가까울수록 설계 CD 에 맞음 (넓어짐·좁아짐 모두 나쁨)"
+  },
+  "depth_loss": {
+   "defect": "depth_loss",
+   "metric": "etch_depth_um",
+   "direction": "lower_is_worse",
+   "direction_note": "값이 클수록 같은 시간에 깊이 파임",
+   "metric_definition": "식각 깊이, 단위 µm (작을수록 심함)",
+   "threshold_pct": 5.0,
+   "change_vs_first_basis": "첫 조건 대비 깊이 변화율. 5% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "D3",
+     "level": "증착 3 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능"
+    },
+    {
+     "condition": "D5",
+     "level": "증착 5 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능"
+    },
+    {
+     "condition": "D7",
+     "level": "증착 7 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능"
+    },
+    {
+     "condition": "D9",
+     "level": "증착 9 s / 식각 30 s",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능"
+    },
+    {
+     "condition": "E20",
+     "level": "증착 7 s / 식각 20 s",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능"
+    },
+    {
+     "condition": "E40",
+     "level": "증착 7 s / 식각 40 s",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능"
+    },
+    {
+     "condition": "E60",
+     "level": "증착 7 s / 식각 60 s",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_depth_um / 보충 가능: 이미지에서 harc_measure로 etch_depth_um 측정 시 판정 가능"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 클수록 같은 시간에 깊이 파임)"
+  }
+ },
+ "single": {
+  "q1": {
+   "primary_issue": "심각한 bowing과 taper (D3 조건에서 bow index 19.8%, top-bottom ratio 3.23)",
+   "onset_condition": "D3 (증착 3 s / 식각 30 s)",
+   "process_window": "증착 7 s / 식각 30 s (D7 조건)",
+   "tradeoffs": [
+    "증착 시간이 너무 짧으면(3 s) 측벽 보호막이 부족해 bowing과 taper가 심해짐",
+    "식각 시간이 너무 짧으면(20 s) CD 좁아짐(cd_dev_abs_pct 10.0%)과 bowing(27.2%)이 악화됨"
+   ]
+  },
+  "q2": {
+   "hypotheses": [
+    {
+     "mechanism": "증착 단계 시간 부족으로 인한 측벽 보호막 형성 저하",
+     "predicted_trend": "증착 시간이 길어질수록 bowing과 taper가 완화될 것임",
+     "observed_trend": "증착 시간을 3 s에서 7 s로 늘릴 때 bow index가 19.8%에서 0.5%로 감소하고 top-bottom ratio가 3.23에서 1.28로 크게 개선됨",
+     "verdict": "지지",
+     "citations": []
+    },
+    {
+     "mechanism": "식각 단계 시간 단축에 따른 과도한 폴리머 축적 및 프로파일 변형",
+     "predicted_trend": "식각 단계 시간이 짧아지면 상단 CD 감소 및 CD 편차가 커질 것임",
+     "observed_trend": "식각 시간을 20 s로 줄였을 때(E20) cd_dev_abs_pct가 10.0%로 증가하고 bow index가 27.2%로 악화됨",
+     "verdict": "지지",
+     "citations": []
+    }
+   ]
+  },
+  "q3": {
+   "variable": "증착 단계 시간 및 식각 단계 시간 조합",
+   "direction": "유지 또는 미세 조정",
+   "suggested_levels": "증착 7 s / 식각 30 s (D7)",
+   "risk": "증착 시간이 과도하게 길어지면 에치 스탑이나 홀 막힘(necking) 위험이 발생할 수 있음"
+  }
+ },
+ "rag_chunks": [],
+ "rag_warning": []
+}

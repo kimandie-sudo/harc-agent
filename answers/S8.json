@@ -1,0 +1,142 @@
+{
+ "series_id": "S8",
+ "_note": "채점용 정답. 이 파일은 모델 프롬프트에 절대 넣지 말 것. data/series/S8.json 과 분리돼 있다.",
+ "source": {
+  "paper_id": "kwon2024nano",
+  "doi": "10.3390/nano14020209",
+  "read_from": "Abstract, 2. Materials and Methods (식 1–6), 3. Results and Discussion (그림 4·5·7·8·10, 표 1), 4. Conclusions",
+  "rubric_author": "저자 결론을 읽고 정리한 것 (2026-09-30, Claude 초안). 허용답·오답 경계는 판단이 섞여 있으니 검토 후 고칠 것. 특히 (1) 공정 창을 −63 °C 하나로 둔 것 — 저자 결론은 '낮을수록 좋다' 이고 가장 낮은 조건이 −63 °C 다. 다만 같은 조건의 15분 식각에서 트위스팅이 생겼다고 저자가 적었다, (2) −48 °C 를 허용으로 둔 것, (3) 주 결함 채점에서 mask_erosion·taper 를 어느 쪽에도 넣지 않은 것(무채점) — 둘 다 저온 쪽의 대가로 원문에 나오지만 저자가 문제로 삼은 것은 네킹이다, (4) onset_condition 을 네킹이 심한 두 조건 {26, −22 °C} 로 둔 것은 전문가 확인이 필요하다."
+ },
+ "conditions": {
+  "T1": "26 °C",
+  "T2": "-22 °C",
+  "T3": "-48 °C",
+  "T4": "-63 °C"
+ },
+ "authors_conclusion": "CF4/H2/Ar 플라즈마로 200 nm SiO2 트렌치를 척 온도 26 → −63 °C 에서 식각했다. 온도를 낮출수록 SiO2 식각률과 종횡비가 올랐다. OES 선 세기 비가 온도와 무관해 플라즈마 특성은 그대로였고, 차이는 식각 프로파일에서 왔다 — 저온에서 네킹비가 줄어(넥 CD 가 넓어져) 식각 전면에 닿는 중성종·이온 플럭스가 늘었다. 저온에서 점착 계수가 커져 점착이 큰 (수소)플루오로카본은 넥 부근에 붙고, 점착이 작은 CF3·H·F 가 식각 전면에 닿는다. 보잉비도 저온에서 줄어 이온이 더 방향성을 띤다. 마스크 식각률은 저온에서 올랐지만(웨이퍼 근처 불소 밀도 증가) 15분 식각의 선택비는 1.5 → 2.2 로 올랐다. 따라서 낮은 온도가 네킹을 줄여 더 빠른 식각과 더 높은 종횡비를 준다. 다만 −63 °C 의 긴 식각에서 바닥 트위스팅이 생겼고 프로파일 개선은 후속 과제다.",
+ "q1": {
+  "primary_issue": {
+   "correct": [
+    "necking"
+   ],
+   "acceptable": [
+    "bowing",
+    "depth_loss"
+   ],
+   "incorrect": [
+    "etch_stop",
+    "undercut",
+    "sidewall_angle",
+    "cd_deviation"
+   ],
+   "note": "논문 제목이 'Necking Reduction' 이고, 저자가 식각률·종횡비 개선을 네킹 감소로 설명한다. 보잉비도 함께 줄었고 (보잉은 네킹과 함께 진행된다고 저자가 씀), 식각률·깊이 부족이 서론의 문제 제기라 둘은 허용. mask_erosion 과 taper 는 저온 쪽의 대가로 원문에 나오지만 저자가 문제로 삼지 않아 무채점으로 둔다.",
+   "quote": "A reduction in the necking ratio affected the etch rate and aspect ratio of SiO2"
+  },
+  "onset_condition": {
+   "correct": [
+    "T1",
+    "T2"
+   ],
+   "acceptable": [
+    "T1",
+    "T2"
+   ],
+   "incorrect": [
+    "T3",
+    "T4"
+   ],
+   "note": "네킹비가 26 °C 와 −22 °C 에서 0.59 로 같고 −48 °C 부터 줄어든다. 네킹이 심한 두 조건이 정답, 하나만 지목하면 허용. 저온 두 조건을 결함이 시작되는 곳으로 지목하면 오답.",
+   "quote": "The necking CD tended to widen at lower temperatures. However, the necking ratio decreased.",
+   "judge": "conditions"
+  },
+  "process_window": {
+   "correct": [
+    "T4"
+   ],
+   "acceptable": [
+    "T3",
+    "T4"
+   ],
+   "incorrect": [
+    "T1",
+    "T2"
+   ],
+   "note": "저자 결론은 '낮은 온도가 더 빠른 식각과 더 높은 종횡비를 준다' 이고 가장 낮은 조건이 −63 °C 다. −48 °C 는 네킹·보잉이 이미 크게 줄어 허용. **이 시리즈의 함정은 마스크 침식이다** — 마스크 식각률은 −63 °C 에서 가장 높아(92 nm/min) 그것만 보면 상온을 고르게 되지만, SiO2 식각률이 더 크게 올라 선택비는 오히려 오른다(1.6 → 2.2).",
+   "quote": "Therefore, a lower temperature facilitated both a higher aspect ratio and higher etch rate of SiO2 by reducing necking",
+   "judge": "conditions"
+  }
+ },
+ "q2": {
+  "mechanism": {
+   "judge": "llm",
+   "reference": "OES 선 세기 비(H/F, C2/F, CF3/F, CF2/F)가 온도와 무관해 플라즈마 쪽 원인은 배제된다. 저온에서 (수소)플루오로카본의 점착 계수가 커져 넥 부근에 붙고(넥 표면이 저온에서 C 가 더 많다 — 원문 그림 9), 점착이 작은 CF3·H·F 가 식각 전면까지 간다. 네킹비가 줄어 식각 전면의 중성종·이온 플럭스가 늘고 식각률·종횡비가 오른다. 보잉비 감소는 이온이 더 방향성을 띤다는 뜻이다. 저온에서 웨이퍼 근처 불소 밀도가 올라 마스크 식각률이 오른다. 중성종 플럭스 증가로 저온 프로파일은 테이퍼진다.",
+   "must_contain_any": [
+    "점착",
+    "sticking",
+    "중성",
+    "neutral",
+    "넥",
+    "neck",
+    "네킹"
+   ],
+   "should_contain": [
+    "점착 계수",
+    "sticking coefficient",
+    "CF3",
+    "불소",
+    "fluorine",
+    "방향성",
+    "directional",
+    "플럭스",
+    "flux",
+    "OES"
+   ],
+   "incorrect_claims": [
+    "플라즈마 특성이 온도에 따라 바뀐 것이 원인",
+    "이온 에너지 증가가 원인",
+    "보잉이 주된 실패 양상"
+   ],
+   "note": "원문 본문은 'C 비율이 온도가 오를수록 늘었다' 고 쓰지만 그림 9 는 반대(26 °C 60%, −63 °C 73%)다. 기제 설명(저온에서 점착 증가)과 맞는 쪽은 그림이다.",
+   "quote": "the neutral species reaching the etch front of SiO2 had a low sticking coefficient"
+  }
+ },
+ "q3": {
+  "variable": {
+   "correct": [
+    "온도",
+    "temperature",
+    "척",
+    "chuck",
+    "저온",
+    "cryo",
+    "트위스팅",
+    "twist"
+   ],
+   "judge": "contains",
+   "note": "저자는 저온을 권하고 −63 °C 의 트위스팅 개선을 후속 과제로 남겼다. Q3 루브릭은 다른 시리즈와 같은 한계가 있다 — 오답 목록이 없어 틀릴 수 없다(초고 6 절)."
+  },
+  "direction": {
+   "correct": [
+    "-63",
+    "더 낮",
+    "낮추",
+    "낮춰",
+    "저온",
+    "lower temperature",
+    "cryo",
+    "트위스팅",
+    "twist"
+   ],
+   "incorrect": [
+    "온도를 올",
+    "온도를 높",
+    "상온으로",
+    "높은 온도",
+    "raise the temperature",
+    "increase the temperature",
+    "higher temperature"
+   ],
+   "note": "더 낮은 온도(−63 °C 또는 그 이하)로 가거나 저온 조건에서 트위스팅을 잡는 방향이 맞다. 마스크 침식을 이유로 온도를 올리라는 권고는 오답. 문자열 매칭이라 취약하다."
+  }
+ }
+}

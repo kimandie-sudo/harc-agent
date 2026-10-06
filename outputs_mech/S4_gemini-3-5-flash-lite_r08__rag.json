@@ -1,0 +1,1739 @@
+{
+ "run_id": "0926-140802-85cf",
+ "pipeline_version": "v2",
+ "series": "S4",
+ "provider": "google",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "single",
+ "rag": true,
+ "images": false,
+ "cause_hedge": true,
+ "chunk_chars": null,
+ "temperature": 0.0,
+ "rule_hints": true,
+ "retriever": "bm25",
+ "chunk_source": "rag",
+ "anonymize_chunks": true,
+ "check": {
+  "judgeable": {
+   "bowing": {
+    "E1": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E2": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E3": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E4": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E5": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E6": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E7": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E8": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E9": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E10": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E11": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E12": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E13": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "E14": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    }
+   },
+   "taper": {
+    "E1": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E2": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E3": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E4": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E5": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E6": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E7": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E8": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E9": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E10": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E11": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E12": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E13": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "E14": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    }
+   },
+   "necking": {
+    "E1": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E2": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E3": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E4": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E5": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E6": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E7": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E8": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E9": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E10": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E11": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E12": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E13": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "E14": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    }
+   },
+   "undercut": {
+    "E1": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E2": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E3": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E4": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E5": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E6": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E7": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E8": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E9": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E10": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E11": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E12": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E13": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    },
+    "E14": {
+     "ok": true,
+     "uses": [
+      "undercut_nm"
+     ]
+    }
+   },
+   "sidewall_angle": {
+    "E1": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E2": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E3": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E4": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E5": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E6": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E7": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E8": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E9": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E10": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E11": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E12": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E13": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "E14": {
+     "ok": true,
+     "uses": [
+      "sidewall_angle_deg"
+     ]
+    }
+   },
+   "etch_stop": {
+    "E1": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E2": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E3": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E4": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E5": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E6": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E7": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E8": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E9": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E10": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E11": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E12": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E13": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "E14": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    }
+   }
+  },
+  "resolution": {
+   "px_nm": null,
+   "edge_uncertainty_px": 2,
+   "per_condition": {},
+   "note": "px 크기 정보 없음 → 이미지 기반 판별 한계 계산 불가"
+  },
+  "value_source_note": "계측·논문 표기값 사용 — 해상도 한계는 값을 이미지에서 새로 잴 때만 적용",
+  "gaps": [
+   {
+    "defect": "bowing",
+    "condition": "E1",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E2",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E3",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E4",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E5",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E6",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E7",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E8",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E9",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E10",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E11",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E12",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E13",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "E14",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E1",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E2",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E3",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E4",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E5",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E6",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E7",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E8",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E9",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E10",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E11",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E12",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E13",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "E14",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E1",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E2",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E3",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E4",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E5",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E6",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E7",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E8",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E9",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E10",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E11",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E12",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E13",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "E14",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   }
+  ]
+ },
+ "rules": {
+  "bowing": {
+   "defect": "bowing",
+   "metric": "bow_index_pct",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 측벽이 곧음",
+   "metric_definition": "(최대CD/상단CD - 1) × 100 % (클수록 심함)",
+   "threshold_pct": 5.0,
+   "change_vs_first_basis": "첫 조건 대비 퍼센트포인트 차이. 3pp 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "E1",
+     "level": 1,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E2",
+     "level": 2,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E3",
+     "level": 3,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E4",
+     "level": 4,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E5",
+     "level": 5,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E6",
+     "level": 6,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E7",
+     "level": 7,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E8",
+     "level": 8,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E9",
+     "level": 9,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E10",
+     "level": 10,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E11",
+     "level": 11,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E12",
+     "level": 12,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E13",
+     "level": 13,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "E14",
+     "level": 14,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 측벽이 곧음)"
+  },
+  "taper": {
+   "defect": "taper",
+   "metric": "top_bottom_ratio",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "상단CD/하단CD (클수록 심함)",
+   "threshold_pct": 8.0,
+   "change_vs_first_basis": "첫 조건 대비 비율 변화. 8% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "E1",
+     "level": 1,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E2",
+     "level": 2,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E3",
+     "level": 3,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E4",
+     "level": 4,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E5",
+     "level": 5,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E6",
+     "level": 6,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E7",
+     "level": 7,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E8",
+     "level": 8,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E9",
+     "level": 9,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E10",
+     "level": 10,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E11",
+     "level": 11,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E12",
+     "level": 12,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E13",
+     "level": 13,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "E14",
+     "level": 14,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio, top_cd"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 수직)"
+  },
+  "necking": {
+   "defect": "necking",
+   "metric": "neck_cd",
+   "direction": "lower_is_worse",
+   "direction_note": "값이 클수록 입구가 열려 있음",
+   "metric_definition": "넥 CD (작을수록 심함). top_cd 가 함께 있으면 넥CD/상단CD 비도 계산한다",
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 넥 CD 비율 변화. 3% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "E1",
+     "level": 1,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E2",
+     "level": 2,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E3",
+     "level": 3,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E4",
+     "level": 4,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E5",
+     "level": 5,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E6",
+     "level": 6,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E7",
+     "level": 7,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E8",
+     "level": 8,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E9",
+     "level": 9,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E10",
+     "level": 10,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E11",
+     "level": 11,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E12",
+     "level": 12,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E13",
+     "level": 13,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "E14",
+     "level": 14,
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 클수록 입구가 열려 있음)"
+  },
+  "undercut": {
+   "defect": "undercut",
+   "metric": "undercut_nm",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 마스크 아래가 덜 파임",
+   "metric_definition": "(최대폭 − 개구폭)/2, 단위 nm (클수록 심함)",
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 언더컷 비율 변화. 3% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "E1",
+     "level": 1,
+     "undercut_nm": 256.7,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E2",
+     "level": 2,
+     "undercut_nm": 223.3,
+     "change_vs_first_pct": -13.0,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E3",
+     "level": 3,
+     "undercut_nm": 410.5,
+     "change_vs_first_pct": 59.9,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E4",
+     "level": 4,
+     "undercut_nm": 56.9,
+     "change_vs_first_pct": -77.8,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E5",
+     "level": 5,
+     "undercut_nm": 493.7,
+     "change_vs_first_pct": 92.3,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E6",
+     "level": 6,
+     "undercut_nm": 268.8,
+     "change_vs_first_pct": 4.7,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E7",
+     "level": 7,
+     "undercut_nm": 217.5,
+     "change_vs_first_pct": -15.3,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E8",
+     "level": 8,
+     "undercut_nm": 348.6,
+     "change_vs_first_pct": 35.8,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E9",
+     "level": 9,
+     "undercut_nm": 498.7,
+     "change_vs_first_pct": 94.3,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E10",
+     "level": 10,
+     "undercut_nm": 613.9,
+     "change_vs_first_pct": 139.2,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E11",
+     "level": 11,
+     "undercut_nm": 112.0,
+     "change_vs_first_pct": -56.4,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E12",
+     "level": 12,
+     "undercut_nm": 209.0,
+     "change_vs_first_pct": -18.6,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E13",
+     "level": 13,
+     "undercut_nm": 875.0,
+     "change_vs_first_pct": 240.9,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E14",
+     "level": 14,
+     "undercut_nm": 318.4,
+     "change_vs_first_pct": 24.0,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "E4",
+   "best_value": 56.9,
+   "worst_condition": "E13",
+   "worst_value": 875.0,
+   "summary": "최악 E13(875), 최선 E4(56.9), 값이 작을수록 마스크 아래가 덜 파임"
+  },
+  "sidewall_angle": {
+   "defect": "sidewall_angle",
+   "metric": "sidewall_angle_deg",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "수직으로부터의 이탈 각도, 단위 도 (클수록 심함)",
+   "threshold_deg": 0.5,
+   "change_vs_first_basis": "첫 조건 대비 각도 차(도). 0.5° 이내는 '변화 없음'. 각도는 0 에 가까울 수 있어 비율이 아니라 절대 차로 잰다",
+   "rows": [
+    {
+     "condition": "E1",
+     "level": 1,
+     "sidewall_angle_deg": 1.45,
+     "change_vs_first_deg": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E2",
+     "level": 2,
+     "sidewall_angle_deg": 2.81,
+     "change_vs_first_deg": 1.36,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E3",
+     "level": 3,
+     "sidewall_angle_deg": 3.4,
+     "change_vs_first_deg": 1.95,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E4",
+     "level": 4,
+     "sidewall_angle_deg": 3.27,
+     "change_vs_first_deg": 1.82,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E5",
+     "level": 5,
+     "sidewall_angle_deg": 1.45,
+     "change_vs_first_deg": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E6",
+     "level": 6,
+     "sidewall_angle_deg": 1.82,
+     "change_vs_first_deg": 0.37,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E7",
+     "level": 7,
+     "sidewall_angle_deg": 0.25,
+     "change_vs_first_deg": -1.2,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E8",
+     "level": 8,
+     "sidewall_angle_deg": 9.0,
+     "change_vs_first_deg": 7.55,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E9",
+     "level": 9,
+     "sidewall_angle_deg": 3.68,
+     "change_vs_first_deg": 2.23,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E10",
+     "level": 10,
+     "sidewall_angle_deg": 7.18,
+     "change_vs_first_deg": 5.73,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E11",
+     "level": 11,
+     "sidewall_angle_deg": 0.32,
+     "change_vs_first_deg": -1.13,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E12",
+     "level": 12,
+     "sidewall_angle_deg": 5.35,
+     "change_vs_first_deg": 3.9,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E13",
+     "level": 13,
+     "sidewall_angle_deg": 2.58,
+     "change_vs_first_deg": 1.13,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "E14",
+     "level": 14,
+     "sidewall_angle_deg": 2.3,
+     "change_vs_first_deg": 0.85,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "E7",
+   "best_value": 0.25,
+   "worst_condition": "E8",
+   "worst_value": 9.0,
+   "summary": "최악 E8(9.0), 최선 E7(0.25), 값이 작을수록 수직"
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "metric": "etch_stop",
+   "direction": "true_is_worse",
+   "direction_note": "중단(true)이면 나쁨",
+   "metric_definition": "불리언 — true 이면 중단",
+   "change_vs_first_basis": "첫 조건 대비 상태 변화 (정상→중단은 '악화')",
+   "rows": [
+    {
+     "condition": "E1",
+     "level": 1,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E2",
+     "level": 2,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E3",
+     "level": 3,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E4",
+     "level": 4,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E5",
+     "level": 5,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E6",
+     "level": 6,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E7",
+     "level": 7,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E8",
+     "level": 8,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E9",
+     "level": 9,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E10",
+     "level": 10,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E11",
+     "level": 11,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E12",
+     "level": 12,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E13",
+     "level": 13,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "E14",
+     "level": 14,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    }
+   ],
+   "onset": null,
+   "best_condition": "E1",
+   "best_value": false,
+   "worst_condition": "E1",
+   "worst_value": false,
+   "summary": "최악 E1(정상), 최선 E1(정상), 중단(true)이면 나쁨"
+  }
+ },
+ "chunk_alias": {
+  "D1": "kwon2021mat#5",
+  "D2": "you2025#19",
+  "D3": "you2025#20",
+  "D4": "kwon2024nano#2",
+  "D5": "kwon2024nano#13",
+  "D6": "park2025psst#18"
+ },
+ "single": {
+  "q1": {
+   "primary_issue": "측벽각(sidewall_angle) 및 언더컷(undercut) 불량",
+   "onset_condition": "E2",
+   "process_window": "E7 또는 E4 조건 (측벽각 및 언더컷 측면에서 상대적으로 수직성이 우수함)",
+   "tradeoffs": []
+  },
+  "q2": {
+   "hypotheses": [
+    {
+     "mechanism": "플라즈마 라디칼과 이온 플럭스 비율 조절에 따른 측벽 보호막(passivation) 형성 기제",
+     "predicted_trend": "보호막 형성 조건이 최적화되면 언더컷과 측벽각 이탈이 감소함",
+     "observed_trend": "E7 및 E4 조건에서 언더컷과 측벽각이 개선됨",
+     "verdict": "지지",
+     "citations": [
+      "D3"
+     ]
+    }
+   ]
+  },
+  "q3": {
+   "variable": "공정 가스 비율 또는 스텝 시간",
+   "direction": "증가",
+   "suggested_levels": [
+    "E7 수준 유지 또는 미세 조정"
+   ],
+   "risk": "과도한 보호막 형성으로 인한 식각 중단(etch_stop) 또는 CD 수축"
+  }
+ },
+ "rag_chunks": [
+  {
+   "chunk_id": "kwon2021mat#5",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "you2025#19",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "you2025#20",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "kwon2024nano#2",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "kwon2024nano#13",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "park2025psst#18",
+   "text": "(공개본에서 삭제)"
+  }
+ ],
+ "rag_warning": [],
+ "mech": {
+  "design": "v2",
+  "seed": 20260925,
+  "block": "S4_gemini-3-5-flash-lite_r08",
+  "arm": "rag",
+  "order": 1,
+  "series": "S4",
+  "rep": 8
+ }
+}

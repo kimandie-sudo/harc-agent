@@ -1,0 +1,150 @@
+{
+ "blocks": 80,
+ "dropped_incomplete": 0,
+ "runs": 400,
+ "movement_rate": {
+  "off2": 0.15,
+  "rag": 0.6375,
+  "placebo": 0.3875,
+  "planted": 0.475
+ },
+ "adoption_rate": {
+  "off": 0.0,
+  "off2": 0.0,
+  "rag": 0.0,
+  "placebo": 0.0,
+  "planted": 0.25
+ },
+ "primary": {
+  "P1": {
+   "diff": 0.25,
+   "p": 9.999000099990002e-05
+  },
+  "P2": {
+   "diff": 0.4875,
+   "p": 9.999000099990002e-05
+  },
+  "P3": {
+   "diff": 0.2375,
+   "p": 0.0013998600139986002
+  },
+  "alpha_each": 0.016666666666666666
+ },
+ "reading": {
+  "R": {
+   "diff": 0.2875,
+   "p": 9.999000099990002e-05,
+   "alpha": 0.05
+  },
+  "cited_last_rate": {
+   "rag": 0.15,
+   "planted": 0.4375
+  }
+ },
+ "verdict": "B",
+ "verdict_text": "길이가 움직인다 — 무관한 텍스트도 잡음보다 답을 더 움직인다 (P2·P3 크기 비교할 것)",
+ "secondary": {
+  "score_diff_vs_off": {
+   "S1": {
+    "rag": [
+     0.0,
+     13
+    ],
+    "placebo": [
+     0.0,
+     13
+    ],
+    "planted": [
+     0.0,
+     13
+    ],
+    "off2": [
+     0.0,
+     10
+    ]
+   },
+   "S2": {
+    "off2": [
+     0.0,
+     20
+    ],
+    "rag": [
+     0.45,
+     20
+    ],
+    "placebo": [
+     0.2,
+     20
+    ],
+    "planted": [
+     0.0,
+     10
+    ]
+   },
+   "S3": {
+    "off2": [
+     0.05,
+     20
+    ],
+    "rag": [
+     -0.3,
+     20
+    ],
+    "placebo": [
+     0.05,
+     20
+    ],
+    "planted": [
+     0.05,
+     20
+    ]
+   },
+   "S4": {
+    "off2": [
+     0.0,
+     19
+    ],
+    "rag": [
+     0.0,
+     20
+    ],
+    "placebo": [
+     0.0,
+     10
+    ],
+    "planted": [
+     0.0,
+     20
+    ]
+   }
+  },
+  "onset_movement_rate": {
+   "off2": 0.0875,
+   "rag": 0.35,
+   "placebo": 0.0875,
+   "planted": 0.35
+  },
+  "planted_adoption_by_series": {
+   "S1": 0.0,
+   "S2": 0.5,
+   "S3": 0.0,
+   "S4": 0.5
+  },
+  "intrusion_rate": {
+   "rag": 0.0,
+   "placebo": 0.0,
+   "planted": 0.0
+  },
+  "input_tokens_mean": {
+   "placebo": 10274.05,
+   "planted": 10330.25,
+   "rag": 10278.25
+  },
+  "input_tokens_ratio_vs_rag": {
+   "placebo": 0.9995913701262373,
+   "planted": 1.0050592270084888,
+   "rag": 1.0
+  },
+  "length_matched_within_5pct": true
+ }
+}

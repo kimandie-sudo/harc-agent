@@ -1,0 +1,127 @@
+{
+ "series_id": "S8",
+ "source_set": "kwon2024nano",
+ "_note": "모델 입력용. 논문 제목·저자·결론 없음. 정답은 answers/ 에만. 값의 출처: 원문 그림 5(SiO2 식각률·종횡비), 7(마스크 식각률·유효 마스크 두께), 8(네킹비·넥 CD), 10(보잉비)을 래스터 그래프에서 읽었다 — 마커 중심 픽셀을 축선의 픽셀 범위로 환산(400 dpi). x 좌표가 네 온도(26·−22·−48·−63 °C)와 ±0.2 °C 안에서 맞았다. 계산값: 식각 깊이 = 식각률 × 6 min, top_cd = 깊이/종횡비, max_cd = top_cd × (1 + 보잉비) — 원문 정의식 (1)·(3)·(6). 검증: (1400 − 유효 마스크 두께)/6 이 그래프의 마스크 식각률과 ±0.5 nm/min, top_cd × (1 − 네킹비) 가 그래프의 넥 CD 와 1~2.5 nm 안에서 맞는다. 넥은 마스크 안(경계 위 약 0.83 × 마스크 두께)에 있다. SEM(원문 그림 4)은 보기용이다 — 그림의 스케일바로 재면 그래프 값보다 약 20% 작게 나와 치수는 그래프를 따랐다. 원문 표 1(15분 식각, 26·−63 °C 두 조건)은 식각 시간이 달라 조건으로 넣지 않았다. CC BY 4.0.",
+ "design": "sweep",
+ "structure": "SiO2 트렌치, 설계 폭 200 nm. Si 위 SiO2 2400 nm, ACL 마스크 1400 nm",
+ "goal": "저온 RIE 로 200 nm SiO2 트렌치를 고종횡비 식각한다. 목표는 식각률과 종횡비를 높여 생산성을 올리는 것.",
+ "swept_variable": "척(웨이퍼) 온도 26 → −63 °C",
+ "other_fixed": "CF4/H2/Ar, Ar 200 · (CF4+H2) 200 sccm, H2/(CF4+H2) 35%, 25 mTorr, 13.56 MHz 600 W + 2 MHz 700 W (Vdc 약 −1000 V), 식각 6 min, 300 mm 저온 RIE",
+ "nominal_cd_nm": 200,
+ "target_depth_nm": 2400,
+ "px_nm": null,
+ "value_source": "figure",
+ "extra": {
+  "value_note": "top_cd 는 SiO2/마스크 경계 폭, neck_cd 는 최소 폭, max_cd 는 최대 폭(원문의 bowing CD). etch_depth_um 은 경계에서 SiO2 바닥까지. 하단 CD 는 원문에 없다.",
+  "figure_read": {
+   "etch_rate_nm_min": [
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+   ],
+   "aspect_ratio": [
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+   ],
+   "necking_ratio": [
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+   ],
+   "neck_cd": [
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+   ],
+   "bowing_ratio": [
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+   ],
+   "mask_etch_rate_nm_min": [
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+   ],
+   "effective_mask_nm": [
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+   ]
+  }
+ },
+ "conditions": [
+  {
+   "id": "T1",
+   "level": "척 온도 26 °C",
+   "chuck_temp_c": 26,
+   "top_cd": 165,
+   "neck_cd": 66.7,
+   "max_cd": 190,
+   "necking_ratio": 0.588,
+   "bowing_ratio": 0.15,
+   "aspect_ratio": 3.22,
+   "etch_depth_um": 0.53,
+   "etch_rate_nm_min": 88.6,
+   "mask_etch_rate_nm_min": 56.2,
+   "effective_mask_nm": 1061,
+   "image": "images/S8_T1.png"
+  },
+  {
+   "id": "T2",
+   "level": "척 온도 -22 °C",
+   "chuck_temp_c": -22,
+   "top_cd": 161,
+   "neck_cd": 64.9,
+   "max_cd": 180,
+   "necking_ratio": 0.588,
+   "bowing_ratio": 0.12,
+   "aspect_ratio": 4.09,
+   "etch_depth_um": 0.66,
+   "etch_rate_nm_min": 109.8,
+   "mask_etch_rate_nm_min": 60.4,
+   "effective_mask_nm": 1037,
+   "image": "images/S8_T2.png"
+  },
+  {
+   "id": "T3",
+   "level": "척 온도 -48 °C",
+   "chuck_temp_c": -48,
+   "top_cd": 172,
+   "neck_cd": 87.4,
+   "max_cd": 183,
+   "necking_ratio": 0.489,
+   "bowing_ratio": 0.059,
+   "aspect_ratio": 4.32,
+   "etch_depth_um": 0.75,
+   "etch_rate_nm_min": 124.2,
+   "mask_etch_rate_nm_min": 77.7,
+   "effective_mask_nm": 932,
+   "image": "images/S8_T3.png"
+  },
+  {
+   "id": "T4",
+   "level": "척 온도 -63 °C",
+   "chuck_temp_c": -63,
+   "top_cd": 182,
+   "neck_cd": 95.9,
+   "max_cd": 192,
+   "necking_ratio": 0.459,
+   "bowing_ratio": 0.055,
+   "aspect_ratio": 6.78,
+   "etch_depth_um": 1.23,
+   "etch_rate_nm_min": 205.5,
+   "mask_etch_rate_nm_min": 92.0,
+   "effective_mask_nm": 848,
+   "image": "images/S8_T4.png"
+  }
+ ]
+}

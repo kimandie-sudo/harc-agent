@@ -1,0 +1,533 @@
+{
+ "run_id": "0925-074419-cebb",
+ "pipeline_version": "v2",
+ "series": "S3",
+ "provider": "google",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "single",
+ "rag": true,
+ "images": false,
+ "cause_hedge": true,
+ "chunk_chars": null,
+ "temperature": 0.0,
+ "rule_hints": true,
+ "retriever": "embed",
+ "chunk_source": "rag",
+ "check": {
+  "judgeable": {
+   "bowing": {
+    "R": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "P90": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "P180": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    }
+   },
+   "taper": {
+    "R": {
+     "ok": false,
+     "reason": "값 없음: top_bottom_ratio, top_cd",
+     "missing": [
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "P90": {
+     "ok": false,
+     "reason": "값 없음: top_bottom_ratio, top_cd",
+     "missing": [
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    },
+    "P180": {
+     "ok": false,
+     "reason": "값 없음: top_bottom_ratio, top_cd",
+     "missing": [
+      "top_bottom_ratio",
+      "top_cd"
+     ]
+    }
+   },
+   "necking": {
+    "R": {
+     "ok": true,
+     "uses": [
+      "neck_cd"
+     ]
+    },
+    "P90": {
+     "ok": true,
+     "uses": [
+      "neck_cd"
+     ]
+    },
+    "P180": {
+     "ok": true,
+     "uses": [
+      "neck_cd"
+     ]
+    }
+   },
+   "undercut": {
+    "R": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "P90": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "P180": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    }
+   },
+   "sidewall_angle": {
+    "R": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "P90": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "P180": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    }
+   },
+   "etch_stop": {
+    "R": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "P90": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "P180": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    }
+   }
+  },
+  "resolution": {
+   "px_nm": null,
+   "edge_uncertainty_px": 2,
+   "per_condition": {},
+   "note": "px 크기 정보 없음 → 이미지 기반 판별 한계 계산 불가"
+  },
+  "value_source_note": "이미지 측정값 — 해상도 한계 미만의 차이는 '변화 없음'으로 취급",
+  "gaps": [
+   {
+    "defect": "bowing",
+    "condition": "R",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "P90",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "P180",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "R",
+    "missing": [
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "P90",
+    "missing": [
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "P180",
+    "missing": [
+     "top_bottom_ratio",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "R",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "P90",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "P180",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "R",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "P90",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "P180",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   }
+  ]
+ },
+ "rules": {
+  "bowing": {
+   "defect": "bowing",
+   "metric": "bow_index_pct",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 측벽이 곧음",
+   "metric_definition": "(최대CD/상단CD - 1) × 100 % (클수록 심함)",
+   "threshold_pct": 5.0,
+   "change_vs_first_basis": "첫 조건 대비 퍼센트포인트 차이. 3pp 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "R",
+     "level": "위상 비제어 (기준)",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "P90",
+     "level": 90,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "P180",
+     "level": 180,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    }
+   ],
+   "trend_bow_index": "판단 불가(값 부족)",
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 측벽이 곧음)"
+  },
+  "taper": {
+   "defect": "taper",
+   "metric": "top_bottom_ratio",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "상단CD/하단CD (클수록 심함)",
+   "threshold_pct": 8.0,
+   "change_vs_first_basis": "첫 조건 대비 비율 변화. 8% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "R",
+     "level": "위상 비제어 (기준)",
+     "status": "판정 불가",
+     "reason": "값 없음: top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "P90",
+     "level": 90,
+     "status": "판정 불가",
+     "reason": "값 없음: top_bottom_ratio, top_cd"
+    },
+    {
+     "condition": "P180",
+     "level": 180,
+     "status": "판정 불가",
+     "reason": "값 없음: top_bottom_ratio, top_cd"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 수직)",
+   "trend_ratio": "판단 불가(값 부족)"
+  },
+  "necking": {
+   "defect": "necking",
+   "metric": "neck_cd",
+   "direction": "lower_is_worse",
+   "direction_note": "값이 클수록 입구가 열려 있음",
+   "metric_definition": "넥 CD (작을수록 심함). top_cd 가 함께 있으면 넥CD/상단CD 비도 계산한다",
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 넥 CD 비율 변화. 3% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "R",
+     "level": "위상 비제어 (기준)",
+     "neck_cd": 100,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "P90",
+     "level": 90,
+     "neck_cd": 114,
+     "change_vs_first_pct": 14.0,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "P180",
+     "level": 180,
+     "neck_cd": 67,
+     "change_vs_first_pct": -33.0,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "P90",
+   "best_value": 114,
+   "worst_condition": "P180",
+   "worst_value": 67,
+   "summary": "최악 P180(67), 최선 P90(114), 값이 클수록 입구가 열려 있음",
+   "trend_neck_cd": "비단조(창 또는 역전 있음)"
+  },
+  "undercut": {
+   "defect": "undercut",
+   "metric": "undercut_nm",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 마스크 아래가 덜 파임",
+   "metric_definition": "(최대폭 − 개구폭)/2, 단위 nm (클수록 심함)",
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 언더컷 비율 변화. 3% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "R",
+     "level": "위상 비제어 (기준)",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    },
+    {
+     "condition": "P90",
+     "level": 90,
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    },
+    {
+     "condition": "P180",
+     "level": 180,
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 마스크 아래가 덜 파임)",
+   "trend_undercut": "판단 불가(값 부족)"
+  },
+  "sidewall_angle": {
+   "defect": "sidewall_angle",
+   "metric": "sidewall_angle_deg",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "수직으로부터의 이탈 각도, 단위 도 (클수록 심함)",
+   "threshold_deg": 0.5,
+   "change_vs_first_basis": "첫 조건 대비 각도 차(도). 0.5° 이내는 '변화 없음'. 각도는 0 에 가까울 수 있어 비율이 아니라 절대 차로 잰다",
+   "rows": [
+    {
+     "condition": "R",
+     "level": "위상 비제어 (기준)",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    },
+    {
+     "condition": "P90",
+     "level": 90,
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    },
+    {
+     "condition": "P180",
+     "level": 180,
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 수직)",
+   "trend_sidewall_angle": "판단 불가(값 부족)"
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "metric": "etch_stop",
+   "direction": "true_is_worse",
+   "direction_note": "중단(true)이면 나쁨",
+   "metric_definition": "불리언 — true 이면 중단",
+   "change_vs_first_basis": "첫 조건 대비 상태 변화 (정상→중단은 '악화')",
+   "rows": [
+    {
+     "condition": "R",
+     "level": "위상 비제어 (기준)",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "P90",
+     "level": 90,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "P180",
+     "level": 180,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    }
+   ],
+   "onset": null,
+   "best_condition": "R",
+   "best_value": false,
+   "worst_condition": "R",
+   "worst_value": false,
+   "summary": "최악 R(정상), 최선 R(정상), 중단(true)이면 나쁨"
+  }
+ },
+ "single": {
+  "q1": {
+   "primary_issue": "necking",
+   "onset_condition": "P180",
+   "process_window": "P90",
+   "tradeoffs": []
+  },
+  "q2": {
+   "hypotheses": [
+    {
+     "mechanism": "상·하부 전극 간 RF 위상차(Δphase) 조절에 따른 플라즈마 시스 및 이온 입사 에너지/각도 변화로 인한 입구 CD 변동",
+     "predicted_trend": "위상차 증가에 따른 단조로운 넥 CD 개선 또는 악화",
+     "observed_trend": "P90에서 neck_cd가 114로 개선되었으나, P180에서는 67로 악화되는 비단조(역전) 경향",
+     "verdict": "지지",
+     "citations": [
+      "park2026srep#9"
+     ]
+    }
+   ]
+  },
+  "q3": {
+   "variable": "상·하부 전극 간 RF 위상차 (Δphase)",
+   "direction": "유지 또는 미세 조정",
+   "suggested_levels": [
+    "P90"
+   ],
+   "risk": "위상차를 과도하게 증가시킬 경우(예: P180) 플라즈마 시스 불균일 및 이온 각도 분포 악화로 인해 넥ing(입구 좁아짐)이 심화될 수 있음"
+  }
+ },
+ "rag_chunks": [
+  {
+   "chunk_id": "park2026srep#0",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "seong2022nano#6",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "park2026srep#7",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "park2026srep#3",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "osipov2022srep#21",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "park2026srep#9",
+   "text": "(공개본에서 삭제)"
+  }
+ ],
+ "rag_warning": []
+}

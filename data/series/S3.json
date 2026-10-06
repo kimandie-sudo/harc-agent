@@ -1,0 +1,46 @@
+{
+  "series_id": "S3",
+  "source_set": "park2025psst",
+  "_note": "모델 입력용. 논문 제목·저자·결론 없음. 정답은 answers/ 에만. 원문이 조건별 절대 CD 를 본문에 싣지 않았다 — Figure 13 에만 있고 본문에는 기준 조건 대비 변화율만 제시된다(넥 CD +14%/-33%, 하단 CD +32%/-29%). 그래서 값은 기준 조건을 100 으로 둔 상대 지수다. 상단CD·최대CD 는 어디에도 수치가 없어 보잉·테이퍼는 판정 불가로 남는다 — 결측이 아니라 원문의 한계다.",
+  "structure": "SiO2/Si3N4 교대 적층(O/N mold) 딥 트렌치. PR / poly / O/N mold 3층. O/N 32층 식각.",
+  "goal": "O/N 32층 딥 트렌치의 HAR 식각. 목표는 상단에서 바닥까지 이방성으로 식각하는 것.",
+  "swept_variable": "상·하부 전극 간 RF 위상차 (Δphase)",
+  "other_fixed": "삼극형 CCP. 60 MHz 상부 2400 W + 하부 1200 W(합 3600 W), 400 kHz 하부 8000 W. 순환 식각 2단계 — Step#1 SiO2(C4F8 9% / C4F6 14% / Ar 54% / O2 23%, 220 sccm), Step#2 Si3N4(CH2F2 60% / Ar 28% / O2 12%, 420 sccm).",
+  "nominal_cd_nm": null,
+  "target_depth_nm": null,
+  "px_nm": null,
+  "value_source": "paper_relative",
+  "conditions": [
+    {
+      "id": "R",
+      "level": "위상 비제어 (기준)",
+      "label": "60 MHz 3600 W 를 하부 전극에만 인가 — 이극형 CCP 를 모사",
+      "neck_cd": 100,
+      "bottom_cd": 100,
+      "etch_stop": false
+    },
+    {
+      "id": "P90",
+      "level": 90,
+      "label": "Δphase 90° — 한 RF 주기 평균 400 kHz Vrms 가 최대",
+      "neck_cd": 114,
+      "bottom_cd": 132,
+      "etch_stop": false
+    },
+    {
+      "id": "P180",
+      "level": 180,
+      "label": "Δphase 180° — 한 RF 주기 평균 400 kHz Vrms 가 최소",
+      "neck_cd": 67,
+      "bottom_cd": 71,
+      "etch_stop": false
+    }
+  ],
+  "extra": {
+    "value_note": "neck_cd 는 PR 층의 넥 CD, bottom_cd 는 O/N mold 의 하단 CD. 둘 다 기준 조건 R 을 100 으로 둔 지수이며 절대 나노미터 값이 아니다. 조건 간 비교에만 쓸 것.",
+    "unavailable": {
+      "top_cd": "원문에 수치 없음 (Figure 13 이미지에만 존재)",
+      "max_cd": "원문에 수치 없음 — 보잉을 정량화하지 않은 논문이다"
+    }
+  }
+}

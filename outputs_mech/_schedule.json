@@ -1,0 +1,1073 @@
+{
+ "design": {
+  "design": "v2",
+  "seed": 20260925,
+  "series": [
+   "S1",
+   "S2",
+   "S3",
+   "S4"
+  ],
+  "models": [
+   "gemini-3.5-flash-lite",
+   "gemma-4-26b-a4b-it"
+  ],
+  "reps": 10,
+  "arms": [
+   "off",
+   "off2",
+   "rag",
+   "placebo",
+   "planted"
+  ],
+  "common": {
+   "mode": "single",
+   "retriever": "bm25",
+   "anonymize_chunks": true,
+   "temperature": 0.0,
+   "rule_hints": true
+  }
+ },
+ "blocks": [
+  {
+   "block": "S1_gemma-4-26b-a4b-it_r01",
+   "series": "S1",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 1,
+   "arms": [
+    "placebo",
+    "planted",
+    "off",
+    "off2",
+    "rag"
+   ]
+  },
+  {
+   "block": "S3_gemini-3-5-flash-lite_r01",
+   "series": "S3",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 1,
+   "arms": [
+    "off",
+    "placebo",
+    "planted",
+    "rag",
+    "off2"
+   ]
+  },
+  {
+   "block": "S4_gemini-3-5-flash-lite_r01",
+   "series": "S4",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 1,
+   "arms": [
+    "planted",
+    "off2",
+    "placebo",
+    "off",
+    "rag"
+   ]
+  },
+  {
+   "block": "S1_gemini-3-5-flash-lite_r01",
+   "series": "S1",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 1,
+   "arms": [
+    "rag",
+    "off2",
+    "placebo",
+    "planted",
+    "off"
+   ]
+  },
+  {
+   "block": "S2_gemini-3-5-flash-lite_r01",
+   "series": "S2",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 1,
+   "arms": [
+    "rag",
+    "off2",
+    "planted",
+    "off",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S4_gemma-4-26b-a4b-it_r01",
+   "series": "S4",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 1,
+   "arms": [
+    "rag",
+    "placebo",
+    "off",
+    "off2",
+    "planted"
+   ]
+  },
+  {
+   "block": "S2_gemma-4-26b-a4b-it_r01",
+   "series": "S2",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 1,
+   "arms": [
+    "off",
+    "planted",
+    "rag",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S3_gemma-4-26b-a4b-it_r01",
+   "series": "S3",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 1,
+   "arms": [
+    "off",
+    "off2",
+    "rag",
+    "planted",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S4_gemma-4-26b-a4b-it_r02",
+   "series": "S4",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 2,
+   "arms": [
+    "rag",
+    "off2",
+    "placebo",
+    "off",
+    "planted"
+   ]
+  },
+  {
+   "block": "S1_gemma-4-26b-a4b-it_r02",
+   "series": "S1",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 2,
+   "arms": [
+    "planted",
+    "off",
+    "off2",
+    "placebo",
+    "rag"
+   ]
+  },
+  {
+   "block": "S1_gemini-3-5-flash-lite_r02",
+   "series": "S1",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 2,
+   "arms": [
+    "off",
+    "rag",
+    "planted",
+    "placebo",
+    "off2"
+   ]
+  },
+  {
+   "block": "S3_gemma-4-26b-a4b-it_r02",
+   "series": "S3",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 2,
+   "arms": [
+    "placebo",
+    "off",
+    "planted",
+    "rag",
+    "off2"
+   ]
+  },
+  {
+   "block": "S2_gemma-4-26b-a4b-it_r02",
+   "series": "S2",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 2,
+   "arms": [
+    "off",
+    "rag",
+    "placebo",
+    "planted",
+    "off2"
+   ]
+  },
+  {
+   "block": "S2_gemini-3-5-flash-lite_r02",
+   "series": "S2",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 2,
+   "arms": [
+    "rag",
+    "off",
+    "placebo",
+    "off2",
+    "planted"
+   ]
+  },
+  {
+   "block": "S4_gemini-3-5-flash-lite_r02",
+   "series": "S4",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 2,
+   "arms": [
+    "off2",
+    "placebo",
+    "rag",
+    "planted",
+    "off"
+   ]
+  },
+  {
+   "block": "S3_gemini-3-5-flash-lite_r02",
+   "series": "S3",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 2,
+   "arms": [
+    "placebo",
+    "off2",
+    "rag",
+    "off",
+    "planted"
+   ]
+  },
+  {
+   "block": "S2_gemma-4-26b-a4b-it_r03",
+   "series": "S2",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 3,
+   "arms": [
+    "planted",
+    "rag",
+    "placebo",
+    "off",
+    "off2"
+   ]
+  },
+  {
+   "block": "S3_gemma-4-26b-a4b-it_r03",
+   "series": "S3",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 3,
+   "arms": [
+    "rag",
+    "off",
+    "planted",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S1_gemini-3-5-flash-lite_r03",
+   "series": "S1",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 3,
+   "arms": [
+    "placebo",
+    "off2",
+    "planted",
+    "rag",
+    "off"
+   ]
+  },
+  {
+   "block": "S1_gemma-4-26b-a4b-it_r03",
+   "series": "S1",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 3,
+   "arms": [
+    "off2",
+    "placebo",
+    "planted",
+    "rag",
+    "off"
+   ]
+  },
+  {
+   "block": "S2_gemini-3-5-flash-lite_r03",
+   "series": "S2",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 3,
+   "arms": [
+    "planted",
+    "placebo",
+    "rag",
+    "off",
+    "off2"
+   ]
+  },
+  {
+   "block": "S4_gemma-4-26b-a4b-it_r03",
+   "series": "S4",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 3,
+   "arms": [
+    "planted",
+    "placebo",
+    "off",
+    "rag",
+    "off2"
+   ]
+  },
+  {
+   "block": "S4_gemini-3-5-flash-lite_r03",
+   "series": "S4",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 3,
+   "arms": [
+    "rag",
+    "planted",
+    "placebo",
+    "off",
+    "off2"
+   ]
+  },
+  {
+   "block": "S3_gemini-3-5-flash-lite_r03",
+   "series": "S3",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 3,
+   "arms": [
+    "rag",
+    "planted",
+    "off2",
+    "off",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S3_gemma-4-26b-a4b-it_r04",
+   "series": "S3",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 4,
+   "arms": [
+    "off2",
+    "planted",
+    "off",
+    "rag",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S4_gemini-3-5-flash-lite_r04",
+   "series": "S4",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 4,
+   "arms": [
+    "rag",
+    "off",
+    "planted",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S3_gemini-3-5-flash-lite_r04",
+   "series": "S3",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 4,
+   "arms": [
+    "rag",
+    "planted",
+    "off",
+    "placebo",
+    "off2"
+   ]
+  },
+  {
+   "block": "S4_gemma-4-26b-a4b-it_r04",
+   "series": "S4",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 4,
+   "arms": [
+    "off",
+    "off2",
+    "planted",
+    "rag",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S2_gemini-3-5-flash-lite_r04",
+   "series": "S2",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 4,
+   "arms": [
+    "off2",
+    "placebo",
+    "off",
+    "planted",
+    "rag"
+   ]
+  },
+  {
+   "block": "S1_gemini-3-5-flash-lite_r04",
+   "series": "S1",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 4,
+   "arms": [
+    "placebo",
+    "off2",
+    "rag",
+    "off",
+    "planted"
+   ]
+  },
+  {
+   "block": "S1_gemma-4-26b-a4b-it_r04",
+   "series": "S1",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 4,
+   "arms": [
+    "placebo",
+    "off2",
+    "rag",
+    "planted",
+    "off"
+   ]
+  },
+  {
+   "block": "S2_gemma-4-26b-a4b-it_r04",
+   "series": "S2",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 4,
+   "arms": [
+    "off",
+    "planted",
+    "off2",
+    "rag",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S2_gemini-3-5-flash-lite_r05",
+   "series": "S2",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 5,
+   "arms": [
+    "off",
+    "placebo",
+    "planted",
+    "off2",
+    "rag"
+   ]
+  },
+  {
+   "block": "S4_gemma-4-26b-a4b-it_r05",
+   "series": "S4",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 5,
+   "arms": [
+    "planted",
+    "off2",
+    "rag",
+    "off",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S3_gemma-4-26b-a4b-it_r05",
+   "series": "S3",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 5,
+   "arms": [
+    "off2",
+    "placebo",
+    "planted",
+    "rag",
+    "off"
+   ]
+  },
+  {
+   "block": "S1_gemma-4-26b-a4b-it_r05",
+   "series": "S1",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 5,
+   "arms": [
+    "placebo",
+    "off2",
+    "rag",
+    "off",
+    "planted"
+   ]
+  },
+  {
+   "block": "S2_gemma-4-26b-a4b-it_r05",
+   "series": "S2",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 5,
+   "arms": [
+    "placebo",
+    "off2",
+    "rag",
+    "planted",
+    "off"
+   ]
+  },
+  {
+   "block": "S4_gemini-3-5-flash-lite_r05",
+   "series": "S4",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 5,
+   "arms": [
+    "off2",
+    "placebo",
+    "planted",
+    "off",
+    "rag"
+   ]
+  },
+  {
+   "block": "S1_gemini-3-5-flash-lite_r05",
+   "series": "S1",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 5,
+   "arms": [
+    "off",
+    "rag",
+    "placebo",
+    "planted",
+    "off2"
+   ]
+  },
+  {
+   "block": "S3_gemini-3-5-flash-lite_r05",
+   "series": "S3",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 5,
+   "arms": [
+    "off2",
+    "planted",
+    "rag",
+    "off",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S1_gemini-3-5-flash-lite_r06",
+   "series": "S1",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 6,
+   "arms": [
+    "off",
+    "off2",
+    "planted",
+    "placebo",
+    "rag"
+   ]
+  },
+  {
+   "block": "S1_gemma-4-26b-a4b-it_r06",
+   "series": "S1",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 6,
+   "arms": [
+    "off2",
+    "placebo",
+    "planted",
+    "off",
+    "rag"
+   ]
+  },
+  {
+   "block": "S3_gemma-4-26b-a4b-it_r06",
+   "series": "S3",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 6,
+   "arms": [
+    "rag",
+    "placebo",
+    "off2",
+    "planted",
+    "off"
+   ]
+  },
+  {
+   "block": "S3_gemini-3-5-flash-lite_r06",
+   "series": "S3",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 6,
+   "arms": [
+    "rag",
+    "off2",
+    "off",
+    "planted",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S2_gemini-3-5-flash-lite_r06",
+   "series": "S2",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 6,
+   "arms": [
+    "placebo",
+    "off",
+    "planted",
+    "rag",
+    "off2"
+   ]
+  },
+  {
+   "block": "S2_gemma-4-26b-a4b-it_r06",
+   "series": "S2",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 6,
+   "arms": [
+    "off2",
+    "rag",
+    "placebo",
+    "planted",
+    "off"
+   ]
+  },
+  {
+   "block": "S4_gemini-3-5-flash-lite_r06",
+   "series": "S4",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 6,
+   "arms": [
+    "off",
+    "planted",
+    "rag",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S4_gemma-4-26b-a4b-it_r06",
+   "series": "S4",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 6,
+   "arms": [
+    "planted",
+    "rag",
+    "placebo",
+    "off",
+    "off2"
+   ]
+  },
+  {
+   "block": "S2_gemini-3-5-flash-lite_r07",
+   "series": "S2",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 7,
+   "arms": [
+    "off",
+    "rag",
+    "planted",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S1_gemma-4-26b-a4b-it_r07",
+   "series": "S1",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 7,
+   "arms": [
+    "placebo",
+    "planted",
+    "rag",
+    "off2",
+    "off"
+   ]
+  },
+  {
+   "block": "S3_gemma-4-26b-a4b-it_r07",
+   "series": "S3",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 7,
+   "arms": [
+    "rag",
+    "planted",
+    "off",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S1_gemini-3-5-flash-lite_r07",
+   "series": "S1",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 7,
+   "arms": [
+    "off",
+    "planted",
+    "rag",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S3_gemini-3-5-flash-lite_r07",
+   "series": "S3",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 7,
+   "arms": [
+    "off",
+    "rag",
+    "placebo",
+    "planted",
+    "off2"
+   ]
+  },
+  {
+   "block": "S4_gemma-4-26b-a4b-it_r07",
+   "series": "S4",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 7,
+   "arms": [
+    "rag",
+    "off",
+    "off2",
+    "planted",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S2_gemma-4-26b-a4b-it_r07",
+   "series": "S2",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 7,
+   "arms": [
+    "placebo",
+    "off",
+    "rag",
+    "planted",
+    "off2"
+   ]
+  },
+  {
+   "block": "S4_gemini-3-5-flash-lite_r07",
+   "series": "S4",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 7,
+   "arms": [
+    "off2",
+    "placebo",
+    "planted",
+    "off",
+    "rag"
+   ]
+  },
+  {
+   "block": "S2_gemma-4-26b-a4b-it_r08",
+   "series": "S2",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 8,
+   "arms": [
+    "placebo",
+    "planted",
+    "rag",
+    "off2",
+    "off"
+   ]
+  },
+  {
+   "block": "S4_gemini-3-5-flash-lite_r08",
+   "series": "S4",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 8,
+   "arms": [
+    "planted",
+    "rag",
+    "off",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S1_gemma-4-26b-a4b-it_r08",
+   "series": "S1",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 8,
+   "arms": [
+    "rag",
+    "off2",
+    "placebo",
+    "planted",
+    "off"
+   ]
+  },
+  {
+   "block": "S4_gemma-4-26b-a4b-it_r08",
+   "series": "S4",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 8,
+   "arms": [
+    "off",
+    "rag",
+    "off2",
+    "planted",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S3_gemma-4-26b-a4b-it_r08",
+   "series": "S3",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 8,
+   "arms": [
+    "rag",
+    "placebo",
+    "planted",
+    "off",
+    "off2"
+   ]
+  },
+  {
+   "block": "S2_gemini-3-5-flash-lite_r08",
+   "series": "S2",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 8,
+   "arms": [
+    "off2",
+    "rag",
+    "off",
+    "planted",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S3_gemini-3-5-flash-lite_r08",
+   "series": "S3",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 8,
+   "arms": [
+    "rag",
+    "off",
+    "off2",
+    "placebo",
+    "planted"
+   ]
+  },
+  {
+   "block": "S1_gemini-3-5-flash-lite_r08",
+   "series": "S1",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 8,
+   "arms": [
+    "planted",
+    "off2",
+    "off",
+    "placebo",
+    "rag"
+   ]
+  },
+  {
+   "block": "S1_gemma-4-26b-a4b-it_r09",
+   "series": "S1",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 9,
+   "arms": [
+    "rag",
+    "planted",
+    "off",
+    "placebo",
+    "off2"
+   ]
+  },
+  {
+   "block": "S2_gemini-3-5-flash-lite_r09",
+   "series": "S2",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 9,
+   "arms": [
+    "rag",
+    "off",
+    "planted",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S1_gemini-3-5-flash-lite_r09",
+   "series": "S1",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 9,
+   "arms": [
+    "rag",
+    "planted",
+    "placebo",
+    "off2",
+    "off"
+   ]
+  },
+  {
+   "block": "S4_gemma-4-26b-a4b-it_r09",
+   "series": "S4",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 9,
+   "arms": [
+    "off2",
+    "off",
+    "rag",
+    "planted",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S3_gemma-4-26b-a4b-it_r09",
+   "series": "S3",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 9,
+   "arms": [
+    "off",
+    "planted",
+    "off2",
+    "placebo",
+    "rag"
+   ]
+  },
+  {
+   "block": "S3_gemini-3-5-flash-lite_r09",
+   "series": "S3",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 9,
+   "arms": [
+    "rag",
+    "off2",
+    "planted",
+    "off",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S2_gemma-4-26b-a4b-it_r09",
+   "series": "S2",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 9,
+   "arms": [
+    "off",
+    "rag",
+    "placebo",
+    "planted",
+    "off2"
+   ]
+  },
+  {
+   "block": "S4_gemini-3-5-flash-lite_r09",
+   "series": "S4",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 9,
+   "arms": [
+    "rag",
+    "placebo",
+    "off",
+    "planted",
+    "off2"
+   ]
+  },
+  {
+   "block": "S1_gemma-4-26b-a4b-it_r10",
+   "series": "S1",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 10,
+   "arms": [
+    "off2",
+    "planted",
+    "off",
+    "rag",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S4_gemini-3-5-flash-lite_r10",
+   "series": "S4",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 10,
+   "arms": [
+    "rag",
+    "off",
+    "planted",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S3_gemini-3-5-flash-lite_r10",
+   "series": "S3",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 10,
+   "arms": [
+    "off2",
+    "planted",
+    "placebo",
+    "rag",
+    "off"
+   ]
+  },
+  {
+   "block": "S4_gemma-4-26b-a4b-it_r10",
+   "series": "S4",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 10,
+   "arms": [
+    "off",
+    "off2",
+    "placebo",
+    "rag",
+    "planted"
+   ]
+  },
+  {
+   "block": "S2_gemini-3-5-flash-lite_r10",
+   "series": "S2",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 10,
+   "arms": [
+    "planted",
+    "rag",
+    "off",
+    "off2",
+    "placebo"
+   ]
+  },
+  {
+   "block": "S3_gemma-4-26b-a4b-it_r10",
+   "series": "S3",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 10,
+   "arms": [
+    "placebo",
+    "planted",
+    "off",
+    "off2",
+    "rag"
+   ]
+  },
+  {
+   "block": "S1_gemini-3-5-flash-lite_r10",
+   "series": "S1",
+   "model": "gemini-3.5-flash-lite",
+   "rep": 10,
+   "arms": [
+    "rag",
+    "planted",
+    "off2",
+    "placebo",
+    "off"
+   ]
+  },
+  {
+   "block": "S2_gemma-4-26b-a4b-it_r10",
+   "series": "S2",
+   "model": "gemma-4-26b-a4b-it",
+   "rep": 10,
+   "arms": [
+    "off2",
+    "placebo",
+    "rag",
+    "off",
+    "planted"
+   ]
+  }
+ ]
+}

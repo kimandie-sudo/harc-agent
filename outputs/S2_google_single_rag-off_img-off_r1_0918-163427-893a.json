@@ -1,0 +1,317 @@
+{
+ "run_id": "0918-163427-893a",
+ "series": "S2",
+ "provider": "google",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "single",
+ "rag": false,
+ "images": false,
+ "check": {
+  "judgeable": {
+   "bowing": {
+    "L1": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L2": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L3": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L4": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    }
+   },
+   "taper_narrowing": {
+    "L1": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L2": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L3": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L4": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    }
+   },
+   "etch_stop": {
+    "L1": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L2": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L3": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L4": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    }
+   }
+  },
+  "resolution": {
+   "px_nm": 6.061,
+   "edge_uncertainty_px": 2,
+   "per_condition": {
+    "L1": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L2": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L3": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L4": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    }
+   }
+  },
+  "value_source_note": "계측·논문 표기값 사용 — 해상도 한계는 값을 이미지에서 새로 잴 때만 적용",
+  "gaps": [
+   {
+    "defect": "bowing",
+    "condition": "L1",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L2",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L3",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L4",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   }
+  ]
+ },
+ "rules": {
+  "bowing": {
+   "defect": "bowing",
+   "threshold_pct": 5.0,
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    }
+   ],
+   "trend_bow_index": "판단 불가(값 부족)"
+  },
+  "taper_narrowing": {
+   "defect": "taper_narrowing",
+   "threshold_pct": 8.0,
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "top_bottom_ratio": 4.0,
+     "change_vs_first_pct": 0.0,
+     "significant_vs_first": false
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "top_bottom_ratio": 2.9,
+     "change_vs_first_pct": -27.5,
+     "significant_vs_first": true
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "top_bottom_ratio": 3.0,
+     "change_vs_first_pct": -25.0,
+     "significant_vs_first": true
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "top_bottom_ratio": 1.6,
+     "change_vs_first_pct": -60.0,
+     "significant_vs_first": true
+    }
+   ],
+   "factorial": {
+    "main_effects_pct": {
+     "gas": [
+      {
+       "at": 20,
+       "from": "CHF3",
+       "to": "C3H2F6",
+       "change_pct": -25.0
+      },
+      {
+       "at": -20,
+       "from": "CHF3",
+       "to": "C3H2F6",
+       "change_pct": -44.8
+      }
+     ],
+     "temp": [
+      {
+       "at": "CHF3",
+       "from": 20,
+       "to": -20,
+       "change_pct": -27.5
+      },
+      {
+       "at": "C3H2F6",
+       "from": 20,
+       "to": -20,
+       "change_pct": -46.7
+      }
+     ]
+    },
+    "note": "같은 요인의 두 변화율이 크게 다르면 상호작용 가능성. 비율 지표 기준이며 보잉 등 다른 지표에선 결론이 다를 수 있음"
+   }
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "etch_stop": false
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "etch_stop": false
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "etch_stop": false
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "etch_stop": false
+    }
+   ],
+   "onset": null
+  }
+ },
+ "single": {
+  "q1": {
+   "primary_issue": "taper_narrowing",
+   "onset_condition": "L2 (CHF3 / -20C)",
+   "process_window": "CHF3 at 20C (L1) shows stable taper ratio, while -20C or C3H2F6 causes significant profile changes.",
+   "tradeoffs": [
+    "Lower temperature (-20C) and alternative gas (C3H2F6) improve top_bottom_ratio reduction (less tapering/narrowing) but increase profile variation significantly."
+   ]
+  },
+  "q2": {
+   "hypotheses": [
+    {
+     "mechanism": "Chiller temperature reduction to -20C decreases radical diffusion and polymer redeposition dynamics, altering the top-to-bottom etch rate balance.",
+     "predicted_trend": "Lower temperature improves profile tapering.",
+     "observed_trend": "top_bottom_ratio decreases from 4.0 to 2.9 for CHF3 and from 3.0 to 1.6 for C3H2F6 when temperature drops to -20C.",
+     "verdict": "supported",
+     "citations": []
+    },
+    {
+     "mechanism": "Switching from CHF3 to C3H2F6 increases polymerization propensity, enhancing sidewall passivation and reducing the top_bottom_ratio.",
+     "predicted_trend": "C3H2F6 decreases top_bottom_ratio compared to CHF3.",
+     "observed_trend": "At 20C, ratio changes from 4.0 (CHF3) to 3.0 (C3H2F6); at -20C, from 2.9 to 1.6.",
+     "verdict": "supported",
+     "citations": []
+    }
+   ]
+  },
+  "q3": {
+   "variable": "gas and chiller temperature combination",
+   "direction": "optimize within non-defect window",
+   "suggested_levels": "CHF3 at 20C (L1) as baseline, fine-tuning temperature between 20C and -20C",
+   "risk": "Lowering temperature or changing to C3H2F6 excessively accelerates taper changes beyond the threshold."
+  }
+ },
+ "rag_chunks": []
+}

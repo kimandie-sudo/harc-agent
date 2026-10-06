@@ -1,0 +1,95 @@
+{
+  "series_id": "S3",
+  "_note": "채점용 정답. 이 파일은 모델 프롬프트에 절대 넣지 말 것. data/series/S3.json 과 분리돼 있다.",
+  "source": {
+    "paper_id": "park2025psst",
+    "doi": "10.1088/1361-6595/ae0a5f",
+    "read_from": "Results (figure 13 문단), Discussion, Conclusion and outlook",
+    "rubric_author": "저자 결론을 읽고 정리한 것. 허용답 집합은 판단이 섞여 있으니 검토 후 고칠 것."
+  },
+  "conditions": {
+    "R": "위상 비제어 (기준)",
+    "P90": "Δphase 90°",
+    "P180": "Δphase 180°"
+  },
+  "authors_conclusion": "상·하부 전극 간 위상차(Δphase)를 제어하면 플라즈마 밀도와 시스 두께를 조절할 수 있어 HAR 식각 성능이 크게 개선된다. Δphase 90°에서 넥 CD 가 14%, 하단 CD 가 32% 늘어 이방성 HAR 식각이 향상됐다 — 상·하부 60 MHz Vrms 비가 최대가 되어 상부 마스크의 폴리머 형성이 강화된 덕이다. 반면 Δphase 180°에서는 넥 CD 가 33%, 하단 CD 가 29% 줄고 목표를 넘겨 과식각(punched)됐으며, 기준 조건보다도 나빴다. 비패턴 웨이퍼(NPW) 연구에서 좋아 보이던 위상 설정이 패턴 웨이퍼에서는 나쁠 수 있다는 뜻이다. 부적절한 Δphase 로 인한 넥 막힘은 상·하부 전극에 인가하는 60 MHz 소스 RF 전력의 양(또는 비)을 최적화해 막을 수 있다.",
+  "q1": {
+    "primary_issue": {
+      "correct": [
+        "necking"
+      ],
+      "acceptable": [],
+      "incorrect": [
+        "bowing",
+        "taper",
+        "etch_stop"
+      ],
+      "note": "정량 지표는 넥 CD 와 하단 CD 뿐이고, 결함으로 판정 가능한 것은 necking 이다(P180 에서 -33%). bowing·taper 는 세 조건 모두 '판정 불가'다 — S3 데이터에 top_cd·max_cd 가 없어 규칙 출력이 '판정 가능한 조건 없음'이라고 프롬프트에 명시한다. 그걸 보고도 주 문제로 꼽는 것은 이 파이프라인이 막으려는 행동(판정 불가는 추측 금지)이다. etch_stop 은 세 조건 모두 false 이므로 오답이며, P180 의 실패 양상은 식각 중단이 아니라 그 반대인 과식각(punch-through)이다.",
+      "quote": "the neck CD of the PR layer decreased by 33%, and the bottom CD of the O/N mold decreased by 29% compared to the reference data, resulting in excessive etching beyond the target (i.e. commonly referred to as punched)"
+    },
+    "onset_condition": {
+      "correct": [
+        "P180"
+      ],
+      "acceptable": [],
+      "incorrect": [
+        "P90",
+        "R"
+      ],
+      "note": "P180 이 넥 CD 67(-33%)로 유일하게 악화된 조건이다. P90 은 최선(114)이므로 결함이 시작되는 조건으로 지목하면 오답이다. 기준 조건 R 을 지목하는 것도 오답 — R 은 비교 기준이지 결함 조건이 아니다.",
+      "judge": "conditions"
+    },
+    "process_window": {
+      "correct": [
+        "P90"
+      ],
+      "acceptable": [],
+      "incorrect": [
+        "P180",
+        "R"
+      ],
+      "note": "P90 이 넥 CD 114, 하단 CD 132 로 두 지표 모두 최선이다. P180 을 공정창으로 지목하는 것은 값의 방향을 뒤집어 읽은 것이다. R 은 기준일 뿐 최적이 아니다 — 저자가 '위상 제어가 HAR 식각을 크게 개선한다'고 명시한다.",
+      "judge": "conditions"
+    }
+  },
+  "q2": {
+    "mechanism": {
+      "judge": "llm",
+      "reference": "Δphase 는 상·하부 전극의 시스 두께와 플라즈마 밀도를 바꾼다. 90°에서는 상·하부 60 MHz Vrms 비가 최대가 되어 상부 마스크에 폴리머가 더 잘 형성되고, 물리적 식각과 패시베이션이 균형을 이뤄 넥이 열린 채 이방성 식각이 유지된다. 180°에서는 한쪽 전극이 최대 전압·최소 시스가 되어 벌크 플라즈마로 전달되는 전력이 커지고 플라즈마 밀도가 가장 높아지는데, 이것이 패턴 웨이퍼에서는 넥 막힘과 과식각으로 이어진다. 즉 비패턴 웨이퍼에서 좋아 보이는 조건이 패턴 웨이퍼에서 좋으리란 보장이 없다.",
+      "must_contain_any": [
+        "위상", "phase", "시스", "sheath", "플라즈마 밀도", "plasma density"
+      ],
+      "should_contain": [
+        "폴리머", "polymer", "패시베이션", "passivation", "Vrms", "마스크", "mask"
+      ],
+      "incorrect_claims": [
+        "식각 중단이 주된 실패 양상",
+        "위상 제어가 효과 없다",
+        "180도가 최적",
+        "기준 조건이 최적"
+      ]
+    }
+  },
+  "q3": {
+    "variable": {
+      "correct": [
+        "60 MHz", "소스 RF 전력", "source RF power", "전력 비", "power ratio",
+        "위상", "phase", "Δphase"
+      ],
+      "judge": "contains"
+    },
+    "direction": {
+      "correct": [
+        "90도 유지", "90° 유지", "Δphase 90", "phase of 90", "90도 부근",
+        "상·하부 전력 비를 최적화", "전력 비 최적화", "optimize the ratio",
+        "60 MHz 전력을 줄", "reduce the 60 MHz", "reducing the amount of 60 MHz",
+        "위상을 더 촘촘히", "위상 구간을 세분"
+      ],
+      "incorrect": [
+        "180도로", "phase of 180", "180° 로 올리", "위상 제어를 끄", "기준 조건으로 되돌",
+        "60 MHz 전력을 올리", "increase the 60 MHz"
+      ],
+      "note": "저자가 명시한 다음 수는 두 가지다 — (1) 상·하부 전극에 인가하는 60 MHz 소스 RF 전력의 양/비를 최적화해 넥 막힘을 막는 것, (2) OES 로 선택비 변화를 더 들여다보는 것. 90° 근방을 더 쪼개 보는 것도 합당하다. 180° 로 올리거나 위상 제어를 끄는 방향은 오답이다."
+    }
+  }
+}

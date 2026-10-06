@@ -1,0 +1,9 @@
+{
+  "_note": "실행 전 python run.py --list-models anthropic|openai|google|openrouter 로 실제 ID를 확인해 바꿀 것. google: 이 키의 무료 티어는 Gemini Pro 계열 할당량이 0(429)이고, Flash 계열은 '모델당 하루 ~20건' 한도라 3.8/3.7/3.6/3-flash-preview 가 모두 일일 소진 → 남아있던 gemini-3.5-flash-lite 로 실행함. 유료 키로 전환하면 gemini-3.1-pro-preview 로 되돌릴 것. Gemma 4 는 google provider 로 --model gemma-4-26b-a4b-it 처럼 직접 지정해 부른다 (gemma-4-31b-it 은 500/503 이 잦아 비권장). 자세한 실측은 README의 '모델 선택' 절 참고.",
+  "anthropic": "claude-opus-4-1",
+  "openai": "gpt-4.1",
+  "google": "gemini-3.5-flash-lite",
+  "mock": "mock",
+  "moonshot": "kimi-k3",
+  "openrouter": "google/gemma-4-31b-it:free"
+}

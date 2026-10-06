@@ -1,0 +1,52 @@
+name: tests
+
+# 공개본용 CI. 공개본에는 코퍼스(논문 PDF·색인)가 없어 RAG 검사는 돌리지 않는다.
+# 검사는 전부 API 키 없이 돌아간다 (mock provider). 실제 모델 실험은 CI 에서 돌리지 않는다.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: 의존성 설치
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 회귀 테스트
+        # 코퍼스·NC-ND 이미지가 필요한 테스트는 자동으로 건너뛴다
+        run: python -m pytest tests -q
+
+      - name: mock 파이프라인 (multi · single, 문헌 없음)
+        run: |
+          python run.py --series S1 S3 --provider mock --mode multi single \
+            --rag off --outdir "$RUNNER_TEMP/ci-outputs"
+          python - <<'PY'
+          import json, os, pathlib
+          import harc
+          out = pathlib.Path(os.environ["RUNNER_TEMP"]) / "ci-outputs"
+          runs = [json.loads(p.read_text(encoding="utf-8")) for p in out.glob("*.json")]
+          assert len(runs) == 4, f"런 4개가 나와야 하는데 {len(runs)}개"
+          for r in runs:
+              assert r["pipeline_version"] == harc.PIPELINE_VERSION, r["run_id"]
+          print(f"OK {len(runs)}런")
+          PY
+
+      - name: 채점 레이어 (저장소에 든 실제 런)
+        run: python -m harc.judge outputs outputs_v2 --by dir

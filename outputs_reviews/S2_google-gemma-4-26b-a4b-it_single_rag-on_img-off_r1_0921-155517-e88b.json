@@ -1,0 +1,412 @@
+{
+ "run_id": "0921-155517-e88b",
+ "pipeline_version": "v2",
+ "series": "S2",
+ "provider": "google",
+ "model": "gemma-4-26b-a4b-it",
+ "mode": "single",
+ "rag": true,
+ "images": false,
+ "cause_hedge": true,
+ "chunk_chars": null,
+ "temperature": 0.0,
+ "rule_hints": true,
+ "check": {
+  "judgeable": {
+   "bowing": {
+    "L1": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L2": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L3": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L4": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    }
+   },
+   "taper": {
+    "L1": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L2": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L3": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L4": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    }
+   },
+   "etch_stop": {
+    "L1": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L2": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L3": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L4": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    }
+   }
+  },
+  "resolution": {
+   "px_nm": 6.061,
+   "edge_uncertainty_px": 2,
+   "per_condition": {
+    "L1": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L2": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L3": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L4": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    }
+   }
+  },
+  "value_source_note": "계측·논문 표기값 사용 — 해상도 한계는 값을 이미지에서 새로 잴 때만 적용",
+  "gaps": [
+   {
+    "defect": "bowing",
+    "condition": "L1",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L2",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L3",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L4",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   }
+  ]
+ },
+ "rules": {
+  "bowing": {
+   "defect": "bowing",
+   "metric": "bow_index_pct",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 측벽이 곧음",
+   "metric_definition": "(최대CD/상단CD - 1) × 100 % (클수록 심함)",
+   "threshold_pct": 5.0,
+   "change_vs_first_basis": "첫 조건 대비 퍼센트포인트 차이. 3pp 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    }
+   ],
+   "trend_bow_index": "판단 불가(값 부족)",
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 측벽이 곧음)"
+  },
+  "taper": {
+   "defect": "taper",
+   "metric": "top_bottom_ratio",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "상단CD/하단CD (클수록 심함)",
+   "threshold_pct": 8.0,
+   "change_vs_first_basis": "첫 조건 대비 비율 변화. 8% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "top_bottom_ratio": 4.0,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "top_bottom_ratio": 2.9,
+     "change_vs_first_pct": -27.5,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "top_bottom_ratio": 3.0,
+     "change_vs_first_pct": -25.0,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "top_bottom_ratio": 1.6,
+     "change_vs_first_pct": -60.0,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "L4",
+   "best_value": 1.6,
+   "worst_condition": "L1",
+   "worst_value": 4.0,
+   "summary": "최악 L1(4.0), 최선 L4(1.6), 값이 작을수록 수직",
+   "factorial": {
+    "main_effects_pct": {
+     "gas": [
+      {
+       "at": 20,
+       "from": "CHF3",
+       "to": "C3H2F6",
+       "change_pct": -25.0,
+       "verdict": "개선"
+      },
+      {
+       "at": -20,
+       "from": "CHF3",
+       "to": "C3H2F6",
+       "change_pct": -44.8,
+       "verdict": "개선"
+      }
+     ],
+     "temp": [
+      {
+       "at": "CHF3",
+       "from": 20,
+       "to": -20,
+       "change_pct": -27.5,
+       "verdict": "개선"
+      },
+      {
+       "at": "C3H2F6",
+       "from": 20,
+       "to": -20,
+       "change_pct": -46.7,
+       "verdict": "개선"
+      }
+     ]
+    },
+    "direction": "higher_is_worse",
+    "note": "verdict 는 위 direction 기준. 같은 요인의 두 변화율이 크게 다르면 상호작용 가능성. 비율 지표 기준이며 보잉 등 다른 지표에선 결론이 다를 수 있음"
+   }
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "metric": "etch_stop",
+   "direction": "true_is_worse",
+   "direction_note": "중단(true)이면 나쁨",
+   "metric_definition": "불리언 — true 이면 중단",
+   "change_vs_first_basis": "첫 조건 대비 상태 변화 (정상→중단은 '악화')",
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    }
+   ],
+   "onset": null,
+   "best_condition": "L1",
+   "best_value": false,
+   "worst_condition": "L1",
+   "worst_value": false,
+   "summary": "최악 L1(정상), 최선 L1(정상), 중단(true)이면 나쁨"
+  }
+ },
+ "single": {
+  "q1": {
+   "primary_issue": "taper (high top_bottom_ratio)",
+   "onset_condition": "CHF3 / 20C (L1)",
+   "process_window": "C3H2F6 / -20C (L4)",
+   "tradeoffs": [
+    "Taper 개선을 위해 C3H2F6 및 저온을 사용했으나, 과도한 폴리머 증착으로 인한 bowing 발생 또는 etch_stop 위험이 존재함 (bowing 데이터 부재로 확인 불가)"
+   ]
+  },
+  "q2": {
+   "hypotheses": [
+    {
+     "mechanism": "C3H2F6 및 저온 조건에 의한 측벽 폴리머 패시베이션(Passivation) 강화",
+     "predicted_trend": "C3H2F6 사용 및 온도 저하 시 taper 감소",
+     "observed_trend": "L1(4.0) -> L4(1.6)로 taper ratio 대폭 감소",
+     "verdict": "Support",
+     "citations": [
+      "jansen2009blacksi#60"
+     ]
+    },
+    {
+     "mechanism": "온도 저하에 따른 불소화 탄화수소(Fluorocarbon)의 억제(Inhibition) 능력 증가",
+     "predicted_trend": "온도 저하 시 profile 개선",
+     "observed_trend": "20C 대비 -20C에서 taper 개선 확인",
+     "verdict": "Support",
+     "citations": [
+      "jansen2009blacksi#28"
+     ]
+    },
+    {
+     "mechanism": "ACL 마스크의 침식(Erosion) 및 페이싱(Faceting)에 의한 상단 CD 변화",
+     "predicted_trend": "고온/고에너지 조건에서 마스크 침식 심화로 profile 악화",
+     "observed_trend": "L1(20C)이 최악의 taper를 보이나, bowing 데이터가 없어 마스크 침식과의 직접적 연관성 판정 불가",
+     "verdict": "Indeterminate",
+     "citations": [
+      "you2025#15"
+     ]
+    }
+   ]
+  },
+  "q3": {
+   "variable": "Gas mixture ratio (C3H2F6 / CHF3)",
+   "direction": "C3H2F6 비율을 높여 패시베이션 강화",
+   "suggested_levels": [
+    "C3H2F6/CHF3 = 75/25",
+    "C3H2F6/CHF3 = 50/50",
+    "Temperature: -20C"
+   ],
+   "risk": "과도한 폴리머 증착으로 인한 etch_stop 또는 bowing 발생 가능성"
+  }
+ },
+ "rag_chunks": [
+  {
+   "chunk_id": "you2025#15",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "wu2010review#28",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "jansen2009blacksi#51",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "wu2010review#47",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "jansen2009blacksi#60",
+   "text": "(공개본에서 삭제)"
+  },
+  {
+   "chunk_id": "jansen2009blacksi#45",
+   "text": "(공개본에서 삭제)"
+  }
+ ],
+ "rag_warning": []
+}

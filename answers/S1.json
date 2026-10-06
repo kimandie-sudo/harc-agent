@@ -1,0 +1,125 @@
+{
+ "series_id": "S1",
+ "_note": "채점용 정답. 이 파일은 모델 프롬프트에 절대 넣지 말 것. data/series/S1.json 과 분리돼 있다.",
+ "source": {
+  "paper_id": "coatings2023",
+  "doi": "10.3390/coatings13081452",
+  "read_from": "Abstract, 3. Results (HFE/Ar 비별 프로파일 문단), 4. Conclusions",
+  "rubric_author": "저자 결론을 읽고 정리한 것. 허용답 집합은 판단이 섞여 있으니 검토 후 고칠 것."
+ },
+ "conditions": {
+  "C1": 0.4,
+  "C2": 0.47,
+  "C3": 0.56,
+  "C4": 0.65,
+  "C5": 0.75
+ },
+ "authors_conclusion": "HFE-347mcc3/Ar 비가 0.40 일 때 보잉이 나타나고, 0.47 로 올리면 보잉 대신 좁아짐(narrowing)이 생기며 프로파일이 가장 수직에 가깝다. 비를 더 올리면 좁아짐이 심해지고 0.65·0.75 에서는 식각이 중단된다. 즉 낮은 비에서는 보잉, 높은 비에서는 좁아짐이라는 트레이드오프가 있고 0.47 이 최적이다.",
+ "q1": {
+  "primary_issue": {
+   "correct": [
+    "taper",
+    "etch_stop"
+   ],
+   "acceptable": [
+    "bowing"
+   ],
+   "incorrect": [],
+   "note": "비 증가에 따른 좁아짐 악화와 그 끝의 식각 중단이 이 시리즈의 주된 실패다. 보잉은 C1 한쪽 끝에서만 나타나므로, 보잉만 단독으로 지목하면 절반만 맞은 것으로 본다. 보잉↔좁아짐 트레이드오프를 함께 말하면 correct 로 친다.",
+   "quote": "showed more bowing at lower flow rate ratios of HFE-347mcc3 to Ar, whereas more narrowing occurred at higher ratios"
+  },
+  "onset_condition": {
+   "correct": [
+    "C2",
+    "C3"
+   ],
+   "acceptable": [
+    "C4"
+   ],
+   "incorrect": [
+    "C1"
+   ],
+   "note": "좁아짐은 0.47(C2)부터 보이기 시작해 C3 에서 뚜렷해진다(하단 75 nm). 식각 중단의 시작은 C4. C1 은 보잉 조건이라 좁아짐의 시작으로 볼 수 없다.",
+   "quote": "When the HFE-347mcc3/Ar ratio was 0.47 ..., narrowing of the hole instead of bowing was observed.",
+   "judge": "conditions"
+  },
+  "process_window": {
+   "correct": [
+    "C2"
+   ],
+   "acceptable": [
+    "C2",
+    "C3"
+   ],
+   "incorrect": [
+    "C4",
+    "C5"
+   ],
+   "note": "저자가 0.47(C2)을 최적으로 명시했다. C4·C5 는 식각 중단 조건이므로 공정창으로 지목하면 명백한 오답이다. 채점은 조건 집합으로 한다 (judge=conditions): 구간 표현('C1 ~ C3')은 펼치고, 배제 절('C4 이상에서 식각 중단')·비교 절('L1 대비')의 조건은 세지 않는다. 오답 조건이 하나라도 들어가면 오답, 정확히 정답 집합이면 정답, 정답을 포함하되 더 넓으면 절반.",
+   "quote": "By carefully selecting the specific flow rates of HFE-347mcc3/O2/Ar (9/2/19 sccm), a highly anisotropic and bowing-free SiO2 contact hole ... was successfully achieved.",
+   "judge": "conditions"
+  }
+ },
+ "q2": {
+  "mechanism": {
+   "judge": "llm",
+   "reference": "HFE-347mcc3/Ar 비가 올라가면 측벽의 플루오로카본 증착이 이온 입사각에 따라 덜 감소하고, 경사 입사각에서의 SiO2 식각률도 떨어진다. 그 결과 바닥보다 측벽이 더 식각에 강해져(또는 덜 식각돼) 낮은 비에서는 보잉이, 높은 비에서는 좁아짐이 나타난다.",
+   "must_contain_any": [
+    "측벽",
+    "sidewall",
+    "패시베이션",
+    "passivation",
+    "플루오로카본",
+    "fluorocarbon",
+    "폴리머",
+    "polymer"
+   ],
+   "should_contain": [
+    "이온 입사각",
+    "ion incident angle",
+    "측벽 식각 저항",
+    "etch-resistant"
+   ],
+   "incorrect_claims": [
+    "온도 변화가 원인",
+    "압력 변화가 원인",
+    "마스크 두께가 원인"
+   ],
+   "quote": "the surface of the SiO2 contact hole, particularly its sidewall rather than its bottom, becomes more etch-resistant and/or less etchable with an increasing HFE-347mcc3/Ar ratio"
+  }
+ },
+ "q3": {
+  "variable": {
+   "correct": [
+    "HFE-347mcc3/Ar",
+    "flow ratio",
+    "유량비",
+    "HFE-347mcc3/Ar ratio"
+   ],
+   "judge": "contains"
+  },
+  "direction": {
+   "correct": [
+    "0.47",
+    "9/2/19",
+    "비를 낮",
+    "ratio 를 낮",
+    "decrease the ratio",
+    "lower the ratio",
+    "reduce the ratio",
+    "낮추기"
+   ],
+   "incorrect": [
+    "비를 올리",
+    "비를 높",
+    "increase the ratio",
+    "raise the ratio",
+    "0.65",
+    "0.75",
+    "11/2/17",
+    "12/2/16"
+   ],
+   "note": "최적이 0.47 이므로 비를 낮추는 쪽이 맞다. 비를 더 올리라는 권고는 식각 중단(C4·C5)으로 가는 방향이라 오답. 이 항목은 문자열 매칭이라 취약하다. 맨 화학식 이름(예: 'C3H2F6')을 정답 표현으로 두면 'minimize C3H2F6' 같은 반대 권고까지 정답으로 잡힌다 — 실제로 judge.py 첫 실행에서 그랬다. 그래서 동사를 포함한 구절만 쓴다. 그래도 표현을 다 덮지는 못하므로 LLM 판정으로 옮기는 것이 낫다."
+  }
+ }
+}

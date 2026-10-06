@@ -1,0 +1,467 @@
+{
+ "run_id": "0920-004735-2084",
+ "pipeline_version": "v2",
+ "series": "S1",
+ "provider": "google",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "single",
+ "rag": false,
+ "images": true,
+ "check": {
+  "judgeable": {
+   "bowing": {
+    "C1": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "max_cd"
+     ]
+    },
+    "C2": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "max_cd"
+     ]
+    },
+    "C3": {
+     "ok": false,
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능 (이 해상도에서 판별 가능한 최소 변화 약 1.7%)",
+     "missing": [
+      "max_cd"
+     ]
+    },
+    "C4": {
+     "ok": false,
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능 (이 해상도에서 판별 가능한 최소 변화 약 1.7%)",
+     "missing": [
+      "max_cd"
+     ]
+    },
+    "C5": {
+     "ok": false,
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능 (이 해상도에서 판별 가능한 최소 변화 약 1.8%)",
+     "missing": [
+      "max_cd"
+     ]
+    }
+   },
+   "taper": {
+    "C1": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "bottom_cd"
+     ]
+    },
+    "C2": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "bottom_cd"
+     ]
+    },
+    "C3": {
+     "ok": true,
+     "uses": [
+      "top_cd",
+      "bottom_cd"
+     ]
+    },
+    "C4": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio (식각 중단으로 하단 CD 정의 안 됨 — 결측이 아니라 결과)",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio"
+     ]
+    },
+    "C5": {
+     "ok": false,
+     "reason": "값 없음: bottom_cd, top_bottom_ratio (식각 중단으로 하단 CD 정의 안 됨 — 결측이 아니라 결과)",
+     "missing": [
+      "bottom_cd",
+      "top_bottom_ratio"
+     ]
+    }
+   },
+   "etch_stop": {
+    "C1": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "C2": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "C3": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "C4": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "C5": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    }
+   }
+  },
+  "resolution": {
+   "px_nm": 1.623,
+   "edge_uncertainty_px": 2,
+   "per_condition": {
+    "C1": {
+     "cd_ref_nm": 197,
+     "min_detectable_pct": 1.6,
+     "can_resolve_cd_threshold": true
+    },
+    "C2": {
+     "cd_ref_nm": 197,
+     "min_detectable_pct": 1.6,
+     "can_resolve_cd_threshold": true
+    },
+    "C3": {
+     "cd_ref_nm": 196,
+     "min_detectable_pct": 1.7,
+     "can_resolve_cd_threshold": true
+    },
+    "C4": {
+     "cd_ref_nm": 191,
+     "min_detectable_pct": 1.7,
+     "can_resolve_cd_threshold": true
+    },
+    "C5": {
+     "cd_ref_nm": 182,
+     "min_detectable_pct": 1.8,
+     "can_resolve_cd_threshold": true
+    }
+   }
+  },
+  "value_source_note": "계측·논문 표기값 사용 — 해상도 한계는 값을 이미지에서 새로 잴 때만 적용",
+  "gaps": [
+   {
+    "defect": "bowing",
+    "condition": "C3",
+    "missing": [
+     "max_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "C4",
+    "missing": [
+     "max_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "C5",
+    "missing": [
+     "max_cd"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "C4",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio"
+    ]
+   },
+   {
+    "defect": "taper",
+    "condition": "C5",
+    "missing": [
+     "bottom_cd",
+     "top_bottom_ratio"
+    ]
+   }
+  ],
+  "image_quality": {
+   "items": [
+    {
+     "condition": "C1",
+     "bottom_visible": true,
+     "cleave_through_center": "yes",
+     "artifacts": [],
+     "usable_for": [
+      "top_cd",
+      "max_cd",
+      "bottom_cd",
+      "depth",
+      "sidewall"
+     ]
+    },
+    {
+     "condition": "C2",
+     "bottom_visible": true,
+     "cleave_through_center": "yes",
+     "artifacts": [],
+     "usable_for": [
+      "top_cd",
+      "max_cd",
+      "bottom_cd",
+      "depth",
+      "sidewall"
+     ]
+    },
+    {
+     "condition": "C3",
+     "bottom_visible": true,
+     "cleave_through_center": "yes",
+     "artifacts": [],
+     "usable_for": [
+      "top_cd",
+      "max_cd",
+      "bottom_cd",
+      "depth",
+      "sidewall"
+     ]
+    },
+    {
+     "condition": "C4",
+     "bottom_visible": true,
+     "cleave_through_center": "yes",
+     "artifacts": [],
+     "usable_for": [
+      "top_cd",
+      "max_cd",
+      "bottom_cd",
+      "depth",
+      "sidewall"
+     ]
+    },
+    {
+     "condition": "C5",
+     "bottom_visible": true,
+     "cleave_through_center": "yes",
+     "artifacts": [],
+     "usable_for": [
+      "top_cd",
+      "max_cd",
+      "bottom_cd",
+      "depth",
+      "sidewall"
+     ]
+    }
+   ]
+  }
+ },
+ "rules": {
+  "bowing": {
+   "defect": "bowing",
+   "metric": "bow_index_pct",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 측벽이 곧음",
+   "metric_definition": "(최대CD/상단CD - 1) × 100 % (클수록 심함)",
+   "threshold_pct": 5.0,
+   "change_vs_first_basis": "첫 조건 대비 퍼센트포인트 차이. 3pp 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "C1",
+     "level": 0.4,
+     "top_cd": 197,
+     "max_cd": 221,
+     "max_cd_depth": 661,
+     "bow_index_pct": 12.2,
+     "bowing": true,
+     "change_vs_first_pp": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "C2",
+     "level": 0.47,
+     "top_cd": 197,
+     "max_cd": 194,
+     "max_cd_depth": 1094,
+     "bow_index_pct": -1.5,
+     "bowing": false,
+     "change_vs_first_pp": -13.7,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "C3",
+     "level": 0.56,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능 (이 해상도에서 판별 가능한 최소 변화 약 1.7%)"
+    },
+    {
+     "condition": "C4",
+     "level": 0.65,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능 (이 해상도에서 판별 가능한 최소 변화 약 1.7%)"
+    },
+    {
+     "condition": "C5",
+     "level": 0.75,
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd / 보충 가능: 이미지에서 harc_measure로 max_cd 측정 시 판정 가능 (이 해상도에서 판별 가능한 최소 변화 약 1.8%)"
+    }
+   ],
+   "trend_bow_index": "단조 감소",
+   "best_condition": "C2",
+   "best_value": -1.5,
+   "worst_condition": "C1",
+   "worst_value": 12.2,
+   "summary": "최악 C1(12.2), 최선 C2(-1.5), 값이 작을수록 측벽이 곧음"
+  },
+  "taper": {
+   "defect": "taper",
+   "metric": "top_bottom_ratio",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "상단CD/하단CD (클수록 심함)",
+   "threshold_pct": 8.0,
+   "change_vs_first_basis": "첫 조건 대비 비율 변화. 8% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "C1",
+     "level": 0.4,
+     "top_bottom_ratio": 1.52,
+     "top_cd": 197,
+     "bottom_cd": 130,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "C2",
+     "level": 0.47,
+     "top_bottom_ratio": 1.52,
+     "top_cd": 197,
+     "bottom_cd": 130,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "C3",
+     "level": 0.56,
+     "top_bottom_ratio": 2.61,
+     "top_cd": 196,
+     "bottom_cd": 75,
+     "change_vs_first_pct": 72.5,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "C4",
+     "level": 0.65,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio (식각 중단으로 하단 CD 정의 안 됨 — 결측이 아니라 결과)"
+    },
+    {
+     "condition": "C5",
+     "level": 0.75,
+     "status": "판정 불가",
+     "reason": "값 없음: bottom_cd, top_bottom_ratio (식각 중단으로 하단 CD 정의 안 됨 — 결측이 아니라 결과)"
+    }
+   ],
+   "best_condition": "C1",
+   "best_value": 1.52,
+   "worst_condition": "C3",
+   "worst_value": 2.61,
+   "summary": "최악 C3(2.61), 최선 C1(1.52), 값이 작을수록 수직",
+   "trend_ratio": "비감소"
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "metric": "etch_stop",
+   "direction": "true_is_worse",
+   "direction_note": "중단(true)이면 나쁨",
+   "metric_definition": "불리언 — true 이면 중단",
+   "change_vs_first_basis": "첫 조건 대비 상태 변화 (정상→중단은 '악화')",
+   "rows": [
+    {
+     "condition": "C1",
+     "level": 0.4,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "C2",
+     "level": 0.47,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "C3",
+     "level": 0.56,
+     "etch_stop": false,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "C4",
+     "level": 0.65,
+     "etch_stop": true,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "C5",
+     "level": 0.75,
+     "etch_stop": true,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    }
+   ],
+   "onset": "C4",
+   "best_condition": "C1",
+   "best_value": false,
+   "worst_condition": "C4",
+   "worst_value": true,
+   "summary": "최악 C4(중단), 최선 C1(정상), 중단(true)이면 나쁨"
+  }
+ },
+ "single": {
+  "q1": {
+   "primary_issue": "etch_stop",
+   "onset_condition": "C4",
+   "process_window": "C2",
+   "tradeoffs": [
+    "C1은 bowing이 12.2%로 심하지만 etch_stop은 발생하지 않음",
+    "C3은 taper(top_bottom_ratio)가 2.61로 크게 악화됨",
+    "C4와 C5는 etch_stop이 발생함"
+   ]
+  },
+  "q2": {
+   "hypotheses": [
+    {
+     "mechanism": "HFE-347mcc3 유량 증가에 따른 폴리머 과다 생성으로 인한 하단 식각 중단 및 테이퍼 악화",
+     "predicted_trend": "HFE 유량이 증가할수록 etch_stop 및 taper 악화",
+     "observed_trend": "C3에서 taper 악화(2.61), C4~C5에서 etch_stop 발생",
+     "verdict": "지지",
+     "citations": []
+    }
+   ]
+  },
+  "q3": {
+   "variable": "HFE-347mcc3 / Ar flow ratio",
+   "direction": "decrease",
+   "suggested_levels": [
+    "0.42",
+    "0.45"
+   ],
+   "risk": "HFE 유량을 너무 낮추면 C1처럼 bowing(12.2%)이 다시 심해질 수 있음"
+  }
+ },
+ "rag_chunks": [],
+ "rag_warning": []
+}

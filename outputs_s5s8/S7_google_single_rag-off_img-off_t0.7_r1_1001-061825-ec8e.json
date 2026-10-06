@@ -1,0 +1,2497 @@
+{
+ "run_id": "1001-061825-ec8e",
+ "pipeline_version": "v2",
+ "series": "S7",
+ "provider": "google",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "single",
+ "rag": false,
+ "images": false,
+ "cause_hedge": true,
+ "chunk_chars": null,
+ "temperature": 0.7,
+ "rule_hints": true,
+ "retriever": "bm25",
+ "chunk_source": "rag",
+ "anonymize_chunks": false,
+ "check": {
+  "judgeable": {
+   "bowing": {
+    "B10": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "B50": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "B100": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "B200": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "B300": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "B400": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "P1500": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "P1700": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "C70": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "C80": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "S120": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "S130": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "S150": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    }
+   },
+   "taper": {
+    "B10": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "B50": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "B100": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "B200": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "B300": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "B400": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "P1500": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "P1700": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "C70": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "C80": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "S120": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "S130": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "S150": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    }
+   },
+   "necking": {
+    "B10": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "B50": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "B100": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "B200": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "B300": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "B400": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "P1500": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "P1700": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "C70": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "C80": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "S120": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "S130": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    },
+    "S150": {
+     "ok": false,
+     "reason": "값 없음: neck_cd, top_cd",
+     "missing": [
+      "neck_cd",
+      "top_cd"
+     ]
+    }
+   },
+   "undercut": {
+    "B10": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "B50": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "B100": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "B200": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "B300": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "B400": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "P1500": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "P1700": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "C70": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "C80": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "S120": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "S130": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    },
+    "S150": {
+     "ok": false,
+     "reason": "값 없음: undercut_nm",
+     "missing": [
+      "undercut_nm"
+     ]
+    }
+   },
+   "sidewall_angle": {
+    "B10": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "B50": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "B100": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "B200": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "B300": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "B400": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "P1500": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "P1700": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "C70": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "C80": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "S120": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "S130": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    },
+    "S150": {
+     "ok": false,
+     "reason": "값 없음: sidewall_angle_deg",
+     "missing": [
+      "sidewall_angle_deg"
+     ]
+    }
+   },
+   "etch_stop": {
+    "B10": {
+     "ok": false,
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "B50": {
+     "ok": false,
+     "reason": "값 없음: etch_stop",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "B100": {
+     "ok": false,
+     "reason": "값 없음: etch_stop",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "B200": {
+     "ok": false,
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "B300": {
+     "ok": false,
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "B400": {
+     "ok": false,
+     "reason": "값 없음: etch_stop",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "P1500": {
+     "ok": false,
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "P1700": {
+     "ok": false,
+     "reason": "값 없음: etch_stop",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "C70": {
+     "ok": false,
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "C80": {
+     "ok": false,
+     "reason": "값 없음: etch_stop",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "S120": {
+     "ok": false,
+     "reason": "값 없음: etch_stop",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "S130": {
+     "ok": false,
+     "reason": "값 없음: etch_stop",
+     "missing": [
+      "etch_stop"
+     ]
+    },
+    "S150": {
+     "ok": false,
+     "reason": "값 없음: etch_stop",
+     "missing": [
+      "etch_stop"
+     ]
+    }
+   },
+   "mask_erosion": {
+    "B10": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "B50": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "B100": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "B200": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "B300": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "B400": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "P1500": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "P1700": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "C70": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "C80": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "S120": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "S130": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    },
+    "S150": {
+     "ok": false,
+     "reason": "값 없음: mask_etch_rate_nm_min",
+     "missing": [
+      "mask_etch_rate_nm_min"
+     ]
+    }
+   },
+   "cd_deviation": {
+    "B10": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd / 보충 가능: 이미지에서 harc_measure로 cd_nm, top_cd 측정 시 판정 가능",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "B50": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "B100": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "B200": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd / 보충 가능: 이미지에서 harc_measure로 cd_nm, top_cd 측정 시 판정 가능",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "B300": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd / 보충 가능: 이미지에서 harc_measure로 cd_nm, top_cd 측정 시 판정 가능",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "B400": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "P1500": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd / 보충 가능: 이미지에서 harc_measure로 cd_nm, top_cd 측정 시 판정 가능",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "P1700": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "C70": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd / 보충 가능: 이미지에서 harc_measure로 cd_nm, top_cd 측정 시 판정 가능",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "C80": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "S120": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "S130": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    },
+    "S150": {
+     "ok": false,
+     "reason": "값 없음: cd_nm, top_cd",
+     "missing": [
+      "cd_nm",
+      "top_cd"
+     ]
+    }
+   },
+   "depth_loss": {
+    "B10": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "B50": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "B100": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "B200": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "B300": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "B400": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "P1500": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "P1700": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "C70": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "C80": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "S120": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "S130": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    },
+    "S150": {
+     "ok": true,
+     "uses": [
+      "etch_depth_um"
+     ]
+    }
+   }
+  },
+  "resolution": {
+   "px_nm": null,
+   "edge_uncertainty_px": 2,
+   "per_condition": {},
+   "note": "px 크기 정보 없음 → 이미지 기반 판별 한계 계산 불가"
+  },
+  "value_source_note": "이미지 측정값 — 해상도 한계 미만의 차이는 '변화 없음'으로 취급",
+  "gaps": [
+   {
+    "defect": "bowing",
+    "condition": "B10",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "B50",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "B100",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "B200",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "B300",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "B400",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "P1500",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "P1700",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "C70",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "C80",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "S120",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "S130",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "S150",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "B10",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "B50",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "B100",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "B200",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "B300",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "B400",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "P1500",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "P1700",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "C70",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "C80",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "S120",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "S130",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "necking",
+    "condition": "S150",
+    "missing": [
+     "neck_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "B10",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "B50",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "B100",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "B200",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "B300",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "B400",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "P1500",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "P1700",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "C70",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "C80",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "S120",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "S130",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "undercut",
+    "condition": "S150",
+    "missing": [
+     "undercut_nm"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "B10",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "B50",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "B100",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "B200",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "B300",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "B400",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "P1500",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "P1700",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "C70",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "C80",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "S120",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "S130",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "sidewall_angle",
+    "condition": "S150",
+    "missing": [
+     "sidewall_angle_deg"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "B10",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "B50",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "B100",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "B200",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "B300",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "B400",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "P1500",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "P1700",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "C70",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "C80",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "S120",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "S130",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "etch_stop",
+    "condition": "S150",
+    "missing": [
+     "etch_stop"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "B10",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "B50",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "B100",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "B200",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "B300",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "B400",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "P1500",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "P1700",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "C70",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "C80",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "S120",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "S130",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "mask_erosion",
+    "condition": "S150",
+    "missing": [
+     "mask_etch_rate_nm_min"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "B10",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "B50",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "B100",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "B200",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "B300",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "B400",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "P1500",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "P1700",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "C70",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "C80",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "S120",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "S130",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "cd_deviation",
+    "condition": "S150",
+    "missing": [
+     "cd_nm",
+     "top_cd"
+    ]
+   }
+  ]
+ },
+ "rules": {
+  "bowing": {
+   "defect": "bowing",
+   "metric": "bow_index_pct",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 측벽이 곧음",
+   "metric_definition": "(최대CD/상단CD - 1) × 100 % (클수록 심함)",
+   "threshold_pct": 5.0,
+   "change_vs_first_basis": "첫 조건 대비 퍼센트포인트 차이. 3pp 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "B10",
+     "level": "바이어스 10 V",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "B50",
+     "level": "바이어스 50 V",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "B100",
+     "level": "바이어스 100 V",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "B200",
+     "level": "바이어스 200 V",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "B300",
+     "level": "바이어스 300 V",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "B400",
+     "level": "바이어스 400 V",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "P1500",
+     "level": "ICP 1500 W",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "P1700",
+     "level": "ICP 1700 W",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "C70",
+     "level": "C4F8 70 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "C80",
+     "level": "C4F8 80 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "S120",
+     "level": "SF6 120 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "S130",
+     "level": "SF6 130 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "S150",
+     "level": "SF6 150 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 측벽이 곧음)"
+  },
+  "taper": {
+   "defect": "taper",
+   "metric": "top_bottom_ratio",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "상단CD/하단CD (클수록 심함)",
+   "threshold_pct": 8.0,
+   "change_vs_first_basis": "첫 조건 대비 비율 변화. 8% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "B10",
+     "level": "바이어스 10 V",
+     "top_bottom_ratio": 3.33,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "B50",
+     "level": "바이어스 50 V",
+     "top_bottom_ratio": 2.76,
+     "change_vs_first_pct": -17.1,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "B100",
+     "level": "바이어스 100 V",
+     "top_bottom_ratio": 2.08,
+     "change_vs_first_pct": -37.6,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "B200",
+     "level": "바이어스 200 V",
+     "top_bottom_ratio": 1.63,
+     "change_vs_first_pct": -51.2,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "B300",
+     "level": "바이어스 300 V",
+     "top_bottom_ratio": 1.51,
+     "change_vs_first_pct": -54.8,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "B400",
+     "level": "바이어스 400 V",
+     "top_bottom_ratio": 1.5,
+     "change_vs_first_pct": -54.9,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "P1500",
+     "level": "ICP 1500 W",
+     "top_bottom_ratio": 1.42,
+     "change_vs_first_pct": -57.5,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "P1700",
+     "level": "ICP 1700 W",
+     "top_bottom_ratio": 1.42,
+     "change_vs_first_pct": -57.5,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "C70",
+     "level": "C4F8 70 sccm",
+     "top_bottom_ratio": 1.5,
+     "change_vs_first_pct": -55.0,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "C80",
+     "level": "C4F8 80 sccm",
+     "top_bottom_ratio": 1.5,
+     "change_vs_first_pct": -55.1,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "S120",
+     "level": "SF6 120 sccm",
+     "top_bottom_ratio": 1.8,
+     "change_vs_first_pct": -46.1,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "S130",
+     "level": "SF6 130 sccm",
+     "top_bottom_ratio": 1.82,
+     "change_vs_first_pct": -45.5,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "S150",
+     "level": "SF6 150 sccm",
+     "top_bottom_ratio": 2.09,
+     "change_vs_first_pct": -37.3,
+     "change_vs_first": "개선",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "P1500",
+   "best_value": 1.42,
+   "worst_condition": "B10",
+   "worst_value": 3.33,
+   "summary": "최악 B10(3.33), 최선 P1500(1.42), 값이 작을수록 수직"
+  },
+  "necking": {
+   "defect": "necking",
+   "metric": "neck_cd",
+   "direction": "lower_is_worse",
+   "direction_note": "값이 클수록 입구가 열려 있음",
+   "metric_definition": "넥 CD (작을수록 심함). top_cd 가 함께 있으면 넥CD/상단CD 비도 계산한다",
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 넥 CD 비율 변화. 3% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "B10",
+     "level": "바이어스 10 V",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "B50",
+     "level": "바이어스 50 V",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "B100",
+     "level": "바이어스 100 V",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "B200",
+     "level": "바이어스 200 V",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "B300",
+     "level": "바이어스 300 V",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "B400",
+     "level": "바이어스 400 V",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "P1500",
+     "level": "ICP 1500 W",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "P1700",
+     "level": "ICP 1700 W",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "C70",
+     "level": "C4F8 70 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 neck_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "C80",
+     "level": "C4F8 80 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "S120",
+     "level": "SF6 120 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "S130",
+     "level": "SF6 130 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    },
+    {
+     "condition": "S150",
+     "level": "SF6 150 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: neck_cd, top_cd"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 클수록 입구가 열려 있음)"
+  },
+  "undercut": {
+   "defect": "undercut",
+   "metric": "undercut_nm",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 마스크 아래가 덜 파임",
+   "metric_definition": "(최대폭 − 개구폭)/2, 단위 nm (클수록 심함)",
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 언더컷 비율 변화. 3% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "B10",
+     "level": "바이어스 10 V",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "B50",
+     "level": "바이어스 50 V",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    },
+    {
+     "condition": "B100",
+     "level": "바이어스 100 V",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    },
+    {
+     "condition": "B200",
+     "level": "바이어스 200 V",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "B300",
+     "level": "바이어스 300 V",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "B400",
+     "level": "바이어스 400 V",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    },
+    {
+     "condition": "P1500",
+     "level": "ICP 1500 W",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "P1700",
+     "level": "ICP 1700 W",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    },
+    {
+     "condition": "C70",
+     "level": "C4F8 70 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm / 보충 가능: 이미지에서 harc_measure로 undercut_nm 측정 시 판정 가능"
+    },
+    {
+     "condition": "C80",
+     "level": "C4F8 80 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    },
+    {
+     "condition": "S120",
+     "level": "SF6 120 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    },
+    {
+     "condition": "S130",
+     "level": "SF6 130 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    },
+    {
+     "condition": "S150",
+     "level": "SF6 150 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: undercut_nm"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 마스크 아래가 덜 파임)"
+  },
+  "sidewall_angle": {
+   "defect": "sidewall_angle",
+   "metric": "sidewall_angle_deg",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 수직",
+   "metric_definition": "수직으로부터의 이탈 각도, 단위 도 (클수록 심함)",
+   "threshold_deg": 0.5,
+   "change_vs_first_basis": "첫 조건 대비 각도 차(도). 0.5° 이내는 '변화 없음'. 각도는 0 에 가까울 수 있어 비율이 아니라 절대 차로 잰다",
+   "rows": [
+    {
+     "condition": "B10",
+     "level": "바이어스 10 V",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "B50",
+     "level": "바이어스 50 V",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    },
+    {
+     "condition": "B100",
+     "level": "바이어스 100 V",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    },
+    {
+     "condition": "B200",
+     "level": "바이어스 200 V",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "B300",
+     "level": "바이어스 300 V",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "B400",
+     "level": "바이어스 400 V",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    },
+    {
+     "condition": "P1500",
+     "level": "ICP 1500 W",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "P1700",
+     "level": "ICP 1700 W",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    },
+    {
+     "condition": "C70",
+     "level": "C4F8 70 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg / 보충 가능: 이미지에서 harc_measure로 sidewall_angle_deg 측정 시 판정 가능"
+    },
+    {
+     "condition": "C80",
+     "level": "C4F8 80 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    },
+    {
+     "condition": "S120",
+     "level": "SF6 120 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    },
+    {
+     "condition": "S130",
+     "level": "SF6 130 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    },
+    {
+     "condition": "S150",
+     "level": "SF6 150 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: sidewall_angle_deg"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 수직)"
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "metric": "etch_stop",
+   "direction": "true_is_worse",
+   "direction_note": "중단(true)이면 나쁨",
+   "metric_definition": "불리언 — true 이면 중단",
+   "change_vs_first_basis": "첫 조건 대비 상태 변화 (정상→중단은 '악화')",
+   "rows": [
+    {
+     "condition": "B10",
+     "level": "바이어스 10 V",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능"
+    },
+    {
+     "condition": "B50",
+     "level": "바이어스 50 V",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop"
+    },
+    {
+     "condition": "B100",
+     "level": "바이어스 100 V",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop"
+    },
+    {
+     "condition": "B200",
+     "level": "바이어스 200 V",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능"
+    },
+    {
+     "condition": "B300",
+     "level": "바이어스 300 V",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능"
+    },
+    {
+     "condition": "B400",
+     "level": "바이어스 400 V",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop"
+    },
+    {
+     "condition": "P1500",
+     "level": "ICP 1500 W",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능"
+    },
+    {
+     "condition": "P1700",
+     "level": "ICP 1700 W",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop"
+    },
+    {
+     "condition": "C70",
+     "level": "C4F8 70 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop / 보충 가능: 이미지에서 harc_measure로 etch_stop 측정 시 판정 가능"
+    },
+    {
+     "condition": "C80",
+     "level": "C4F8 80 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop"
+    },
+    {
+     "condition": "S120",
+     "level": "SF6 120 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop"
+    },
+    {
+     "condition": "S130",
+     "level": "SF6 130 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop"
+    },
+    {
+     "condition": "S150",
+     "level": "SF6 150 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: etch_stop"
+    }
+   ],
+   "onset": null,
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (중단(true)이면 나쁨)"
+  },
+  "mask_erosion": {
+   "defect": "mask_erosion",
+   "metric": "mask_etch_rate_nm_min",
+   "direction": "higher_is_worse",
+   "direction_note": "값이 작을수록 마스크가 덜 깎임 (음수는 증착)",
+   "metric_definition": "마스크 식각률, 단위 nm/min (클수록 심함)",
+   "threshold_nm_min": 5,
+   "change_vs_first_basis": "첫 조건 대비 마스크 식각률의 절대 차. 5 nm/min 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "B10",
+     "level": "바이어스 10 V",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "B50",
+     "level": "바이어스 50 V",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min"
+    },
+    {
+     "condition": "B100",
+     "level": "바이어스 100 V",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min"
+    },
+    {
+     "condition": "B200",
+     "level": "바이어스 200 V",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "B300",
+     "level": "바이어스 300 V",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "B400",
+     "level": "바이어스 400 V",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min"
+    },
+    {
+     "condition": "P1500",
+     "level": "ICP 1500 W",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "P1700",
+     "level": "ICP 1700 W",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min"
+    },
+    {
+     "condition": "C70",
+     "level": "C4F8 70 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min / 보충 가능: 이미지에서 harc_measure로 mask_etch_rate_nm_min 측정 시 판정 가능"
+    },
+    {
+     "condition": "C80",
+     "level": "C4F8 80 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min"
+    },
+    {
+     "condition": "S120",
+     "level": "SF6 120 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min"
+    },
+    {
+     "condition": "S130",
+     "level": "SF6 130 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min"
+    },
+    {
+     "condition": "S150",
+     "level": "SF6 150 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: mask_etch_rate_nm_min"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (값이 작을수록 마스크가 덜 깎임 (음수는 증착))"
+  },
+  "cd_deviation": {
+   "defect": "cd_deviation",
+   "metric": "cd_dev_abs_pct",
+   "direction": "higher_is_worse",
+   "direction_note": "0 에 가까울수록 설계 CD 에 맞음 (넓어짐·좁아짐 모두 나쁨)",
+   "metric_definition": "|측정CD/설계CD − 1| × 100 % (클수록 심함). 부호 있는 값은 cd_dev_pct",
+   "nominal_cd_nm": 1600,
+   "threshold_pct": 3.0,
+   "change_vs_first_basis": "첫 조건 대비 |편차| 의 차(%p). 3%p 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "B10",
+     "level": "바이어스 10 V",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd / 보충 가능: 이미지에서 harc_measure로 cd_nm, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "B50",
+     "level": "바이어스 50 V",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd"
+    },
+    {
+     "condition": "B100",
+     "level": "바이어스 100 V",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd"
+    },
+    {
+     "condition": "B200",
+     "level": "바이어스 200 V",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd / 보충 가능: 이미지에서 harc_measure로 cd_nm, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "B300",
+     "level": "바이어스 300 V",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd / 보충 가능: 이미지에서 harc_measure로 cd_nm, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "B400",
+     "level": "바이어스 400 V",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd"
+    },
+    {
+     "condition": "P1500",
+     "level": "ICP 1500 W",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd / 보충 가능: 이미지에서 harc_measure로 cd_nm, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "P1700",
+     "level": "ICP 1700 W",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd"
+    },
+    {
+     "condition": "C70",
+     "level": "C4F8 70 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd / 보충 가능: 이미지에서 harc_measure로 cd_nm, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "C80",
+     "level": "C4F8 80 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd"
+    },
+    {
+     "condition": "S120",
+     "level": "SF6 120 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd"
+    },
+    {
+     "condition": "S130",
+     "level": "SF6 130 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd"
+    },
+    {
+     "condition": "S150",
+     "level": "SF6 150 sccm",
+     "status": "판정 불가",
+     "reason": "값 없음: cd_nm, top_cd"
+    }
+   ],
+   "best_condition": null,
+   "best_value": null,
+   "worst_condition": null,
+   "worst_value": null,
+   "summary": "판정 가능한 조건 없음 (0 에 가까울수록 설계 CD 에 맞음 (넓어짐·좁아짐 모두 나쁨))"
+  },
+  "depth_loss": {
+   "defect": "depth_loss",
+   "metric": "etch_depth_um",
+   "direction": "lower_is_worse",
+   "direction_note": "값이 클수록 같은 시간에 깊이 파임",
+   "metric_definition": "식각 깊이, 단위 µm (작을수록 심함)",
+   "threshold_pct": 5.0,
+   "change_vs_first_basis": "첫 조건 대비 깊이 변화율. 5% 이내는 '변화 없음'",
+   "rows": [
+    {
+     "condition": "B10",
+     "level": "바이어스 10 V",
+     "etch_depth_um": 30.5,
+     "change_vs_first_pct": 0.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "B50",
+     "level": "바이어스 50 V",
+     "etch_depth_um": 29.9,
+     "change_vs_first_pct": -2.0,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "B100",
+     "level": "바이어스 100 V",
+     "etch_depth_um": 29.3,
+     "change_vs_first_pct": -3.9,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "B200",
+     "level": "바이어스 200 V",
+     "etch_depth_um": 30.6,
+     "change_vs_first_pct": 0.3,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "B300",
+     "level": "바이어스 300 V",
+     "etch_depth_um": 28.5,
+     "change_vs_first_pct": -6.6,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "B400",
+     "level": "바이어스 400 V",
+     "etch_depth_um": 28.6,
+     "change_vs_first_pct": -6.2,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "P1500",
+     "level": "ICP 1500 W",
+     "etch_depth_um": 24.1,
+     "change_vs_first_pct": -21.0,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "P1700",
+     "level": "ICP 1700 W",
+     "etch_depth_um": 22.2,
+     "change_vs_first_pct": -27.2,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "C70",
+     "level": "C4F8 70 sccm",
+     "etch_depth_um": 30.3,
+     "change_vs_first_pct": -0.7,
+     "change_vs_first": "변화 없음",
+     "significant_vs_first": false
+    },
+    {
+     "condition": "C80",
+     "level": "C4F8 80 sccm",
+     "etch_depth_um": 28.7,
+     "change_vs_first_pct": -5.9,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "S120",
+     "level": "SF6 120 sccm",
+     "etch_depth_um": 23.7,
+     "change_vs_first_pct": -22.3,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "S130",
+     "level": "SF6 130 sccm",
+     "etch_depth_um": 25.6,
+     "change_vs_first_pct": -16.1,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    },
+    {
+     "condition": "S150",
+     "level": "SF6 150 sccm",
+     "etch_depth_um": 26.3,
+     "change_vs_first_pct": -13.8,
+     "change_vs_first": "악화",
+     "significant_vs_first": true
+    }
+   ],
+   "best_condition": "B200",
+   "best_value": 30.6,
+   "worst_condition": "P1700",
+   "worst_value": 22.2,
+   "summary": "최악 P1700(22.2), 최선 B200(30.6), 값이 클수록 같은 시간에 깊이 파임"
+  }
+ },
+ "single": {
+  "q1": {
+   "primary_issue": "taper",
+   "onset_condition": "B10",
+   "process_window": "B100~B400 (taper 비율 2.08~1.5로 개선 추세이나 깊이 손실 고려 필요)",
+   "tradeoffs": [
+    "바이어스 전압을 높이면 taper(수직성)는 개선되나(B10: 3.33 -> B400: 1.5), 고바이어스(B300, B400) 및 고파워(P1500, P1700) 조건에서 etch_depth_um이 감소하는 depth_loss(식각 깊이 감소) 악화 발생"
+   ]
+  },
+  "q2": {
+   "hypotheses": [
+    {
+     "mechanism": "바이어스 전압 증가에 따른 이온 직진성 향상으로 하단 식각 촉진 및 taper 개선",
+     "predicted_trend": "바이어스 전압이 높아질수록 top_bottom_ratio가 감소하여 측벽 수직성 향상",
+     "observed_trend": "B10(3.33)에서 B400(1.5)까지 top_bottom_ratio가 지속적으로 감소하여 taper가 개선됨",
+     "verdict": "지지",
+     "citations": []
+    },
+    {
+     "mechanism": "과도한 ICP 파워 또는 가스 유량 조절 시 이온 밀도 및 라디칼 균일성 저하로 인한 식각 깊이(etch_depth_um) 감소",
+     "predicted_trend": "ICP 파워 증가 또는 특정 SF6/C4F8 유량 조건에서 etch_depth_um 감소",
+     "observed_trend": "P1500(24.1 µm), P1700(22.2 µm) 및 S120(23.7 µm) 등에서 표준 조건 대비 깊이가 크게 감소함",
+     "verdict": "지지",
+     "citations": []
+    }
+   ]
+  },
+  "q3": {
+   "variable": "식각 단계 바이어스 전압",
+   "direction": "증가",
+   "suggested_levels": [
+    "150 V",
+    "200 V",
+    "250 V"
+   ],
+   "risk": "바이어스를 너무 높이면 물리적 스퍼터링 증가로 인한 마스크 침식(mask_erosion) 및 과도한 이온 손상 우려"
+  }
+ },
+ "rag_chunks": [],
+ "rag_warning": []
+}

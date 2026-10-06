@@ -1,0 +1,128 @@
+{
+ "series_id": "S2",
+ "_note": "채점용 정답. 이 파일은 모델 프롬프트에 절대 넣지 말 것. data/series/S2.json 과 분리돼 있다.",
+ "source": {
+  "paper_id": "lee2026",
+  "doi": "10.1007/s44374-026-00024-x",
+  "read_from": "Abstract, Results (Fig 2c·Fig 7 문단), Conclusions",
+  "rubric_author": "저자 결론을 읽고 정리한 것. 허용답 집합은 판단이 섞여 있으니 검토 후 고칠 것."
+ },
+ "conditions": {
+  "L1": "CHF3 / 20C",
+  "L2": "CHF3 / -20C",
+  "L3": "C3H2F6 / 20C",
+  "L4": "C3H2F6 / -20C"
+ },
+ "authors_conclusion": "C3H2F6 플라즈마가 CHF3 보다 보잉과 테이퍼가 적고 더 수직한 프로파일을 준다. 프로파일은 칠러 온도보다 플라즈마 화학종에 더 강하게 좌우된다. 원인은 C3H2F6 에서 CF·CF2·CHF 같은 폴리머성 CFx 종이 더 많이 생겨 측벽 패시베이션층을 만들기 때문이다. 온도를 -20℃ 로 낮추면 SiO2 식각률이 CHF3 13%, C3H2F6 28% 올라가며, 이는 HF 흡착 증가 때문이다. 다만 SiO2/ACL 선택비는 20℃ 조건에서 더 높았다.",
+ "q1": {
+  "primary_issue": {
+   "correct": [
+    "taper"
+   ],
+   "acceptable": [],
+   "incorrect": [
+    "etch_stop",
+    "bowing"
+   ],
+   "note": "정량 지표는 top/bottom CD 비(테이퍼)뿐이고 L1 4.0 → L4 1.6 으로 움직인다. etch_stop 은 네 조건 모두 false 이므로 오답. bowing 도 오답이다 — S2 데이터에는 top_cd/max_cd 가 없어 네 조건 전부 '판정 불가'이고 규칙 출력이 '판정 가능한 조건 없음'이라고 프롬프트에 명시한다. 그걸 보고도 주 문제로 꼽는 것은 이 파이프라인이 막으려는 행동(판정 불가는 추측 금지)이다. 저자가 보잉을 논하는 것은 사실이지만, 모델에게 준 데이터로는 잴 수 없다.",
+   "quote": "The C3H2F6 plasma produced less bowing and tapering than the CHF3 plasma"
+  },
+  "onset_condition": {
+   "correct": [
+    "L1"
+   ],
+   "acceptable": [
+    "L2",
+    "L3"
+   ],
+   "incorrect": [
+    "L4"
+   ],
+   "note": "L1(CHF3/20℃)이 top/bottom 비 4.0 으로 최악이다. L4 는 최선(1.6)이므로 결함이 시작되는 조건으로 지목하면 오답 — v1 파이프라인이 실제로 저지른 오독이다.",
+   "judge": "conditions"
+  },
+  "process_window": {
+   "correct": [
+    "L4"
+   ],
+   "acceptable": [
+    "L3",
+    "L4"
+   ],
+   "incorrect": [
+    "L1"
+   ],
+   "note": "L4(C3H2F6/-20℃)가 테이퍼 1.6 으로 최선이다. L1 을 공정창으로 지목하는 것은 값의 방향을 뒤집어 읽은 것이며, v1 파이프라인 single 6런 중 5런이 실제로 그렇게 답했다(MANIFEST_v2 참고). 채점은 조건 집합으로 한다 (judge=conditions): 구간 표현('C1 ~ C3')은 펼치고, 배제 절('C4 이상에서 식각 중단')·비교 절('L1 대비')의 조건은 세지 않는다. 오답 조건이 하나라도 들어가면 오답, 정확히 정답 집합이면 정답, 정답을 포함하되 더 넓으면 절반.",
+   "judge": "conditions"
+  }
+ },
+ "q2": {
+  "mechanism": {
+   "judge": "llm",
+   "reference": "C3H2F6 플라즈마는 CF·CF2·CHF 등 폴리머성 CFx 라디칼 밀도가 높아 측벽에 패시베이션층을 만든다. 그래서 이온 산란에 의한 보잉과 테이퍼가 줄고 프로파일이 수직해진다. CHF3 는 폴리머성 CF 종이 적어 측벽 패시베이션이 부족하고 이온 산란이 커져 보잉이 생긴다. 프로파일은 칠러 온도보다 가스 종류에 더 강하게 좌우된다. 저온에서 식각률이 오르는 것은 HF 흡착 증가 때문이며 프로파일과는 별개다.",
+   "must_contain_any": [
+    "측벽",
+    "sidewall",
+    "패시베이션",
+    "passivation",
+    "폴리머",
+    "polymer",
+    "CFx",
+    "CF2"
+   ],
+   "should_contain": [
+    "가스 종류",
+    "plasma chemistry",
+    "이온 산란",
+    "ion scattering"
+   ],
+   "incorrect_claims": [
+    "온도가 프로파일의 지배 요인",
+    "식각 중단이 일어났다",
+    "선택비가 -20℃ 에서 더 높다"
+   ],
+   "quote": "The C3H2F6 plasma exhibited a higher density of polymeric CFx species, resulting in enhanced sidewall passivation. Reduced bowing and tapered profiles were observed in the C3H2F6 plasma"
+  }
+ },
+ "q3": {
+  "variable": {
+   "correct": [
+    "gas",
+    "가스",
+    "chemistry",
+    "C3H2F6",
+    "화학종"
+   ],
+   "judge": "contains"
+  },
+  "direction": {
+   "correct": [
+    "C3H2F6 로 전환",
+    "C3H2F6 유지",
+    "C3H2F6 사용",
+    "use C3H2F6",
+    "switch to C3H2F6",
+    "C3H2F6 를 사용",
+    "저온",
+    "온도를 낮",
+    "lower temperature",
+    "decrease temperature",
+    "below -20",
+    "-20"
+   ],
+   "incorrect": [
+    "CHF3 로 되돌",
+    "use CHF3",
+    "CHF3 gas",
+    "CHF3 를 사용",
+    "minimize C3H2F6",
+    "maintain L1",
+    "increase temperature",
+    "온도를 20",
+    "20 C 로 올리",
+    "20℃ 로 올리"
+   ],
+   "note": "C3H2F6 유지·전환과 저온이 맞는 방향. CHF3 로 되돌리거나 온도를 20℃ 로 올리라는 권고는 최악 조건(L1)으로 가는 방향이며, v1 multi 6런 중 3런이 실제로 그렇게 권고했다. 이 항목은 문자열 매칭이라 취약하다. 맨 화학식 이름(예: 'C3H2F6')을 정답 표현으로 두면 'minimize C3H2F6' 같은 반대 권고까지 정답으로 잡힌다 — 실제로 judge.py 첫 실행에서 그랬다. 그래서 동사를 포함한 구절만 쓴다. 그래도 표현을 다 덮지는 못하므로 LLM 판정으로 옮기는 것이 낫다."
+  }
+ }
+}

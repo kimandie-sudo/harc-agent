@@ -1,0 +1,73 @@
+﻿key,분류,서지,DOI_또는_ID,OA_링크,라이선스,용도
+coatings2023,DOE시리즈,"You et al. 2023, Coatings 13(8):1452",10.3390/coatings13081452,https://www.mdpi.com/2079-6412/13/8/1452,CC BY 4.0,시리즈 S1 + RAG
+lee2026,DOE시리즈,"Lee et al. 2026, Micro & Nano Manufacturing 2:16",10.1007/s44374-026-00024-x,https://link.springer.com/article/10.1007/s44374-026-00024-x,CC BY-NC-ND 4.0,시리즈 S2 + RAG
+you2025,DOE시리즈,"You S. et al. 2025, Materials & Design 259:114797",10.1016/j.matdes.2025.114797,https://doi.org/10.1016/j.matdes.2025.114797,CC BY-NC-ND,시리즈 S5 + RAG
+park2025psst,DOE시리즈,"Park H. et al. 2025, Plasma Sources Sci. Technol. 34:095016",10.1088/1361-6595/ae00f0,https://doi.org/10.1088/1361-6595/ae00f0,CC BY,시리즈 S3 + RAG
+park2026srep,DOE시리즈 후보,"Park et al. 2026, Sci. Rep. 16:5851",10.1038/s41598-026-36323-6,https://doi.org/10.1038/s41598-026-36323-6,CC BY-NC-ND,시리즈 + RAG
+kwon2024nano,DOE시리즈,"Kwon et al. 2024, Nanomaterials 14(2):209",10.3390/nano14020209,https://doi.org/10.3390/nano14020209,CC BY,시리즈 S8 + RAG
+sung2022mat,DOE시리즈,"Sung et al. 2022, Materials 15(4):1300",10.3390/ma15041300,https://doi.org/10.3390/ma15041300,CC BY,시리즈 S6 + RAG
+seong2022nano,DOE시리즈 후보,"Seong et al. 2022, Nanomaterials 12(22):3963",10.3390/nano12223963,https://doi.org/10.3390/nano12223963,CC BY,시리즈 + RAG
+kimlee2022mnsl,DOE시리즈,"Kim & Lee 2022, Micro Nano Syst. Lett. 10:12",10.1186/s40486-022-00155-6,https://doi.org/10.1186/s40486-022-00155-6,CC BY,시리즈 S7 + RAG
+wang2026mi,DOE시리즈 후보,"Wang et al. 2026, Micromachines 17(1):13",10.3390/mi17010013,https://doi.org/10.3390/mi17010013,CC BY,시리즈 + RAG
+osipov2022srep,DOE시리즈 후보,"Osipov et al. 2022, Sci. Rep. 12:5287",10.1038/s41598-022-09266-x,https://doi.org/10.1038/s41598-022-09266-x,CC BY,시리즈 + RAG
+osipov2026acs,DOE시리즈,"Osipov et al. 2026, ACS Omega",10.1021/acsomega.5c11733,https://doi.org/10.1021/acsomega.5c11733,라이선스 확인 필요,시리즈 S4 + RAG
+refino2021srep,DOE시리즈 후보,"Refino et al. 2021, Sci. Rep. 11:19779",10.1038/s41598-021-99173-4,https://doi.org/10.1038/s41598-021-99173-4,CC BY,시리즈 + RAG
+you2022coat,DOE시리즈 후보,"You S. et al. 2022, Coatings 12(5):679",10.3390/coatings12050679,https://doi.org/10.3390/coatings12050679,CC BY,시리즈 + RAG
+cho2021mat,DOE시리즈 후보,"Cho et al. 2021, Materials 14(17):5036",10.3390/ma14175036,https://doi.org/10.3390/ma14175036,CC BY,시리즈 + RAG
+choi2023mat,DOE시리즈 후보,"Choi M. et al. 2023, Materials 16(16):5624",10.3390/ma16165624,https://doi.org/10.3390/ma16165624,CC BY,시리즈 + RAG
+pyo2025mi,DOE시리즈 제외,"Pyo 2025, Micromachines 16(12):1354",10.3390/mi16121354,https://doi.org/10.3390/mi16121354,CC BY,RAG
+jeong2022nano,DOE시리즈 후보,"Jeong et al. 2022, Nanomaterials 12(24):4457",10.3390/nano12244457,https://doi.org/10.3390/nano12244457,CC BY,시리즈 + RAG
+kwon2021mat,DOE시리즈 후보,"Kwon J.-W. et al. 2021, Materials 14(11):3005",10.3390/ma14113005,https://doi.org/10.3390/ma14113005,CC BY,시리즈 + RAG
+xu2023mi,DOE시리즈 후보,"Xu et al. 2023, Micromachines 14(4):846",10.3390/mi14040846,https://doi.org/10.3390/mi14040846,CC BY,시리즈 + RAG
+shi2020mi,DOE시리즈 후보,"Shi et al. 2020, Micromachines 11(9):864",10.3390/mi11090864,https://doi.org/10.3390/mi11090864,CC BY,시리즈 + RAG
+paiva2023acsami,DOE시리즈 후보,"Paiva et al. 2023, ACS AMI 15(50):57960",10.1021/acsami.3c09863,https://doi.org/10.1021/acsami.3c09863,CC BY 4.0,시리즈 + RAG
+bansal2021,XAI,"Bansal et al. 2021, CHI",10.1145/3411764.3445717,https://doi.org/10.1145/3411764.3445717,출판사 확인,읽기·인용 (RAG 아님)
+vasconcelos2023,XAI,"Vasconcelos et al. 2023, PACM HCI CSCW1",10.1145/3579605,https://doi.org/10.1145/3579605,출판사 확인,읽기·인용 (RAG 아님)
+fokweld2024,XAI,"Fok & Weld 2024, AI Magazine",10.1002/aaai.12182,https://doi.org/10.1002/aaai.12182,출판사 확인,읽기·인용 (RAG 아님)
+poursabzi2021,XAI,"Poursabzi-Sangdeh et al. 2021, CHI",10.1145/3411764.3445315,https://doi.org/10.1145/3411764.3445315,출판사 확인,읽기·인용 (RAG 아님)
+schemmer2023,XAI,"Schemmer et al. 2023, IUI",10.1145/3581641.3584066,https://doi.org/10.1145/3581641.3584066,출판사 확인,읽기·인용 (RAG 아님)
+schemmer2022,XAI,"Schemmer et al. 2022, AIES",10.1145/3514094.3534128,https://doi.org/10.1145/3514094.3534128,출판사 확인,읽기·인용 (RAG 아님)
+si2024,XAI,"Si et al. 2024, NAACL",10.18653/v1/2024.naacl-long.81,https://doi.org/10.18653/v1/2024.naacl-long.81,출판사 확인,읽기·인용 (RAG 아님)
+zhang2020,XAI,"Zhang, Liao, Bellamy 2020, FAT*",10.1145/3351095.3372852,https://doi.org/10.1145/3351095.3372852,출판사 확인,읽기·인용 (RAG 아님)
+kim2024,XAI,"Kim et al. 2024, FAccT",10.1145/3630106.3658941,https://doi.org/10.1145/3630106.3658941,출판사 확인,읽기·인용 (RAG 아님)
+steyvers2025,XAI,"Steyvers et al. 2025, Nature Machine Intelligence",10.1038/s42256-024-00976-7,https://doi.org/10.1038/s42256-024-00976-7,출판사 확인,읽기·인용 (RAG 아님)
+zhou2024,XAI,"Zhou, Hwang, Ren, Sap 2024, ACL",10.18653/v1/2024.acl-long.198,https://doi.org/10.18653/v1/2024.acl-long.198,출판사 확인,읽기·인용 (RAG 아님)
+xiong2024,XAI,"Xiong et al. 2024, ICLR",arXiv:2306.13063,https://arxiv.org/abs/2306.13063,출판사 확인,읽기·인용 (RAG 아님)
+bucinca2021,XAI,"Buçinca et al. 2021, PACM HCI CSCW1",10.1145/3449287,https://doi.org/10.1145/3449287,출판사 확인,읽기·인용 (RAG 아님)
+greenchen2019,XAI,"Green & Chen 2019, PACM HCI CSCW",10.1145/3359152,https://doi.org/10.1145/3359152,출판사 확인,읽기·인용 (RAG 아님)
+gajos2022,XAI,"Gajos & Mamykina 2022, IUI",10.1145/3490099.3511138,https://doi.org/10.1145/3490099.3511138,출판사 확인,읽기·인용 (RAG 아님)
+miller2023,XAI,"Miller 2023, FAccT",10.1145/3593013.3594001,https://doi.org/10.1145/3593013.3594001,출판사 확인,읽기·인용 (RAG 아님)
+jacovi2020,XAI,"Jacovi & Goldberg 2020, ACL",10.18653/v1/2020.acl-main.386,https://doi.org/10.18653/v1/2020.acl-main.386,출판사 확인,읽기·인용 (RAG 아님)
+turpin2023,XAI,"Turpin et al. 2023, NeurIPS",arXiv:2305.04388,https://arxiv.org/abs/2305.04388,출판사 확인,읽기·인용 (RAG 아님)
+lanham2023,XAI,"Lanham et al. 2023, preprint",arXiv:2307.13702,https://arxiv.org/abs/2307.13702,출판사 확인,읽기·인용 (RAG 아님)
+chen2025,XAI,"Chen et al. 2025, preprint",arXiv:2505.05410,https://arxiv.org/abs/2505.05410,출판사 확인,읽기·인용 (RAG 아님)
+agarwal2024,XAI,"Agarwal et al. 2024, preprint",arXiv:2402.04614,https://arxiv.org/abs/2402.04614,출판사 확인,읽기·인용 (RAG 아님)
+miller2019,XAI,"Miller 2019, Artificial Intelligence 267",10.1016/j.artint.2018.07.007,https://doi.org/10.1016/j.artint.2018.07.007,출판사 확인,읽기·인용 (RAG 아님)
+wachter2018,XAI,"Wachter et al. 2018, Harvard JOLT",arXiv:1711.00399,https://arxiv.org/abs/1711.00399,출판사 확인,읽기·인용 (RAG 아님)
+liao2020,XAI,"Liao, Gruen, Miller 2020, CHI",10.1145/3313831.3376590,https://doi.org/10.1145/3313831.3376590,출판사 확인,읽기·인용 (RAG 아님)
+senoner2022,XAI,"Senoner et al. 2022, Management Science",10.1287/mnsc.2021.4190,https://doi.org/10.1287/mnsc.2021.4190,출판사 확인,읽기·인용 (RAG 아님)
+senoner2024,XAI,"Senoner et al. 2024, Sci. Rep. 14:31150",10.1038/s41598-024-82501-9,https://doi.org/10.1038/s41598-024-82501-9,출판사 확인,읽기·인용 (RAG 아님)
+gaube2021,XAI,"Gaube et al. 2021, npj Digital Medicine",10.1038/s41746-021-00385-9,https://doi.org/10.1038/s41746-021-00385-9,출판사 확인,읽기·인용 (RAG 아님)
+jacobs2021,XAI,"Jacobs et al. 2021, Translational Psychiatry",10.1038/s41398-021-01224-x,https://doi.org/10.1038/s41398-021-01224-x,출판사 확인,읽기·인용 (RAG 아님)
+doshivelez2017,XAI,"Doshi-Velez & Kim 2017, preprint",arXiv:1702.08608,https://arxiv.org/abs/1702.08608,출판사 확인,읽기·인용 (RAG 아님)
+hoffman2023,XAI,"Hoffman et al. 2023, Frontiers in Computer Science",10.3389/fcomp.2023.1096257,https://doi.org/10.3389/fcomp.2023.1096257,출판사 확인,읽기·인용 (RAG 아님)
+nauta2023,XAI,"Nauta et al. 2023, ACM Computing Surveys",10.1145/3583558,https://doi.org/10.1145/3583558,출판사 확인,읽기·인용 (RAG 아님)
+lee2026ijhci,XAI,"Lee et al. 2026, IJHCI (공저, 부제 포함 인용)",10.1080/10447318.2026.2638556,https://doi.org/10.1080/10447318.2026.2638556,출판사 확인,읽기·인용 (RAG 아님)
+leesee2004,XAI,"Lee & See 2004, Human Factors (보조)",10.1518/hfes.46.1.50_30392,https://doi.org/10.1518/hfes.46.1.50_30392,출판사 확인,읽기·인용 (RAG 아님)
+lai2023,XAI,"Lai et al. 2023, FAccT (보조)",10.1145/3593013.3594087,https://doi.org/10.1145/3593013.3594087,출판사 확인,읽기·인용 (RAG 아님)
+bussone2015,XAI,"Bussone et al. 2015, IEEE ICHI (보조)",10.1109/ICHI.2015.26,https://doi.org/10.1109/ICHI.2015.26,출판사 확인,읽기·인용 (RAG 아님)
+tschandl2020,XAI,"Tschandl et al. 2020, Nature Medicine (보조)",10.1038/s41591-020-0942-0,https://doi.org/10.1038/s41591-020-0942-0,출판사 확인,읽기·인용 (RAG 아님)
+sivaraman2023,XAI,"Sivaraman et al. 2023, CHI (보조)",10.1145/3544548.3581075,https://doi.org/10.1145/3544548.3581075,출판사 확인,읽기·인용 (RAG 아님)
+zhou2023emnlp,XAI,"Zhou, Jurafsky, Hashimoto 2023, EMNLP (보조)",10.18653/v1/2023.emnlp-main.335,https://doi.org/10.18653/v1/2023.emnlp-main.335,출판사 확인,읽기·인용 (RAG 아님)
+lipton1990,XAI,"Lipton 1990, Royal Inst. Phil. Suppl. (보조)",10.1017/S1358246100005130,https://doi.org/10.1017/S1358246100005130,출판사 확인,읽기·인용 (RAG 아님)
+mohseni2021,XAI,"Mohseni et al. 2021, ACM TiiS (보조)",10.1145/3387166,https://doi.org/10.1145/3387166,출판사 확인,읽기·인용 (RAG 아님)
+kaur2020,XAI,"Kaur et al. 2020, CHI (보조)",10.1145/3313831.3376219,https://doi.org/10.1145/3313831.3376219,출판사 확인,읽기·인용 (RAG 아님)
+chung2025,XAI,"Chung et al. 2025, NEJM AI (보조)",10.1056/AIdbp2500418,https://doi.org/10.1056/AIdbp2500418,출판사 확인,읽기·인용 (RAG 아님)
+cai2019,XAI,"Cai et al. 2019, PACM HCI CSCW (보조, 서지 일부 미확인)",10.1145/3359206,https://doi.org/10.1145/3359206,출판사 확인,읽기·인용 (RAG 아님)
+wu2010review,리뷰,"Wu B., Kumar A., Pamarthy S. 2010, J. Appl. Phys. 108, 051101 (Review Article, 21쪽)",10.1063/1.3474652,확인 필요,AIP 구독 저널 — 재배포 불가,RAG(기제)
+plasmaroadmap2017,리뷰,Adamovich I. et al. (2017) The 2017 Plasma Roadmap: Low temperature plasma science and technology. J. Phys. D Appl. Phys.,10.1088/1361-6463/aa76f5,확인 필요,확인 필요,RAG(기제)
+jansen2009blacksi,리뷰,"Jansen H.V. et al. 2009, J. Micromech. Microeng. 19 033001 (Topical Review, 42쪽)",10.1088/0960-1317/19/3/033001,확인 필요,IOP 구독 저널 — 재배포 불가,RAG(기제)
+guo2022tsv,리뷰,"Guo H., Cao S., Li L., Zhang X. A review on the mainstream through-silicon via etching methods. Mater. Sci. Semicond. Process. 2022, 137, 106182",10.1016/j.mssp.2021.106182,확인 필요,확인 필요,RAG(기제)
+cho2015iontrap,리뷰,"Cho D., Hong S., Lee M., Kim T. A review of silicon microfabricated ion traps for quantum information processing. Micro Nano Syst Lett 3(1):1-12",10.1186/s40486-015-0013-3,확인 필요,확인 필요,RAG(기제)
+lieberman2005,교과서,"Lieberman M.A., Lichtenberg A.J. (2005) Principles of Plasma Discharges and Materials Processing. Wiley",ISBN 978-0471720010,해당 없음,저작권 도서,읽기·인용 (RAG 아님)
+nojiri2015,교과서,Nojiri K. Handbook of Dry Etching Technology for Semiconductors. Springer,ISBN 978-3319102160,해당 없음,저작권 도서,읽기·인용 (RAG 아님)

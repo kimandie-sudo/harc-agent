@@ -1,0 +1,291 @@
+{
+ "run_id": "0918-234054-f62a",
+ "series": "S2",
+ "provider": "mock",
+ "model": "mock",
+ "mode": "single",
+ "rag": false,
+ "images": true,
+ "check": {
+  "judgeable": {
+   "bowing": {
+    "L1": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L2": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L3": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L4": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    }
+   },
+   "taper_narrowing": {
+    "L1": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L2": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L3": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L4": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    }
+   },
+   "etch_stop": {
+    "L1": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L2": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L3": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L4": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    }
+   }
+  },
+  "resolution": {
+   "px_nm": 6.061,
+   "edge_uncertainty_px": 2,
+   "per_condition": {
+    "L1": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L2": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L3": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L4": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    }
+   }
+  },
+  "value_source_note": "계측·논문 표기값 사용 — 해상도 한계는 값을 이미지에서 새로 잴 때만 적용",
+  "gaps": [
+   {
+    "defect": "bowing",
+    "condition": "L1",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L2",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L3",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L4",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   }
+  ],
+  "image_quality": {
+   "items": "(mock items)"
+  }
+ },
+ "rules": {
+  "bowing": {
+   "defect": "bowing",
+   "threshold_pct": 5.0,
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    }
+   ],
+   "trend_bow_index": "판단 불가(값 부족)"
+  },
+  "taper_narrowing": {
+   "defect": "taper_narrowing",
+   "threshold_pct": 8.0,
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "top_bottom_ratio": 4.0,
+     "change_vs_first_pct": 0.0,
+     "significant_vs_first": false
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "top_bottom_ratio": 2.9,
+     "change_vs_first_pct": -27.5,
+     "significant_vs_first": true
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "top_bottom_ratio": 3.0,
+     "change_vs_first_pct": -25.0,
+     "significant_vs_first": true
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "top_bottom_ratio": 1.6,
+     "change_vs_first_pct": -60.0,
+     "significant_vs_first": true
+    }
+   ],
+   "factorial": {
+    "main_effects_pct": {
+     "gas": [
+      {
+       "at": 20,
+       "from": "CHF3",
+       "to": "C3H2F6",
+       "change_pct": -25.0
+      },
+      {
+       "at": -20,
+       "from": "CHF3",
+       "to": "C3H2F6",
+       "change_pct": -44.8
+      }
+     ],
+     "temp": [
+      {
+       "at": "CHF3",
+       "from": 20,
+       "to": -20,
+       "change_pct": -27.5
+      },
+      {
+       "at": "C3H2F6",
+       "from": 20,
+       "to": -20,
+       "change_pct": -46.7
+      }
+     ]
+    },
+    "note": "같은 요인의 두 변화율이 크게 다르면 상호작용 가능성. 비율 지표 기준이며 보잉 등 다른 지표에선 결론이 다를 수 있음"
+   }
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "etch_stop": false
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "etch_stop": false
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "etch_stop": false
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "etch_stop": false
+    }
+   ],
+   "onset": null
+  }
+ },
+ "single": {
+  "q1": "(mock q1)",
+  "q2": "(mock q2)",
+  "q3": "(mock q3)"
+ },
+ "rag_chunks": []
+}

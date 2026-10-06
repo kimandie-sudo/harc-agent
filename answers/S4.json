@@ -1,0 +1,121 @@
+{
+  "series_id": "S4",
+  "_note": "채점용 정답. 이 파일은 모델 프롬프트에 절대 넣지 말 것. data/series/S4.json 과 분리돼 있다.",
+  "source": {
+    "paper_id": "osipov2026acs",
+    "doi": "10.1021/acsomega.5c11733",
+    "read_from": "Results (Table 3, 다목적 베이지안 최적화), Multivariate Regression Analysis, Conclusions",
+    "rubric_author": "저자 결론을 읽고 정리한 것. 허용답 집합은 판단이 섞여 있으니 검토 후 고칠 것."
+  },
+  "conditions": {
+    "E1": "출발점 1", "E2": "출발점 2", "E3": "", "E4": "", "E5": "", "E6": "", "E7": "",
+    "E8": "", "E9": "", "E10": "", "E11": "", "E12": "", "E13": "", "E14": "저자가 최적으로 선언한 모드"
+  },
+  "authors_conclusion": "다목적 베이지안 최적화로 실리콘 고종횡비 나노공동 식각 조건을 찾았다. 목표는 네 가지 — 역측벽각 C 최소화, 마스크 언더컷 B 최소화, 식각 등방성 I 최소화, 종횡비 AR 최대화이며, 설계 요구는 AR > 10 이다. 14회 실험 끝에 No.14(WICP 1025 W, Ubias 130 V, P 3.35 Pa, T 3.5 ℃, SF6 24 sccm, C4F8 50 sccm)를 최적 모드로 채택했다. 한 지표를 개선하면 다른 하나가 반드시 나빠지는 파레토 구조이며, 다중회귀로 확인한 기제는 다음과 같다. 압력을 1.9 → 3.35 Pa 로 올리면 이온 각분포가 넓어지고 불소 라디칼 농도가 올라 언더컷과 측벽각 이탈이 함께 커진다. ICP 파워를 750 → 1250 W 로 올리면 활성종 생성이 늘어 종횡비와 언더컷이 함께 커진다(수직 식각률이 측면보다 더 크게 오르기 때문). SF6 유량을 7.5 → 22.5 sccm 으로 올리면 종횡비가 오르면서 등방성과 역측벽각은 줄어든다. 바이어스 전압은 네 출력 전부에 유의한 영향을 준다.",
+  "q1": {
+    "primary_issue": {
+      "correct": [
+        "undercut"
+      ],
+      "acceptable": [
+        "sidewall_angle"
+      ],
+      "incorrect": [
+        "bowing",
+        "taper",
+        "necking",
+        "etch_stop"
+      ],
+      "note": "언더컷이 조건 간 변동이 가장 크고(56.9 ~ 875.0 nm, 15배) 종횡비를 올리는 두 입력(압력·ICP 파워) 모두에서 함께 악화된다 — 즉 목표와 정면으로 상충하는 지표다. 등방성 I 는 언더컷/깊이라서 파생값이다. sidewall_angle 은 같은 기제(이온 각분포)로 움직이는 실제 목적함수이므로 허용한다. bowing·taper·necking 은 S4 에 top_cd·max_cd·bottom_cd·neck_cd 가 없어 14조건 전부 '판정 불가'이고 규칙 출력이 그렇게 명시한다 — 그걸 보고도 꼽으면 오답이다. etch_stop 은 14조건 모두 false 다.",
+      "quote": "increasing the pressure from 1.9 to 3.35 Pa results in a larger mask undercut and a greater deviation of the sidewall angle from the vertical"
+    },
+    "onset_condition": {
+      "correct": [
+        "E13"
+      ],
+      "acceptable": [
+        "E10",
+        "E8"
+      ],
+      "incorrect": [
+        "E4",
+        "E14",
+        "E11"
+      ],
+      "note": "E13 이 언더컷 875.0 nm 로 최악이다. E10(613.9)·E8(348.6, 측벽각 9.0°로 최악)도 나쁜 조건이라 허용한다. E4 는 언더컷 최선(56.9), E11 은 측벽각 거의 수직(0.32°), E14 는 저자 최적이므로 결함이 시작되는 조건으로 지목하면 오답이다.",
+      "judge": "conditions"
+    },
+    "process_window": {
+      "correct": [
+        "E14"
+      ],
+      "acceptable": [
+        "E5",
+        "E3",
+        "E6",
+        "E2"
+      ],
+      "incorrect": [
+        "E4",
+        "E7",
+        "E11",
+        "E1",
+        "E8",
+        "E9",
+        "E10",
+        "E12",
+        "E13"
+      ],
+      "note": "**이 항목이 이 시리즈의 변별점이다.** 지표를 하나만 보면 전부 다른 답이 나온다 — 언더컷만 보면 E4(56.9), 측벽각만 보면 E7(0.25°), 종횡비만 보면 E5(15.93). 저자 최적은 E14 로, 종횡비 15.66(2위)을 지키면서 언더컷을 중간(318.4)에 두는 균형점이다. 허용답은 **파레토 최적이면서 설계 요구 AR > 10 을 만족하는** 조건들이다(E2·E3·E5·E6). E4·E7·E11 은 파레토 최적이지만 AR 이 각각 7.89·6.49·8.28 로 **요구를 못 맞춘다** — 한 결함 지표만 보고 고르는 전형적 오답이라 오답으로 둔다. 나머지(E1·E8·E9·E10·E12·E13)는 다른 조건에 지배당한다.",
+      "judge": "conditions",
+      "quote": "it is necessary to develop a technology for etching of high-aspect-ratio nano-cavities (AR > 10) in silicon pillars"
+    }
+  },
+  "q2": {
+    "mechanism": {
+      "judge": "llm",
+      "reference": "네 출력이 서로 상충한다. 압력을 올리면 이온의 평균자유행정이 줄어 각분포가 넓어지고, 불소 라디칼 농도도 올라 언더컷과 측벽각 이탈이 함께 커진다. ICP 파워를 올리면 전자 밀도가 올라 원자 불소가 늘고 화학 식각이 빨라지는데, 수직 방향이 측면보다 더 크게 늘어 종횡비와 언더컷이 동시에 커진다. C4F8 해리 생성물은 표면에 폴리머 보호막으로 재증착해 측면 식각을 억제하므로, SF6/C4F8 비가 수직·측면 균형을 정한다. SF6 유량을 올리면 종횡비가 오르면서 등방성과 역측벽각은 줄어든다. 바이어스 전압은 네 출력 전부에 유의하게 작용한다. 그래서 한 지표만 좋게 만드는 조건은 다른 지표를 반드시 악화시킨다(파레토).",
+      "must_contain_any": [
+        "이온", "ion", "라디칼", "radical", "불소", "fluorine", "폴리머", "polymer"
+      ],
+      "should_contain": [
+        "각분포", "angular distribution", "평균자유행정", "mean free path",
+        "재증착", "redeposit", "측면", "lateral", "상충", "trade"
+      ],
+      "incorrect_claims": [
+        "식각 중단이 주된 실패 양상",
+        "지표들이 서로 독립이다",
+        "종횡비만 올리면 된다",
+        "언더컷과 종횡비를 동시에 최적화할 수 있다"
+      ]
+    }
+  },
+  "q3": {
+    "variable": {
+      "correct": [
+        "bias", "바이어스", "Ubias", "전압",
+        "ICP", "파워", "power",
+        "압력", "pressure",
+        "SF6", "C4F8", "유량", "flow", "가스비", "gas ratio"
+      ],
+      "judge": "contains"
+    },
+    "direction": {
+      "correct": [
+        "바이어스", "bias", "Ubias",
+        "압력을 낮", "pressure", "압력을 내",
+        "SF6 를 올리", "SF6 유량을 올리", "SF6 flow", "increase SF6",
+        "C4F8 비", "가스비", "SF6/C4F8",
+        "ICP 파워", "ICP power",
+        "E14 근방", "No. 14", "최적 모드 주변", "14번 조건 부근",
+        "파레토", "Pareto", "상충", "trade-off", "균형"
+      ],
+      "incorrect": [
+        "종횡비만", "AR 만 최대화", "언더컷만",
+        "E4 로", "E7 로", "E13 으로",
+        "압력을 올리", "increase the pressure", "압력을 높이"
+      ],
+      "note": "다중회귀가 짚은 것은 (1) 바이어스 전압이 네 출력 전부에 유의하다는 것, (2) 등방성과 SF6 유량, 종횡비와 바이어스 전압 사이에 유의한 2차 관계가 있다는 것이다. 따라서 바이어스 전압을 쪼개 보거나 SF6/C4F8 비를 조절하는 방향이 맞다. 압력을 올리는 방향은 언더컷과 측벽각을 함께 악화시키므로 오답이다. 지표 하나만 최적화하자는 제안도 오답이다 — 파레토 구조를 못 읽은 것이다."
+    }
+  }
+}

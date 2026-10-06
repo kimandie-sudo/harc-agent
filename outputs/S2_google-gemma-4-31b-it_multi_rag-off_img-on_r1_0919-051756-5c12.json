@@ -1,0 +1,471 @@
+{
+ "run_id": "0919-051756-5c12",
+ "series": "S2",
+ "provider": "google",
+ "model": "gemma-4-31b-it",
+ "mode": "multi",
+ "rag": false,
+ "images": true,
+ "check": {
+  "judgeable": {
+   "bowing": {
+    "L1": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L2": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L3": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    },
+    "L4": {
+     "ok": false,
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능",
+     "missing": [
+      "max_cd",
+      "top_cd"
+     ]
+    }
+   },
+   "taper_narrowing": {
+    "L1": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L2": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L3": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    },
+    "L4": {
+     "ok": true,
+     "uses": [
+      "top_bottom_ratio"
+     ]
+    }
+   },
+   "etch_stop": {
+    "L1": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L2": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L3": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    },
+    "L4": {
+     "ok": true,
+     "uses": [
+      "etch_stop"
+     ]
+    }
+   }
+  },
+  "resolution": {
+   "px_nm": 6.061,
+   "edge_uncertainty_px": 2,
+   "per_condition": {
+    "L1": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L2": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L3": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    },
+    "L4": {
+     "min_detectable_pct": null,
+     "reason": "CD 기준값 없음"
+    }
+   }
+  },
+  "value_source_note": "계측·논문 표기값 사용 — 해상도 한계는 값을 이미지에서 새로 잴 때만 적용",
+  "gaps": [
+   {
+    "defect": "bowing",
+    "condition": "L1",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L2",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L3",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   },
+   {
+    "defect": "bowing",
+    "condition": "L4",
+    "missing": [
+     "max_cd",
+     "top_cd"
+    ]
+   }
+  ],
+  "image_quality": {
+   "items": [
+    {
+     "condition": "L1",
+     "bottom_visible": true,
+     "cleave_through_center": "yes",
+     "artifacts": [],
+     "usable_for": [
+      "top_cd",
+      "max_cd",
+      "bottom_cd",
+      "depth",
+      "sidewall"
+     ]
+    },
+    {
+     "condition": "L2",
+     "bottom_visible": true,
+     "cleave_through_center": "yes",
+     "artifacts": [],
+     "usable_for": [
+      "top_cd",
+      "max_cd",
+      "bottom_cd",
+      "depth",
+      "sidewall"
+     ]
+    },
+    {
+     "condition": "L3",
+     "bottom_visible": true,
+     "cleave_through_center": "yes",
+     "artifacts": [
+      "charging"
+     ],
+     "usable_for": [
+      "top_cd",
+      "max_cd",
+      "bottom_cd",
+      "depth",
+      "sidewall"
+     ]
+    },
+    {
+     "condition": "L4",
+     "bottom_visible": true,
+     "cleave_through_center": "yes",
+     "artifacts": [],
+     "usable_for": [
+      "top_cd",
+      "max_cd",
+      "bottom_cd",
+      "depth",
+      "sidewall"
+     ]
+    }
+   ]
+  }
+ },
+ "rules": {
+  "bowing": {
+   "defect": "bowing",
+   "threshold_pct": 5.0,
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "status": "판정 불가",
+     "reason": "값 없음: max_cd, top_cd / 보충 가능: 이미지에서 harc_measure로 max_cd, top_cd 측정 시 판정 가능"
+    }
+   ],
+   "trend_bow_index": "판단 불가(값 부족)"
+  },
+  "taper_narrowing": {
+   "defect": "taper_narrowing",
+   "threshold_pct": 8.0,
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "top_bottom_ratio": 4.0,
+     "change_vs_first_pct": 0.0,
+     "significant_vs_first": false
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "top_bottom_ratio": 2.9,
+     "change_vs_first_pct": -27.5,
+     "significant_vs_first": true
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "top_bottom_ratio": 3.0,
+     "change_vs_first_pct": -25.0,
+     "significant_vs_first": true
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "top_bottom_ratio": 1.6,
+     "change_vs_first_pct": -60.0,
+     "significant_vs_first": true
+    }
+   ],
+   "factorial": {
+    "main_effects_pct": {
+     "gas": [
+      {
+       "at": 20,
+       "from": "CHF3",
+       "to": "C3H2F6",
+       "change_pct": -25.0
+      },
+      {
+       "at": -20,
+       "from": "CHF3",
+       "to": "C3H2F6",
+       "change_pct": -44.8
+      }
+     ],
+     "temp": [
+      {
+       "at": "CHF3",
+       "from": 20,
+       "to": -20,
+       "change_pct": -27.5
+      },
+      {
+       "at": "C3H2F6",
+       "from": 20,
+       "to": -20,
+       "change_pct": -46.7
+      }
+     ]
+    },
+    "note": "같은 요인의 두 변화율이 크게 다르면 상호작용 가능성. 비율 지표 기준이며 보잉 등 다른 지표에선 결론이 다를 수 있음"
+   }
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "rows": [
+    {
+     "condition": "L1",
+     "level": "CHF3 / 20C",
+     "etch_stop": false
+    },
+    {
+     "condition": "L2",
+     "level": "CHF3 / -20C",
+     "etch_stop": false
+    },
+    {
+     "condition": "L3",
+     "level": "C3H2F6 / 20C",
+     "etch_stop": false
+    },
+    {
+     "condition": "L4",
+     "level": "C3H2F6 / -20C",
+     "etch_stop": false
+    }
+   ],
+   "onset": null
+  }
+ },
+ "defects": {
+  "bowing": {
+   "defect": "bowing",
+   "present": false,
+   "affected_conditions": [],
+   "onset_condition": null,
+   "severity": 0,
+   "trend_summary": "모든 조건에서 측정 데이터가 부족하여 스윕 방향에 따른 경향성을 판단할 수 없습니다.",
+   "evidence": [
+    "L1, L2, L3, L4 모든 조건의 상태가 '판정 불가'로 표시됨",
+    "trend_bow_index: 판단 불가(값 부족)"
+   ],
+   "confidence": "high",
+   "not_judgeable": [
+    {
+     "condition": "L1",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "L2",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "L3",
+     "reason": "값 없음: max_cd, top_cd"
+    },
+    {
+     "condition": "L4",
+     "reason": "값 없음: max_cd, top_cd"
+    }
+   ]
+  },
+  "taper_narrowing": {
+   "defect": "taper_narrowing",
+   "present": true,
+   "affected_conditions": [
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+   ],
+   "onset_condition": "L1",
+   "severity": 3,
+   "trend_summary": "가스가 CHF3에서 C3H2F6로 변경되고 칠러 온도가 20C에서 -20C로 낮아질수록 상단/하단 CD 비율이 감소하며 테이퍼 현상이 완화되는 경향을 보임.",
+   "evidence": [
+    "L1: top_bottom_ratio 4.0",
+    "L2: top_bottom_ratio 2.9",
+    "L3: top_bottom_ratio 3.0",
+    "L4: top_bottom_ratio 1.6"
+   ],
+   "confidence": "high",
+   "not_judgeable": []
+  },
+  "etch_stop": {
+   "defect": "etch_stop",
+   "present": false,
+   "affected_conditions": [],
+   "onset_condition": null,
+   "severity": 0,
+   "trend_summary": "모든 실험 조건(L1~L4)에서 식각 중단 현상이 발생하지 않았습니다.",
+   "evidence": [
+    "L1: etch_stop false",
+    "L2: etch_stop false",
+    "L3: etch_stop false",
+    "L4: etch_stop false"
+   ],
+   "confidence": "high",
+   "not_judgeable": []
+  }
+ },
+ "aggregate": {
+  "ranking": [
+   {
+    "defect": "taper_narrowing",
+    "severity": 3,
+    "why": "모든 실험 조건(L1, L2, L3, L4)에서 발생하였으며, L1의 top_bottom_ratio가 4.0으로 가장 심각함"
+   }
+  ],
+  "primary_issue": "taper_narrowing",
+  "process_window": null,
+  "tradeoffs": [],
+  "confidence": "high"
+ },
+ "rag_chunks": [],
+ "cause": {
+  "hypotheses": [
+   {
+    "issue": "taper_narrowing",
+    "mechanism": "가스 변경(CHF3 → C3H2F6)에 따른 폴리머 증착량 증가 및 측벽 보호막 강화",
+    "predicted_trend": "C3H2F6 사용 시 CHF3 대비 측벽 보호 능력이 향상되어 top_bottom_ratio가 감소할 것이다.",
+    "observed_trend": "CHF3에서 C3H2F6로 변경 시, 20C에서 -25.0%, -20C에서 -44.8%의 top_bottom_ratio 감소가 관측됨",
+    "verdict": "supported",
+    "basis": "general_knowledge",
+    "citations": []
+   },
+   {
+    "issue": "taper_narrowing",
+    "mechanism": "칠러 온도 저하(20C → -20C)에 따른 폴리머 응축 및 증착률 증가",
+    "predicted_trend": "온도가 낮아질수록 폴리머의 휘발성이 낮아지고 증착량이 증가하여 top_bottom_ratio가 감소할 것이다.",
+    "observed_trend": "20C에서 -20C로 변경 시, CHF3에서 -27.5%, C3H2F6에서 -46.7%의 top_bottom_ratio 감소가 관측됨",
+    "verdict": "supported",
+    "basis": "general_knowledge",
+    "citations": []
+   }
+  ],
+  "cannot_assess": [
+   "장비 이력 및 챔버 상태 등 swept_variable 외의 요인에 의한 영향은 제공된 데이터로 확인 불가함"
+  ]
+ },
+ "next": {
+  "recommendation": {
+   "variable": "chiller temperature",
+   "direction": "decrease",
+   "suggested_levels": "below -20 C",
+   "expected_effect": "further reduction of top_bottom_ratio to mitigate taper_narrowing",
+   "risk": "excessive polymer deposition leading to etch stop or clogging"
+  },
+  "alternatives": [
+   {
+    "variable": "gas",
+    "direction": "increase C3H2F6 proportion",
+    "why": "C3H2F6 showed a significant reduction in top_bottom_ratio compared to CHF3"
+   }
+  ],
+  "measure_next": [
+   "top_bottom_ratio",
+   "etch rate",
+   "CD (top/bottom)"
+  ],
+  "confidence": "high"
+ }
+}

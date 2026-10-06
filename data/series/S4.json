@@ -1,0 +1,177 @@
+{
+  "series_id": "S4",
+  "source_set": "osipov2026acs",
+  "_note": "모델 입력용. 논문 제목·저자·결론 없음. 정답은 answers/ 에만. 베이지안 최적화 시퀀스라 입력 6개가 동시에 변한다 — 조건 순서는 실험을 돈 순서일 뿐 스윕이 아니다. design='sequence' 로 표시해 추세 계산을 끈다. E1·E2 는 최적화의 출발점이다.",
+  "structure": "실리콘 고종횡비 나노공동(cavity). 폴리스티렌 구 콜로이드 리소그래피 + 크롬 마스크.",
+  "goal": "실리콘 기둥 안의 고종횡비 나노공동. 설계 요구: 종횡비 AR > 10. 이 요구를 지키면서 마스크 언더컷, 측벽 각 이탈, 식각 등방성을 작게 한다.",
+  "constraints": [{"field": "aspect_ratio", "op": ">", "value": 10, "label": "설계 요구 AR > 10"}],
+  "objectives": [{"field": "aspect_ratio", "better": "higher", "label": "종횡비"}, {"field": "undercut_nm", "better": "lower", "label": "언더컷"}, {"field": "sidewall_angle_deg", "better": "lower", "label": "측벽각 이탈"}, {"field": "isotropy", "better": "lower", "label": "식각 등방성"}],
+  "design": "sequence",
+  "swept_variable": null,
+  "varied_inputs": [
+    "ICP 파워(W)",
+    "바이어스 전압 |Ubias|(V)",
+    "압력 P(Pa)",
+    "온도 T(°C)",
+    "SF6 유량(sccm)",
+    "C4F8 유량(sccm)"
+  ],
+  "other_fixed": "SF6/C4F8 연속 플라즈마 식각. 입력 6개는 조건마다 함께 바뀐다 (label 에 조건별 값이 있다).",
+  "nominal_cd_nm": null,
+  "target_depth_nm": null,
+  "px_nm": null,
+  "value_source": "paper",
+  "conditions": [
+    {
+      "id": "E1",
+      "level": 1,
+      "label": "WICP 1000W · |Ubias| 125V · P 2.3Pa · T 15°C · SF6 10sccm · C4F8 35sccm",
+      "sidewall_angle_deg": 1.45,
+      "undercut_nm": 256.7,
+      "isotropy": 0.039,
+      "aspect_ratio": 6.86,
+      "etch_stop": false
+    },
+    {
+      "id": "E2",
+      "level": 2,
+      "label": "WICP 1000W · |Ubias| 50V · P 2.3Pa · T 1°C · SF6 13sccm · C4F8 32sccm",
+      "sidewall_angle_deg": 2.81,
+      "undercut_nm": 223.3,
+      "isotropy": 0.043,
+      "aspect_ratio": 11.41,
+      "etch_stop": false
+    },
+    {
+      "id": "E3",
+      "level": 3,
+      "label": "WICP 1000W · |Ubias| 75V · P 2.3Pa · T 5°C · SF6 13sccm · C4F8 32sccm",
+      "sidewall_angle_deg": 3.4,
+      "undercut_nm": 410.5,
+      "isotropy": 0.026,
+      "aspect_ratio": 14.91,
+      "etch_stop": false
+    },
+    {
+      "id": "E4",
+      "level": 4,
+      "label": "WICP 750W · |Ubias| 50V · P 2.3Pa · T 5°C · SF6 13sccm · C4F8 32sccm",
+      "sidewall_angle_deg": 3.27,
+      "undercut_nm": 56.9,
+      "isotropy": 0.015,
+      "aspect_ratio": 7.89,
+      "etch_stop": false
+    },
+    {
+      "id": "E5",
+      "level": 5,
+      "label": "WICP 1250W · |Ubias| 50V · P 2.3Pa · T 5°C · SF6 13sccm · C4F8 32sccm",
+      "sidewall_angle_deg": 1.45,
+      "undercut_nm": 493.7,
+      "isotropy": 0.039,
+      "aspect_ratio": 15.93,
+      "etch_stop": false
+    },
+    {
+      "id": "E6",
+      "level": 6,
+      "label": "WICP 1000W · |Ubias| 125V · P 2.7Pa · T 1°C · SF6 12sccm · C4F8 33sccm",
+      "sidewall_angle_deg": 1.82,
+      "undercut_nm": 268.8,
+      "isotropy": 0.035,
+      "aspect_ratio": 13.51,
+      "etch_stop": false
+    },
+    {
+      "id": "E7",
+      "level": 7,
+      "label": "WICP 1000W · |Ubias| 125V · P 1.9Pa · T 1°C · SF6 12sccm · C4F8 33sccm",
+      "sidewall_angle_deg": 0.25,
+      "undercut_nm": 217.5,
+      "isotropy": 0.025,
+      "aspect_ratio": 6.49,
+      "etch_stop": false
+    },
+    {
+      "id": "E8",
+      "level": 8,
+      "label": "WICP 1025W · |Ubias| 40V · P 3Pa · T 18.5°C · SF6 10sccm · C4F8 33sccm",
+      "sidewall_angle_deg": 9.0,
+      "undercut_nm": 348.6,
+      "isotropy": 0.142,
+      "aspect_ratio": 4.02,
+      "etch_stop": false
+    },
+    {
+      "id": "E9",
+      "level": 9,
+      "label": "WICP 950W · |Ubias| 150V · P 3Pa · T 33.5°C · SF6 7sccm · C4F8 22sccm",
+      "sidewall_angle_deg": 3.68,
+      "undercut_nm": 498.7,
+      "isotropy": 0.058,
+      "aspect_ratio": 11.59,
+      "etch_stop": false
+    },
+    {
+      "id": "E10",
+      "level": 10,
+      "label": "WICP 1100W · |Ubias| 40V · P 3Pa · T 33.5°C · SF6 8sccm · C4F8 25sccm",
+      "sidewall_angle_deg": 7.18,
+      "undercut_nm": 613.9,
+      "isotropy": 0.123,
+      "aspect_ratio": 7.37,
+      "etch_stop": false
+    },
+    {
+      "id": "E11",
+      "level": 11,
+      "label": "WICP 1000W · |Ubias| 125V · P 2.3Pa · T 31°C · SF6 11sccm · C4F8 34sccm",
+      "sidewall_angle_deg": 0.32,
+      "undercut_nm": 112.0,
+      "isotropy": 0.028,
+      "aspect_ratio": 8.28,
+      "etch_stop": false
+    },
+    {
+      "id": "E12",
+      "level": 12,
+      "label": "WICP 1100W · |Ubias| 130V · P 3.5Pa · T 8.5°C · SF6 14sccm · C4F8 44sccm",
+      "sidewall_angle_deg": 5.35,
+      "undercut_nm": 209.0,
+      "isotropy": 0.039,
+      "aspect_ratio": 8.18,
+      "etch_stop": false
+    },
+    {
+      "id": "E13",
+      "level": 13,
+      "label": "WICP 1100W · |Ubias| 150V · P 2.15Pa · T 13.5°C · SF6 9sccm · C4F8 24sccm",
+      "sidewall_angle_deg": 2.58,
+      "undercut_nm": 875.0,
+      "isotropy": 0.063,
+      "aspect_ratio": 7.96,
+      "etch_stop": false
+    },
+    {
+      "id": "E14",
+      "level": 14,
+      "label": "WICP 1025W · |Ubias| 130V · P 3.35Pa · T 3.5°C · SF6 24sccm · C4F8 50sccm",
+      "sidewall_angle_deg": 2.3,
+      "undercut_nm": 318.4,
+      "isotropy": 0.036,
+      "aspect_ratio": 15.66,
+      "etch_stop": false
+    }
+  ],
+  "extra": {
+    "metric_note": "sidewall_angle_deg 는 수직 이탈 각도(작을수록 수직), undercut_nm 은 (최대폭−개구폭)/2, isotropy 는 언더컷/깊이 비, aspect_ratio 는 깊이/개구폭이다. 앞 세 개는 작을수록 좋고 aspect_ratio 는 **클수록 좋다**.",
+    "aspect_ratio_is_a_goal": "aspect_ratio 는 결함 지표가 아니라 달성 목표다. 결함을 줄이는 조건이 종횡비도 높다는 보장이 없다.",
+    "unavailable": {
+      "top_cd": "원문에 조건별 수치 없음",
+      "max_cd": "원문에 조건별 수치 없음",
+      "bottom_cd": "원문에 조건별 수치 없음"
+    },
+    "target_note": "원문 설계 요구사항: 종횡비 10 초과(AR > 10)의 고종횡비 나노공동을 만드는 것이 목표다. 요구를 못 맞추면 다른 지표가 좋아도 쓸 수 없다."
+  },
+  "target_aspect_ratio": 10
+}

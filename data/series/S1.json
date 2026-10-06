@@ -1,0 +1,71 @@
+{
+ "series_id": "S1",
+ "source_set": "coatings2023",
+ "_note": "모델 입력용. 논문 제목·저자·결론 없음. 정답은 answers/ 에만. C4·C5 의 max_cd/max_cd_depth/bottom_cd 는 원문 본문에 없음 — Figure 4 그래프에만 있고 etch stop 이라 bottom 자체가 존재하지 않는다. 그림 디지타이징 전에는 '판정 불가'가 맞다.",
+ "structure": "SiO2 contact hole, ACL mask",
+ "goal": "저GWP 가스 HFE-347mcc3 로 ACL 마스크 SiO2 콘택홀을 식각한다. 목표는 상단에서 하단까지 측벽이 수직에 가까운 이방성 프로파일.",
+ "swept_variable": "HFE-347mcc3 / Ar flow ratio",
+ "other_fixed": "O2 2 sccm, total 30 sccm",
+ "nominal_cd_nm": 200,
+ "target_depth_nm": null,
+ "px_nm": 1.623,
+ "conditions": [
+  {
+   "id": "C1",
+   "level": 0.4,
+   "label": "8/2/20 sccm",
+   "top_cd": 197,
+   "max_cd": 221,
+   "max_cd_depth": 661,
+   "bottom_cd": 130,
+   "etch_stop": false,
+   "image": "images/C1.png"
+  },
+  {
+   "id": "C2",
+   "level": 0.47,
+   "label": "9/2/19 sccm",
+   "top_cd": 197,
+   "max_cd": 194,
+   "max_cd_depth": 1094,
+   "bottom_cd": 130,
+   "etch_stop": false,
+   "image": "images/C2.png"
+  },
+  {
+   "id": "C3",
+   "level": 0.56,
+   "label": "10/2/18 sccm",
+   "top_cd": 196,
+   "max_cd": 187,
+   "max_cd_depth": 1094,
+   "bottom_cd": 75,
+   "etch_stop": false,
+   "image": "images/C3.png"
+  },
+  {
+   "id": "C4",
+   "level": 0.65,
+   "label": "11/2/17 sccm",
+   "top_cd": 191,
+   "max_cd": null,
+   "max_cd_depth": null,
+   "bottom_cd": null,
+   "etch_stop": true,
+   "image": "images/C4.png"
+  },
+  {
+   "id": "C5",
+   "level": 0.75,
+   "label": "12/2/16 sccm",
+   "top_cd": 182,
+   "max_cd": null,
+   "max_cd_depth": null,
+   "bottom_cd": null,
+   "etch_stop": true,
+   "image": "images/C5.png"
+  }
+ ],
+ "value_source": "paper",
+ "extra": {}
+}

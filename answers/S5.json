@@ -1,0 +1,146 @@
+{
+ "series_id": "S5",
+ "_note": "채점용 정답. 이 파일은 모델 프롬프트에 절대 넣지 말 것. data/series/S5.json 과 분리돼 있다.",
+ "source": {
+  "paper_id": "you2025",
+  "doi": "10.1016/j.matdes.2025.114797",
+  "read_from": "Abstract, 3.2.1 (증착 단계 시간), 3.2.2 (식각 단계 시간), Fig. 5~8, 4. Conclusions",
+  "rubric_author": "저자 결론을 읽고 정리한 것 (2026-09-29, Claude 초안). 허용답·오답 경계는 판단이 섞여 있으니 검토 후 고칠 것. 특히 onset_condition 의 정의(보잉의 시작)와 process_window 에서 D5·D9·E40 을 어느 칸에도 넣지 않은 것은 전문가 확인이 필요하다."
+ },
+ "conditions": {
+  "D3": "증착 3 s / 식각 30 s",
+  "D5": "증착 5 s / 식각 30 s",
+  "D7": "증착 7 s / 식각 30 s",
+  "D9": "증착 9 s / 식각 30 s",
+  "E20": "증착 7 s / 식각 20 s",
+  "E40": "증착 7 s / 식각 40 s",
+  "E60": "증착 7 s / 식각 60 s"
+ },
+ "authors_conclusion": "저GWP 가스 HFE-347mcc3 로 증착 단계와 식각 단계를 번갈아 반복하는 순환 식각을 써서 SiO2 고종횡비 콘택홀의 변형을 줄였다. 증착 단계가 너무 짧으면(3 s) 측벽 보호막이 모자라 보잉(보잉 정도 19.5 nm)과 네킹이 생기고, 너무 길면(9 s) 막이 두꺼워져 좁아짐이 생긴다. 식각 단계가 짧으면(20 s) 플루오로카본 막이 덜 단단해져(F/C 비가 높음) 보잉이 생기고(24.5 nm), 길면(40·60 s) 이온 충격에 의한 탈불소화로 막이 강하게 가교되어 식각 저항이 커지고 좁아짐이 생긴다. 개구율(하단/상단)은 두 스윕 모두 증착 7 s · 식각 30 s 에서 최대(78%)이며, 이 조건에서 보잉 정도 0.5 nm, 직경 100 nm · 종횡비 24 의 거의 수직인 홀을 얻었다.",
+ "q1": {
+  "primary_issue": {
+   "correct": [
+    "bowing"
+   ],
+   "acceptable": [
+    "taper",
+    "necking"
+   ],
+   "incorrect": [
+    "etch_stop",
+    "undercut",
+    "sidewall_angle"
+   ],
+   "note": "순환 식각을 도입한 목적이 보잉 억제다(연속 식각의 보잉 12 nm 가 출발점). 좁아짐(taper)은 보호막 과잉의 반대쪽 결함이고 개구율 지표로 보면 조건 간 변동이 가장 크므로 허용한다. 보잉↔좁아짐 트레이드오프를 함께 말하면 correct 로 친다(bowing 이 들어가므로). necking 은 D3 한 조건의 국소 현상이라 허용에 둔다. etch_stop 은 모든 조건이 2400 nm 를 끝까지 식각했으므로 오답. undercut·sidewall_angle 은 판정 가능한 데이터가 없다.",
+   "quote": "optimization of these parameters significantly improved the anisotropy and reduced bowing"
+  },
+  "onset_condition": {
+   "correct": [
+    "D3",
+    "E20"
+   ],
+   "acceptable": [
+    "D3",
+    "E20",
+    "D5"
+   ],
+   "incorrect": [
+    "D7"
+   ],
+   "note": "주 결함(보잉)이 뚜렷한 조건 — 증착이 짧은 D3(19.5 nm)과 식각이 짧은 E20(24.5 nm). 두 스윕 모두에서 보잉이 나타나므로 둘을 함께 지목하면 correct, 하나만 지목하거나 보잉이 막 나타나는 D5(5 nm)를 지목하면 acceptable. (채점 규칙상 정답 집합의 부분 집합은 허용 집합 안에 있어야 절반을 받는다 — 그래서 D3·E20 을 허용에도 넣었다.) D7 은 최적 조건(0.5 nm)이므로 결함의 시작으로 지목하면 오답. D9·E40·E60 은 좁아짐 조건이라 보잉의 시작이 아니지만, taper 를 주 결함으로 본 답이 이들을 지목할 수 있어 어느 칸에도 넣지 않았다(무채점). [검토 필요] 같은 구조의 S1 onset 루브릭은 허용 집합에 정답 조건을 넣지 않아 C2 하나만 답하면 무채점이다.",
+   "quote": "When the duration of the deposition step is 3 s ... Sidewall bowing is also observed ... the degree of bowing is 19.5 nm",
+   "judge": "conditions"
+  },
+  "process_window": {
+   "correct": [
+    "D7"
+   ],
+   "acceptable": [],
+   "incorrect": [
+    "D3",
+    "E20",
+    "E60"
+   ],
+   "note": "저자가 증착 7 s · 식각 30 s 를 최적으로 명시했다(개구율 78% 로 두 스윕 모두 최대). D3(보잉 19.5 nm, 개구율 31%)·E20(보잉 24.5 nm)·E60(심한 좁아짐, 개구율 40%)은 공정 창으로 지목하면 명백한 오답. D5(개구율 45%)·D9(56%)·E40(58%)은 최적보다 확실히 나쁘지만 결함이 가장 약한 이웃이라 어느 칸에도 넣지 않았다 — 'D5 ~ D7' 처럼 최적을 포함한 넓은 답은 채점 규칙상 절반(acceptable)이 되고, 이들만 단독으로 지목하면 무채점이다. 채점은 조건 집합으로 한다(judge=conditions).",
+   "quote": "Under the optimized conditions (7 s of deposition and 30 s of etching per cycle), a highly anisotropic SiO2 contact hole having a diameter of 100 nm and an aspect ratio of 24 was successfully etched.",
+   "judge": "conditions"
+  }
+ },
+ "q2": {
+  "mechanism": {
+   "judge": "llm",
+   "reference": "측벽을 보호하는 플루오로카본 막의 두께와 단단함이 프로파일을 정한다. 증착 단계가 짧으면 막이 얇아 측면 식각을 못 막아 보잉이 생기고, 길면 막이 쌓여 좁아진다. 식각 단계가 짧으면 막의 F/C 비가 높아(덜 가교됨) 보호가 약해 보잉이 생기고, 길면 고바이어스(-1200 V) 이온 충격에 의한 탈불소화로 막이 강하게 가교되어 식각 저항이 커지고, 측벽·바닥이 제대로 식각되지 않아 좁아진다(블랭킷 SiO2 의 식각률 감소와 XPS F/C 비 감소로 뒷받침).",
+   "must_contain_any": [
+    "플루오로카본",
+    "fluorocarbon",
+    "패시베이션",
+    "passivation",
+    "보호막",
+    "폴리머",
+    "polymer"
+   ],
+   "should_contain": [
+    "탈불소",
+    "defluorination",
+    "가교",
+    "crosslink",
+    "식각 저항",
+    "etch resistance",
+    "F/C"
+   ],
+   "incorrect_claims": [
+    "온도 변화가 원인",
+    "압력 변화가 원인",
+    "식각 중단이 주된 실패 양상",
+    "마스크 침식이 원인"
+   ],
+   "quote": "the fluorocarbon film deposited during the deposition step becomes more defluorinated because of the bombardment of ions at a high bias voltage ... increasing its etch resistance"
+  }
+ },
+ "q3": {
+  "variable": {
+   "correct": [
+    "증착 단계",
+    "deposition step",
+    "deposition time",
+    "식각 단계",
+    "etching step",
+    "etch step",
+    "단계 시간",
+    "step duration",
+    "사이클",
+    "cycle"
+   ],
+   "judge": "contains",
+   "note": "Q3 루브릭은 다른 시리즈와 같은 한계가 있다 — 오답 목록이 없어 틀릴 수 없다(초고 6 절). 전문가 검토 때 오답 경계를 그을 것."
+  },
+  "direction": {
+   "correct": [
+    "7 s",
+    "30 s",
+    "7초",
+    "30초",
+    "7/30",
+    "증착 7",
+    "식각 30",
+    "균형",
+    "balance",
+    "중간",
+    "주변을 촘촘",
+    "around 7"
+   ],
+   "incorrect": [
+    "증착 단계를 줄",
+    "shorten the deposition",
+    "decrease the deposition",
+    "식각 단계를 늘",
+    "lengthen the etching",
+    "increase the etching step",
+    "3 s 로",
+    "60 s 로",
+    "9 s 로"
+   ],
+   "note": "최적이 두 스윕의 중심(증착 7 s · 식각 30 s)이므로 그 근방을 더 촘촘히 보는 것이 맞다. 한쪽 끝으로 미는 권고(증착 단축 → 보잉, 식각 연장 → 좁아짐)는 오답. 문자열 매칭이라 취약하다."
+  }
+ }
+}

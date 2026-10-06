@@ -1,0 +1,66 @@
+{
+ "series_id": "S2",
+ "source_set": "lee2026",
+ "_note": "모델 입력용. 논문 제목·저자·결론 없음. 정답은 answers/ 에만. L2·L4 선택비와 보잉 수치는 원문(lee2026)을 확인했으나 본문에 없음 — 선택비는 20℃ 조건만 제시(2.6/4.1, Fig 2c), 보잉은 정성 서술뿐이고 정량값은 Fig 7 의 Top/Bottom CD ratio(= top_bottom_ratio)가 전부다.",
+ "structure": "SiO2 contact hole, ACL mask",
+ "goal": "두 가스와 두 칠러 온도 가운데 SiO2 콘택홀에서 측벽이 수직에 가까운 프로파일을 주는 조합을 찾는다.",
+ "swept_variable": "gas (CHF3 vs C3H2F6) x chiller temperature (20 vs -20 C), 2x2",
+ "other_fixed": "",
+ "nominal_cd_nm": null,
+ "target_depth_nm": null,
+ "px_nm": 6.061,
+ "conditions": [
+  {
+   "id": "L1",
+   "level": "CHF3 / 20C",
+   "top_bottom_ratio": 4.0,
+   "etch_rate_nm_min": 257,
+   "selectivity_acl": 2.6,
+   "etch_stop": false,
+   "image": "images/L1.png"
+  },
+  {
+   "id": "L2",
+   "level": "CHF3 / -20C",
+   "top_bottom_ratio": 2.9,
+   "etch_rate_nm_min": 290,
+   "selectivity_acl": null,
+   "etch_stop": false,
+   "image": "images/L2.png"
+  },
+  {
+   "id": "L3",
+   "level": "C3H2F6 / 20C",
+   "top_bottom_ratio": 3.0,
+   "etch_rate_nm_min": 238,
+   "selectivity_acl": 4.1,
+   "etch_stop": false,
+   "image": "images/L3.png"
+  },
+  {
+   "id": "L4",
+   "level": "C3H2F6 / -20C",
+   "top_bottom_ratio": 1.6,
+   "etch_rate_nm_min": 304,
+   "selectivity_acl": null,
+   "etch_stop": false,
+   "image": "images/L4.png"
+  }
+ ],
+ "factors": {
+  "gas": {
+   "L1": "CHF3",
+   "L2": "CHF3",
+   "L3": "C3H2F6",
+   "L4": "C3H2F6"
+  },
+  "temp": {
+   "L1": 20,
+   "L2": -20,
+   "L3": 20,
+   "L4": -20
+  }
+ },
+ "value_source": "paper",
+ "extra": {}
+}
